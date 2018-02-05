@@ -51,7 +51,7 @@
           </section>
           <section>
             <h2>Basement Level 2</h2>
-            <p>That's it, time to go back up.</p><br><a href="#/2"><img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg)"></a>
+            <p>That's it, time to go back up.</p><br><a href="#/2"><img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg);"></a>
           </section>
         </section>
         <section>
@@ -134,7 +134,7 @@
           </section>
           <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
             <h2>Tiled Backgrounds</h2>
-            <pre><code class="hljs" style="word-wrap: break-word">+slide(
+            <pre><code class="hljs" style="word-wrap: break-word;">+slide(
   data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png"
   data-background-repeat="repeat" 
   data-background-size="100px"
@@ -142,9 +142,9 @@
 </code></pre>
           </section>
           <section data-backround-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-            <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px">
+            <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
               <h2>Video Backgrounds</h2>
-              <pre><code style="word-wrap: break-word">+slide(
+              <pre><code style="word-wrap: break-word;">+slide(
   data-backround-video="video.mp4,video.webm"
 )
 </code></pre>
@@ -162,7 +162,7 @@
         <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
           <h2>Background Transitions</h2>
           <p>You can override background transitions per-slide.</p>
-          <pre><code class="hljs" style="word-wrap: break-word">+slide(
+          <pre><code class="hljs" style="word-wrap: break-word;">+slide(
   data-background-transition="zoom"
 )
 </code></pre>
@@ -259,7 +259,7 @@
         <section>
           <h2>Export to PDF</h2>
           <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-          <iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%" allowfullscreen></iframe>
+          <iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen></iframe>
         </section>
         <section>
           <h2>Global State</h2>
@@ -270,7 +270,7 @@
         <section data-state="customevent">
           <h2>State Events</h2>
           <p>Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.</p>
-          <pre><code class="javascript" data-trim contenteditable style="font-size: 18px">Reveal.addEventListener( 'customevent', function() {
+          <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">Reveal.addEventListener( 'customevent', function() {
   console.log( '"customevent" has fired' );
 } );
 </code></pre>

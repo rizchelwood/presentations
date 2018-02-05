@@ -1,0 +1,46 @@
+//- Use the presentation layout so we can keep this clean
+extends layouts/presentation
+
+//- Customize the title, meta description, and author using this block.
+block append config
+  -
+    config.title = 'Rescuing Legacy UIs: How IBM Is Putting Performance First';
+    config.description = 'FILL OUT DESCRIPTION!!!';
+  -
+
+//- Add your slides here. See templates/includes/_mixins.pug for information
+//- on how `+slide` works.
+
+block theme
+  link(rel="stylesheet" href="css/theme/custom.css" id="theme")
+
+block slides
+  +slide
+    <div><h3 style="margin: 0px">Rescuing</h3></div>
+    <div><h4 style="margin: 0px; display: inline">Legacy</h4> <h3 style="margin: 0px; display: inline">UIs:</h3> </div>
+    <div> <h4 style="margin: 0px; display: inline">How <h3 style="margin: 0px; display: inline">IBM</h3> <h4 style="margin: 0px; display: inline">Is Putting</h4>
+    <h3 style="margin: 0px">Performance First</h3></div>
+    //- <h3 style="margin:0px"> Rescuing</h3>
+    //- <h4 style="margin:0px;display: inline">Legacy <h3 style="margin:0px;display: inline">UIs:</h3></h4>
+    //- <div><h4 style="margin:0px"> How <h3 style="margin:0px;display: inline">IBM</h3> <h4 style="margin:0px;display: inline"> Is Putting</h4></h4>
+    //- <h3 style="display: inline">Performance First</h3></div>
+
+
+    //- <p> Rizchel Dayao</p>
+    //- p Twitter: @rizcheldayao
+    //- p Email: rdayao@us.ibm.com
+
+
+  +slide
+    h4 Nice to meet you 👋🏼
+    p Developer Advocate @IBM
+    p Previously a Front End Developer
+
+  +slide
+    h4 What's the problem?
+    p UIs are slow
+    p IBM Cloud Account render time was up to 30 seconds!
+    p Bad performance
+    p *Gif*
+
+
