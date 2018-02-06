@@ -29,36 +29,96 @@
         </section>
         <section><div style="display:flex; flex-direction: column">
           <h3>Nice to meet you 👋🏼</h3><div style="display:flex; justify-content:space-between">
-<div>
-<li style="font-weight: 200;"> Developer Advocate @IBM
-<li style="font-weight: 200;"> Previously a Front End Developer
-</div>
+<div style="padding-top: 5%; font-weight: 200;">
+          <li>Developer Advocate @IBM</li>
+          <li>Front End Developer</li>
+          <li>Puppy lover</li>
+          <li>Harry Potter enthusiast</li></div>
 <div><img style="border-radius: 50%"src="../img/rizchel.jpg" alt="Speaker picture" height="200"></div>
 </div>
 </div>
         </section>
         <section><div style="text-align: center">
-<div><iframe src="https://giphy.com/embed/3NtY188QaxDdC" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
-<h3 style="text-align: center; font-weight: 200; display: inline;"> 40% of people <h3 style="display: inline;">abandon</h3> a website that takes <h3 style="display: inline;">more than</h3> 3 seconds to load.</h3>
+<div><iframe src="https://giphy.com/embed/jUwpNzg9IcyrK" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+<h3 style="text-align: center; display: inline;"> 40% of people <span style="display: inline; color: orange">abandon</span> a website that takes <span style="display: inline; color: orange">more than</span> 3 seconds to load.</h3>
 </div>
         </section>
-        <section>
-          <h3>What we were facing on IBM Cloud:</h3>
-          <li>Made up of microservices that consisted of Dojo, jQuery, and vanilla Javascript</li>
-          <li>Made API calls to a <i>mysterious</i> monolith layer that no one on our team had access to</li>
-          <li>Blocked requests until all the data was available for UI</li>
+        <section><h4 style="text-align: center; opacity: 1"> <span style="color: navy">Optimizing</span> website performance has become <span style="color: navy">key</span> to attracting and keeping users.</h4>
         </section>
         <section><div style="text-align: center">
 <iframe src="https://giphy.com/embed/jquDWJfPUMCiI" width="480" height="428" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-<h3 style="text-align: center; font-weight: 200;"> A page could take up to 30 seconds to load!</h3>
+<h3 style="text-align: center"> The usage dashboard on the IBM Cloud could take <span style="color: orange">more than 30 seconds</span> to load!</h3>
 </div>
+        </section>
+        <section>
+          <h3>How usage dashboard was built:</h3>
+          <li class="fragment">Built in Dojo, jQuery, etc in one microservice</li>
+          <li class="fragment">Blocked UI until all the data was loaded</li>
+          <li class="fragment">Made API calls to a <i>mysterious</i> monolith layer</li>
         </section>
         <section><div style="text-align: center">
 <h3 style="display: inline"> We needed to <h3 style="display: inline; color: #000080">improve performance</h3><h3>...but where do we start?
 </div>
         </section>
-        <section><h4 style="font-size: 10em; position: relative">01</h4>
-<h3 style="position: absolute; top: 50%; left: 20%; transform: translate(-50%, -50%);">Get rid of crap</h3>
+        <section><div style="display: flex;">
+<h4 style="font-size: 10em; position: relative">01</h4>
+<h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Clean up code</h2>
+</div>
+        </section>
+        <section>
+          <h3>Clean up:</h3>
+          <ul></ul>
+          <li class="fragment">Took out unneccessary code (Dojo, jQuery, etc)</li>
+          <li class="fragment">Changed all the code to use React & Redux</li>
+          <li class="fragment">Isolated the React app from the rest of the microservice</li>
+        </section>
+        <section><div style="display: flex;">
+<h4 style="font-size: 10em; position: relative">02</h4>
+<h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Introduce Skeleton Components</h2>
+</div>
+        </section>
+        <section><h3 style="text-align: center"> What are skeleton components?
+        </section>
+        <section><img style="border: none;"src="../img/skeleton-components.png" alt="Skeleton components" height="500">
+<p style="text-align: center"> Element representations of the UI while content is being loaded.
+        </section>
+        <section>
+          <h3>Benefits:</h3>
+          <ul></ul>
+          <li class="fragment">Did not block the UI</li>
+          <li class="fragment">Load data as it becomes available</li>
+          <li class="fragment">Render explorable UI before data is available</li>
+        </section>
+        <section><div style="display: flex;">
+<h4 style="font-size: 10em; position: relative">03</h4>
+<h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Implemented GraphQL Middle Tier</h2>
+</div>
+        </section>
+        <section><div style="text-align: center">
+<iframe src="https://giphy.com/embed/5p2wQFyu8GsFO" width="480" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<h3 style="text-align: center"> GraphQL was life changing 🙌🏼</h3>
+</div>
+        </section>
+        <section>
+          <h3>GraphQL:</h3>
+          <ul></ul>
+          <li class="fragment">Middle tier reduces # of API requests</li>
+          <li class="fragment">Cache data for subsequent page loads</li>
+          <li class="fragment">Pre cached data for moving views (insert more stuff)</li>
+          <li class="fragment">Apollo hold onto data - cache API and client on first load</li>
+        </section>
+        <section><div style="display: flex;">
+<h4 style="font-size: 10em; position: relative">04</h4>
+<h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Used Static Assets</h2>
+</div>
+        </section>
+        <section>
+          <h3>Static Assets:</h3>
+          <ul></ul>
+          <li class="fragment">Static assets don’t need to be processed by Webpack</li>
+          <li class="fragment">Static assets are cached</li>
+          <li class="fragment">Server does not need to do data management because data and template are cached</li>
+          <li class="fragment">Theories</li>
         </section>
       </div>
     </div>
