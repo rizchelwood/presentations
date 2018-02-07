@@ -32,8 +32,8 @@ block slides
     <div style="padding-top: 5%; font-weight: 200;">
     li Developer Advocate @IBM
     li Front End Developer
-    li Puppy lover
-    li Harry Potter enthusiast
+    li Passion for all things tech related
+    li Trying to learn all day, every day
     </div>
     <div><img style="border-radius: 50%"src="../img/rizchel.jpg" alt="Speaker picture" height="200"></div>
     </div>
@@ -68,7 +68,7 @@ block slides
   +slide
     <div style="display: flex;">
     <h4 style="font-size: 10em; position: relative">01</h4>
-    <h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Clean up code</h2>
+    <h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);"><span style="color: navy">Clean</span> up code</h2>
     </div>
 
   +slide
@@ -96,7 +96,12 @@ block slides
     ul
     li.fragment Did not block the UI
     li.fragment Load data as it becomes available
-    li.fragment Render explorable UI before data is available
+    li.fragment Render explorable UI before all data is available
+
+  +slide
+    <div style="text-align: center">
+    <h3 style="text-align: center"> But the data still took a long time to load...</h3>
+    </div>
 
   +slide
     <div style="display: flex;">
@@ -113,22 +118,92 @@ block slides
   +slide
     h3 GraphQL:
     ul
-    li.fragment Middle tier reduces # of API requests
-    li.fragment Cache data for subsequent page loads
-    li.fragment Pre cached data for moving views (insert more stuff)
-    li.fragment Apollo hold onto data - cache API and client on first load
+    li.fragment Middle tier reduced number of of API requests
+    li.fragment Apollo Client cache query results
+    li.fragment Cached data available subsequent page loads
+    li.fragment Pre cached data for changing views
+    li.fragment Support local, offline development support
 
   +slide
     <div style="display: flex;">
     <h4 style="font-size: 10em; position: relative">04</h4>
-    <h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Used Static Assets</h2>
+    <h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Use static assetss</h2>
     </div>
 
   +slide
-    h3 Static Assets:
+    h3 Static assets:
     ul
-    li.fragment Static assets don’t need to be processed by Webpack
-    li.fragment Static assets are cached
-    li.fragment Server does not need to do data management because data and template are cached
-    li.fragment Theories
+    li.fragment Doesn't need to be processed by Webpack
+    li.fragment Assets are cached
+    li.fragment No data management required by the server because the data and template are cached
+
+    <aside class="notes">
+      Static assets are html, vanilla js, etc files
+    </aside>
+
+  +slide
+    <div style="display: flex;">
+    <h4 style="font-size: 10em; position: relative">05</h4>
+    <h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Lazy load non essentials</h2>
+    </div>
+
+  +slide
+    h3 Lazy load:
+    ul
+    li.fragment Only load what’s needed
+    li.fragment Speeds up initial load
+    li.fragment Wait for an interaction to fire request
+
+  +slide
+    <div style="display: flex;">
+    <h4 style="font-size: 10em; position: relative">06</h4>
+    <h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Use Service Workers</h2>
+    </div>
+
+  +slide
+     <h3 style="text-align: center">"Service workers enable applications to control network requests, cache those requests to improve performance, and provide offline access to cached content."</h3>
+
+  +slide
+    h3 Service Workers:
+    ul
+    li.fragment Download on first access
+    li.fragment Cache requests and serve instantly on repeat visits
+    li.fragment Offline support
+
+  +slide
+    <div style="display: flex;">
+    <h4 style="font-size: 10em; position: relative">07</h4>
+    <h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Webpack analyze</h2>
+    </div>
+
+  +slide
+    h3 Webpack analyze:
+    ul
+    li.fragment Plugin used during development
+    li.fragment Find out what modules are inside your bundle
+    li.fragment Remove bundles that aren't being used
+    li.fragment Hints on how to optimize Webpack build
+
+  +slide
+    picture of webpack analyze
+
+  +slide
+    <div style="display: flex;">
+    <h4 style="font-size: 10em; position: relative">06</h4>
+    <h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Measure performance</h2>
+    </div>
+
+  +slide
+    h3 Performance marks:
+    ul
+    li.fragment Timing API available
+    li.fragment Time on render
+    li.fragment Time to interact
+    li.fragment Time to load a cold cache
+    li.fragment Time to load for repeat views
+    li.fragment Load time for switching views
+    li.fragment Fix where you can improve the time
+
+  +slide
+    picture of timing api output
 
