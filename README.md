@@ -1,2 +1,2 @@
 # presentations
-A place I can keep my proposal abstracts, slides, etc
+A repo I can keep my proposal abstracts, slides, etc
