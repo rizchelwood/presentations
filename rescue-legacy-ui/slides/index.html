@@ -90,7 +90,9 @@
           <ul></ul>
           <li class="fragment">Did not block the UI</li>
           <li class="fragment">Load data as it becomes available</li>
-          <li class="fragment">Render explorable UI before all data is available</li>
+          <li class="fragment">Render explorable UI before all data is available</li><aside class="notes">
+          <We>built our own skeleton components</We>
+          <If>data wasn not loaded, show skeleton component</If></aside>
         </section>
         <section><div style="text-align: center">
 <h3 style="text-align: center"> But the data still took <span style="color:orange">forever</span> to load...</h3>
@@ -132,13 +134,19 @@
 <img style="border: none; margin: 0; box-shadow: none; background: transparent"src="../img/data.png" alt="Data source">
 </div>
         </section>
+        <section><div style="text-align: center">
+<img style="border: none;"src="../img/query-mutation.png" alt="Apollo queries and mutations" height="500">
+<p style="opacity: 1">https://www.apollographql.com/client/</p>
+</div>
+        </section>
         <section>
           <h3>GraphQL:</h3>
           <ul></ul>
           <li class="fragment">Middle tier reduced number of API requests</li>
           <li class="fragment">Apollo Client cache query results</li>
           <li class="fragment">Cached data available subsequent page loads & changing views</li>
-          <li class="fragment">Support local, offline development support</li>
+          <li class="fragment">Support local, offline development support</li><aside class="notes">
+          <Apollo>client is the GraphQL client</Apollo></aside>
         </section>
         <section>
           <video src="../video/account-switch.mp4" controls></video>
@@ -154,7 +162,8 @@
           <li class="fragment">Doesn't need to be processed by Webpack</li>
           <li class="fragment">Assets are cached</li>
           <li class="fragment">No data management required by the server because the data and template are cached</li><aside class="notes">
-          <Static>assets are html, vanilla js, etc files</Static></aside>
+          <Static>assets are html, vanilla js, img, css, etc files</Static>
+          <In>output, put public path field pointing to assets folder</In></aside>
         </section>
         <section><div style="display: flex;">
 <h4 style="font-size: 10em; position: relative">05</h4>

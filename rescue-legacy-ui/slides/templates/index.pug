@@ -101,6 +101,12 @@ block slides
     li.fragment Load data as it becomes available
     li.fragment Render explorable UI before all data is available
 
+    <aside class="notes">
+      We built our own skeleton components
+      If data wasn not loaded, show skeleton component
+    </aside>
+
+
   +slide
     <div style="text-align: center">
     <h3 style="text-align: center"> But the data still took <span style="color:orange">forever</span> to load...</h3>
@@ -146,12 +152,22 @@ block slides
     </div>
 
   +slide
+    <div style="text-align: center">
+      <img style="border: none;"src="../img/query-mutation.png" alt="Apollo queries and mutations" height="500">
+      <p style="opacity: 1">https://www.apollographql.com/client/</p>
+    </div>
+
+  +slide
     h3 GraphQL:
     ul
     li.fragment Middle tier reduced number of API requests
     li.fragment Apollo Client cache query results
     li.fragment Cached data available subsequent page loads & changing views
     li.fragment Support local, offline development support
+
+    <aside class="notes">
+      Apollo client is the GraphQL client
+    </aside>
 
   +slide
    video(src="../video/account-switch.mp4" controls)
@@ -170,7 +186,8 @@ block slides
     li.fragment No data management required by the server because the data and template are cached
 
     <aside class="notes">
-      Static assets are html, vanilla js, etc files
+      Static assets are html, vanilla js, img, css, etc files
+      In output, put public path field pointing to assets folder
     </aside>
 
 
