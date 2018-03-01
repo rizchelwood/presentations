@@ -12,3 +12,6 @@ In this talk, Rizchel will share how her team has improved perceived performance
 - Use Service Workers
 - Pay attention (webpack analyze)
 - Measure (use performance marks)
+
+
+[Slides](https://rizcheldayao.github.io/presentations/rescue-legacy-ui/slides/#/)
