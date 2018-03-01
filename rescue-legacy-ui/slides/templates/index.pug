@@ -92,7 +92,7 @@ block slides
 
   +slide
     <img style="border: none;"src="../img/skeleton-components.png" alt="Skeleton components" height="500">
-    <p style="text-align: center"> Element representations of the UI while content is being loaded.
+    <p style="text-align: center"> Element representations of the UI while content is being loaded.</p>
 
   +slide
     h3 Benefits:
@@ -126,7 +126,8 @@ block slides
 
   +slide
     <div style="text-align: center; display: flex; flex-direction: column; width: 15%; margin-left: 45%">
-    <img style="border: none; margin: 0; box-shadow: none; background: transparent"src="../img/application.png" alt="Application">
+      <img style="border: none; margin: 0; box-shadow: none; background: transparent"src="../img/application.png" alt="Application">
+      <p style="margin: 0; font-size: 24px;">Apollo Client</p>
     <div style="display: flex; justify-content: center; margin: 1rem 0;">
       <svg fill="#fff" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0h24v24H0V0z" fill="none"/>
@@ -138,6 +139,7 @@ block slides
       </svg>
     </div>
     <img style="border: none; margin: 0; box-shadow: none; background: transparent"src="../img/graphql.png" alt="Graphql">
+    <p style="margin: 0; font-size: 24px; color: #e339ab">GraphQL server</p>
     <div style="display: flex; justify-content: center; ">
       <svg fill="#fff" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0h24v24H0V0z" fill="none"/>
@@ -149,7 +151,13 @@ block slides
       </svg>
     </div>
     <img style="border: none; margin: 0; box-shadow: none; background: transparent"src="../img/data.png" alt="Data source">
+    <p style="margin: 0; font-size: 24px;">Data sources</p>
     </div>
+
+    <aside class="notes">
+      Apollo client is the GraphQL client
+      You can use other clients like Relay
+    </aside>
 
   +slide
     <div style="text-align: center">
@@ -164,10 +172,6 @@ block slides
     li.fragment Apollo Client cache query results
     li.fragment Cached data available subsequent page loads & changing views
     li.fragment Support local, offline development support
-
-    <aside class="notes">
-      Apollo client is the GraphQL client
-    </aside>
 
   +slide
    video(src="../video/account-switch.mp4" controls)
@@ -188,6 +192,7 @@ block slides
     <aside class="notes">
       Static assets are html, vanilla js, img, css, etc files
       In output, put public path field pointing to assets folder
+      Put it in assets folder in your public folder and it copies and pastes them into that folder
     </aside>
 
 
@@ -214,6 +219,14 @@ block slides
      <p style="text-align: center; opacity: 1; font-weight: 600">"Service workers enable applications to <span style="color: navy">control</span> network requests, <span style="color: navy">cache</span> those requests to improve performance, and provide <span style="color: navy">offline access</span> to cached content."</p>
 
   +slide
+    <img style="display: block; margin-left: auto; margin-right: auto;width: 50%; border: none" src="../img/serviceworkers.png" alt="Service Workers" height="500">
+    <p style="text-align: center; font-size: 22px;">https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers</p>
+
+  +slide
+    <img style="display: block; margin-left: auto; margin-right: auto;width: 80%; border: none" src="../img/fetch.png" alt="Service Workers Fetch" height="500">
+    <p style="text-align: center; font-size: 22px;">https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers</p>
+
+  +slide
     h3 Service Workers:
     ul
     li.fragment Download on first access
@@ -227,7 +240,7 @@ block slides
     </div>
 
   +slide
-    <h3 style="text-align: center"> webpack-bundle-analyzer module</h3>
+    <h3 style="text-align: center"><span style="color: navy">webpack-bundle-analyzer</span> module</h3>
 
   +slide
     h3 What does the npm package do?
@@ -248,7 +261,13 @@ block slides
     </div>
 
   +slide
-    <h3 style="text-align: center">Performance.timing API</h3>
+    <h3 style="text-align: center"><span style="color: navy">Performance.timing</span> API</h3>
+
+  +slide
+    <div style="text-align: center">
+      <img style="border: none;"src="../img/performance.png" alt="Apollo queries and mutations" height="500">
+      <p style="opacity: 1; font-size: 22px;">https://developer.mozilla.org/en-US/docs/Web/API/Performance/timing</p>
+    </div>
 
   +slide
     h3 We can calculate...
@@ -268,7 +287,7 @@ block slides
 
   +slide
     <div style="text-align: center">
-    h3 But we still have a long way to go...
+    h3 But we still have a <span style="color: orange">long</span> way to go...
     </div>
 
   +slide
@@ -276,6 +295,10 @@ block slides
     li.fragment Async load/pre-loading
     li.fragment Implement service workers
     li.fragment Spread this out to other microservices
+
+    <aside class="notes">
+      Preload items and retrieve them
+    </aside>
 
   +slide
     <div style="text-align: center">

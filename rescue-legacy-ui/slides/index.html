@@ -83,7 +83,7 @@
         <section><h3 style="text-align: center"> What are skeleton components?
         </section>
         <section><img style="border: none;"src="../img/skeleton-components.png" alt="Skeleton components" height="500">
-<p style="text-align: center"> Element representations of the UI while content is being loaded.
+<p style="text-align: center"> Element representations of the UI while content is being loaded.</p>
         </section>
         <section>
           <h3>Benefits:</h3>
@@ -110,6 +110,7 @@
         </section>
         <section><div style="text-align: center; display: flex; flex-direction: column; width: 15%; margin-left: 45%">
 <img style="border: none; margin: 0; box-shadow: none; background: transparent"src="../img/application.png" alt="Application">
+<p style="margin: 0; font-size: 24px;">Apollo Client</p>
 <div style="display: flex; justify-content: center; margin: 1rem 0;">
 <svg fill="#fff" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
 <path d="M0 0h24v24H0V0z" fill="none"/>
@@ -121,6 +122,7 @@
 </svg>
 </div>
 <img style="border: none; margin: 0; box-shadow: none; background: transparent"src="../img/graphql.png" alt="Graphql">
+<p style="margin: 0; font-size: 24px; color: #e339ab">GraphQL server</p>
 <div style="display: flex; justify-content: center; ">
 <svg fill="#fff" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
 <path d="M0 0h24v24H0V0z" fill="none"/>
@@ -132,7 +134,11 @@
 </svg>
 </div>
 <img style="border: none; margin: 0; box-shadow: none; background: transparent"src="../img/data.png" alt="Data source">
+<p style="margin: 0; font-size: 24px;">Data sources</p>
 </div>
+<aside class="notes">
+          <Apollo>client is the GraphQL client</Apollo>
+          <You>can use other clients like Relay</You></aside>
         </section>
         <section><div style="text-align: center">
 <img style="border: none;"src="../img/query-mutation.png" alt="Apollo queries and mutations" height="500">
@@ -145,8 +151,7 @@
           <li class="fragment">Middle tier reduced number of API requests</li>
           <li class="fragment">Apollo Client cache query results</li>
           <li class="fragment">Cached data available subsequent page loads & changing views</li>
-          <li class="fragment">Support local, offline development support</li><aside class="notes">
-          <Apollo>client is the GraphQL client</Apollo></aside>
+          <li class="fragment">Support local, offline development support</li>
         </section>
         <section>
           <video src="../video/account-switch.mp4" controls></video>
@@ -163,7 +168,8 @@
           <li class="fragment">Assets are cached</li>
           <li class="fragment">No data management required by the server because the data and template are cached</li><aside class="notes">
           <Static>assets are html, vanilla js, img, css, etc files</Static>
-          <In>output, put public path field pointing to assets folder</In></aside>
+          <In>output, put public path field pointing to assets folder</In>
+          <Put>it in assets folder in your public folder and it copies and pastes them into that folder</Put></aside>
         </section>
         <section><div style="display: flex;">
 <h4 style="font-size: 10em; position: relative">05</h4>
@@ -184,6 +190,12 @@
         </section>
         <section><p style="text-align: center; opacity: 1; font-weight: 600">"Service workers enable applications to <span style="color: navy">control</span> network requests, <span style="color: navy">cache</span> those requests to improve performance, and provide <span style="color: navy">offline access</span> to cached content."</p>
         </section>
+        <section><img style="display: block; margin-left: auto; margin-right: auto;width: 50%; border: none" src="../img/serviceworkers.png" alt="Service Workers" height="500">
+<p style="text-align: center; font-size: 22px;">https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers</p>
+        </section>
+        <section><img style="display: block; margin-left: auto; margin-right: auto;width: 80%; border: none" src="../img/fetch.png" alt="Service Workers Fetch" height="500">
+<p style="text-align: center; font-size: 22px;">https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers</p>
+        </section>
         <section>
           <h3>Service Workers:</h3>
           <ul></ul>
@@ -196,7 +208,7 @@
 <h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Webpack <span style="color: navy">analyze</span></h2>
 </div>
         </section>
-        <section><h3 style="text-align: center"> webpack-bundle-analyzer module</h3>
+        <section><h3 style="text-align: center"><span style="color: navy">webpack-bundle-analyzer</span> module</h3>
         </section>
         <section>
           <h3>What does the npm package do?</h3>
@@ -214,7 +226,12 @@
 <h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);"><span style="color: navy">Measure</span> performance</h2>
 </div>
         </section>
-        <section><h3 style="text-align: center">Performance.timing API</h3>
+        <section><h3 style="text-align: center"><span style="color: navy">Performance.timing</span> API</h3>
+        </section>
+        <section><div style="text-align: center">
+<img style="border: none;"src="../img/performance.png" alt="Apollo queries and mutations" height="500">
+<p style="opacity: 1; font-size: 22px;">https://developer.mozilla.org/en-US/docs/Web/API/Performance/timing</p>
+</div>
         </section>
         <section>
           <h3>We can calculate...</h3>
@@ -231,13 +248,14 @@
           <p>🎉🎉🎉</p></div>
         </section>
         <section><div style="text-align: center">
-          <h3>But we still have a long way to go...</h3></div>
+          <h3>But we still have a <span style="color: orange">long</span> way to go...</h3></div>
         </section>
         <section>
           <h3>Roadmap:</h3>
           <li class="fragment">Async load/pre-loading</li>
           <li class="fragment">Implement service workers</li>
-          <li class="fragment">Spread this out to other microservices</li>
+          <li class="fragment">Spread this out to other microservices</li><aside class="notes">
+          <Preload>items and retrieve them</Preload></aside>
         </section>
         <section><div style="text-align: center">
 <h4 style="opacity: 1"> New + existing customers = <span style="color: navy">increased</span> revenue</h4>
