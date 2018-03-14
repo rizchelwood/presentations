@@ -5,7 +5,7 @@ extends layouts/presentation
 block append config
   -
     config.title = 'Rescuing Legacy UIs: How IBM Is Putting Performance First';
-    config.description = 'FILL OUT DESCRIPTION!!!';
+    config.description = 'Presentation on what techniques and tools we used to improve performance on the IBM Cloud.';
   -
 
 //- Add your slides here. See templates/includes/_mixins.pug for information
@@ -166,7 +166,7 @@ block slides
     </div>
 
   +slide
-    h3 GraphQL:
+    h3 Benefits:
     ul
     li.fragment Middle tier reduced number of API requests
     li.fragment Apollo Client cache query results
@@ -306,14 +306,14 @@ block slides
 
   +slide
     h3 Recap:
-    li Load one library rather than three ✔️
-    li Built an explorable UI with skeleton components ✔️
-    li Easy & fast data management with GraphQL ✔️
-    li Use static assets when we could ✔️
-    li Lazy load only the essentials ✔️
-    li Instant response with service workers ✔️
-    li Optimized dependencies with webpack analyze ✔️
-    li Measured performance ✔️
+    <p style="margin: 0"> Eliminate unnecessary code ✔️ </p>
+    <p style="margin: 0"> Build an explorable UI with skeleton components ✔️ </p>
+    <p style="margin: 0"> Easy & fast data management with GraphQL ✔️ </p>
+    <p style="margin: 0"> Use static assets ✔️ </p>
+    <p style="margin: 0"> Lazy load all non essentials ✔️ </p>
+    <p style="margin: 0"> Instant response with service workers ✔️ </p>
+    <p style="margin: 0"> Optimize dependencies with webpack analyze ✔️ </p>
+    <p style="margin: 0"> Measure performance ✔️ </p>
 
   +slide
     <div style="text-align: center">
