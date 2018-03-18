@@ -41,7 +41,7 @@ block slides
 
   +slide
     <div style="text-align: center">
-    <div><iframe src="https://giphy.com/embed/jUwpNzg9IcyrK" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+    <div><iframe src="https://giphy.com/embed/3o6Ztihlv0pJqdp3H2" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
     <h4 style="text-align: center; display: inline; opacity: 1"> 40% of people <span style="display: inline; color: orange">abandon</span> a website that takes <span style="display: inline; color: orange">more than</span> 3 seconds to load.</h4>
     </div>
 
@@ -222,6 +222,15 @@ block slides
     <img style="display: block; margin-left: auto; margin-right: auto;width: 50%; border: none" src="https://user-images.githubusercontent.com/18426780/36912891-70d37fde-1e05-11e8-82c4-613a1d17e050.png" alt="Service Workers" height="500">
     <p style="text-align: center; font-size: 22px;">https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers</p>
 
+    <aside class="notes">
+      <p> Register service worker in your app (tells the browser where your service worker JavaScript file pves)</p>
+      <p> Install service workers (callback -> Open a cache. Cache our files. Confirm whether all the required assets are cached or not.)</p>
+      <p> Activated || error</p>
+      <p> Idle</p>
+      <p> Terminated || Fetch (event)</p>
+      <p> Update service</p>
+    </aside>
+
   +slide
     <img style="display: block; margin-left: auto; margin-right: auto;width: 80%; border: none" src="https://user-images.githubusercontent.com/18426780/36912892-70e992f6-1e05-11e8-8c72-f10023672a1d.png" alt="Service Workers Fetch" height="500">
     <p style="text-align: center; font-size: 22px;">https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers</p>
@@ -296,7 +305,7 @@ block slides
     li.fragment Spread this out to other microservices
 
     <aside class="notes">
-      Preload items and retrieve them
+      Preload resources and retrieve them (CSS, scripts, images), no blocking scripts
     </aside>
 
   +slide
@@ -305,21 +314,15 @@ block slides
     </div>
 
   +slide
-    h3 Recap:
-    <p style="margin: 0"> Eliminate unnecessary code ✔️ </p>
-    <p style="margin: 0"> Build an explorable UI with skeleton components ✔️ </p>
-    <p style="margin: 0"> Easy & fast data management with GraphQL ✔️ </p>
-    <p style="margin: 0"> Use static assets ✔️ </p>
-    <p style="margin: 0"> Lazy load all non essentials ✔️ </p>
-    <p style="margin: 0"> Instant response with service workers ✔️ </p>
-    <p style="margin: 0"> Optimize dependencies with webpack analyze ✔️ </p>
-    <p style="margin: 0"> Measure performance ✔️ </p>
+    <div style="text-align: center">
+    <img style="border: none; box-shadow: none; margin: 0"src="https://user-images.githubusercontent.com/18426780/37493134-833c20d6-2869-11e8-8daa-897252ae554f.png" alt="Recap" height="500">
+    </div>
 
   +slide
     <div style="text-align: center">
-      h3 Thank you!
+      h3 Questions?
       <div><img style="border-radius: 50%" src="https://user-images.githubusercontent.com/18426780/36912901-71fc797e-1e05-11e8-8e83-9dd223120f2b.jpg" alt="Speaker picture" height="200"></div>
-      h3 Rizchel Dayao
+      h3 Thank you!
       <div style="display: flex">
         <div style="display: flex; justify-content: center; margin-right: 1rem; margin-left: 6rem">
           <img style="border: none; margin: 0; box-shadow: none; background: #00baa1;%" src='https://user-images.githubusercontent.com/18426780/36912894-711fcfb0-1e05-11e8-9a75-82940b50c0e6.png' />
