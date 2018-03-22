@@ -41,6 +41,12 @@ block slides
 
   +slide
     <div style="text-align: center">
+      <img style="border: none;"src="https://user-images.githubusercontent.com/18426780/37790638-1eca5de0-2dd5-11e8-9ec2-2a8bab162e02.png" alt="Dogs" height="500">
+      p ...and I love my two adorable dogs ❤️
+    </div>
+
+  +slide
+    <div style="text-align: center">
     <div><iframe src="https://giphy.com/embed/3o6ZtihIv0pJqdp3H2" width="480" height="204" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
     <h4 style="text-align: center; display: inline; opacity: 1"> 40% of people <span style="display: inline; color: orange">abandon</span> a website that takes <span style="display: inline; color: orange">more than</span> 3 seconds to load.</h4>
     </div>
@@ -166,6 +172,25 @@ block slides
     </div>
 
   +slide
+    h3 Architecture:
+    ul
+    li.fragment GraphQL microservice
+    li.fragment Data sources contain models, resolvers, schema, mocks
+    li.fragement Open source example: https://github.com/gramps-graphql/gramps-express
+
+  +slide
+    h3 Definitions:
+    li.fragment Models: functions for the different calls made with the parameters
+    li.fragment Resolvers: contain mutations and queries
+    li.fragment Schema: schema of the api calls (parameters, returned data)
+    li.fragment Mocks: mock local data using casual
+
+    <aside class="notes">
+      p Connector contains base api path and is called in models
+      p Resolvers contains promises to do any authentication and call models
+    </aside>
+
+  +slide
     h3 Benefits:
     ul
     li.fragment Middle tier reduced number of API requests
@@ -229,7 +254,7 @@ block slides
       <p> Activated || error</p>
       <p> Idle</p>
       <p> Terminated || Fetch (event)</p>
-      <p> Update service</p>
+      <p> Update service (installs if not the same)</p>
     </aside>
 
   +slide
@@ -257,6 +282,10 @@ block slides
     p.fragment 1. Find out what modules are inside your bundle
     p.fragment 2. Identify modules that can be removed
     p.fragment 3. Optimize it 💯
+
+    <aside class="notes">
+      supports minified bundles! It parses them to get real size of bundled modules
+    </aside>
 
   +slide
     <div style="text-align: center">
@@ -338,12 +367,12 @@ block slides
 
   +slide
     h3 Resources
-    <p style="font-size: 20px; margin: 0"> 1. GraphQL</p>
+    <p style="font-size: 20px; margin: 0"> 1. Slides</p>
+    <p style="font-size: 20px; color: navy">(https://rizcheldayao.github.io/presentations/rescue-legacy-ui/slides/#/)</p>
+    <p style="font-size: 20px; margin: 0"> 2. GraphQL</p>
     <p style="font-size: 20px; color: navy">(http://graphql.org/)</p>
-    <p style="font-size: 20px;"> 2. Service Workers </p>
+    <p style="font-size: 20px;"> 3. Service Workers </p>
     <p style="font-size: 20px; color: navy">(https://developers.google.com/web/fundamentals/primers/service-workers/)</p>
-    <p style="font-size: 20px;"> 3. Static assets
-    <p style="font-size: 20px; color: navy">(https://vuejs-templates.github.io/webpack/static.html)</p>
     <p style="font-size: 20px;"> 4. Lazy Load
     <p style="font-size: 20px; color: navy">(https://webpack.js.org/guides/lazy-loading/)
     <p style="font-size: 20px;"> 5. Webpack analyze

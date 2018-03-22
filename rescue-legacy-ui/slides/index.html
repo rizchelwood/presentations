@@ -39,6 +39,10 @@
 </div>
         </section>
         <section><div style="text-align: center">
+<img style="border: none;"src="https://user-images.githubusercontent.com/18426780/37790638-1eca5de0-2dd5-11e8-9ec2-2a8bab162e02.png" alt="Dogs" height="500">
+          <p>...and I love my two adorable dogs ❤️</p></div>
+        </section>
+        <section><div style="text-align: center">
 <div><iframe src="https://giphy.com/embed/3o6ZtihIv0pJqdp3H2" width="480" height="204" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 <h4 style="text-align: center; display: inline; opacity: 1"> 40% of people <span style="display: inline; color: orange">abandon</span> a website that takes <span style="display: inline; color: orange">more than</span> 3 seconds to load.</h4>
 </div>
@@ -146,6 +150,22 @@
 </div>
         </section>
         <section>
+          <h3>Architecture:</h3>
+          <ul></ul>
+          <li class="fragment">GraphQL microservice</li>
+          <li class="fragment">Data sources contain models, resolvers, schema, mocks</li>
+          <li class="fragement">Open source example: https://github.com/gramps-graphql/gramps-express</li>
+        </section>
+        <section>
+          <h3>Definitions:</h3>
+          <li class="fragment">Models: functions for the different calls made with the parameters</li>
+          <li class="fragment">Resolvers: contain mutations and queries</li>
+          <li class="fragment">Schema: schema of the api calls (parameters, returned data)</li>
+          <li class="fragment">Mocks: mock local data using casual</li><aside class="notes">
+          <p>Connector contains base api path and is called in models</p>
+          <p>Resolvers contains promises to do any authentication and call models</p></aside>
+        </section>
+        <section>
           <h3>Benefits:</h3>
           <ul></ul>
           <li class="fragment">Middle tier reduced number of API requests</li>
@@ -199,7 +219,7 @@
 <p> Activated || error</p>
 <p> Idle</p>
 <p> Terminated || Fetch (event)</p>
-<p> Update service</p>
+<p> Update service (installs if not the same)</p>
 </aside>
         </section>
         <section><img style="display: block; margin-left: auto; margin-right: auto;width: 80%; border: none" src="https://user-images.githubusercontent.com/18426780/36912892-70e992f6-1e05-11e8-8c72-f10023672a1d.png" alt="Service Workers Fetch" height="500">
@@ -223,7 +243,8 @@
           <h3>What does the npm package do?</h3>
           <p class="fragment">1. Find out what modules are inside your bundle</p>
           <p class="fragment">2. Identify modules that can be removed</p>
-          <p class="fragment">3. Optimize it 💯</p>
+          <p class="fragment">3. Optimize it 💯</p><aside class="notes">
+          <supports>minified bundles! It parses them to get real size of bundled modules</supports></aside>
         </section>
         <section><div style="text-align: center">
 <img style="border: none;"src="https://user-images.githubusercontent.com/18426780/36912899-71af9c9e-1e05-11e8-852b-ccd51e7b9ba0.png" alt="Webpack analyze" height="500">
@@ -288,12 +309,12 @@
 </div>
         </section>
         <section>
-          <h3>Resources</h3><p style="font-size: 20px; margin: 0"> 1. GraphQL</p>
+          <h3>Resources</h3><p style="font-size: 20px; margin: 0"> 1. Slides</p>
+<p style="font-size: 20px; color: navy">(https://rizcheldayao.github.io/presentations/rescue-legacy-ui/slides/#/)</p>
+<p style="font-size: 20px; margin: 0"> 2. GraphQL</p>
 <p style="font-size: 20px; color: navy">(http://graphql.org/)</p>
-<p style="font-size: 20px;"> 2. Service Workers </p>
+<p style="font-size: 20px;"> 3. Service Workers </p>
 <p style="font-size: 20px; color: navy">(https://developers.google.com/web/fundamentals/primers/service-workers/)</p>
-<p style="font-size: 20px;"> 3. Static assets
-<p style="font-size: 20px; color: navy">(https://vuejs-templates.github.io/webpack/static.html)</p>
 <p style="font-size: 20px;"> 4. Lazy Load
 <p style="font-size: 20px; color: navy">(https://webpack.js.org/guides/lazy-loading/)
 <p style="font-size: 20px;"> 5. Webpack analyze
