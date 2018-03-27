@@ -1,0 +1,40 @@
+//- Use the presentation layout so we can keep this clean
+extends layouts/presentation
+
+//- Customize the title, meta description, and author using this block.
+block append config
+  -
+    config.title = 'How to make your first open source contribution in under 15 minutes';
+    config.description = 'Presentation about open source and how to contribute';
+  -
+
+//- Add your slides here. See templates/includes/_mixins.pug for information
+//- on how `+slide` works.
+
+block theme
+  link(rel="stylesheet" href="css/theme/white.css" id="theme")
+
+block slides
+  +slide
+    h3 How to make your first open source contribution in under 15 minutes
+    <p style="font-weight: 200; margin-top: 30px; font-size: 24px;"> Rizchel Dayao </p>
+    <p style="display: inline; font-weight: 200; font-size: 24px;"> @rizcheldayao </p> <p style="display: inline; opacity: 0.5; font-weight: 200; font-size: 24px;">||</p> <p style="display: inline; font-weight: 200; font-size: 24px;">rdayao@us.ibm.com</p>
+
+  +slide
+    <div style="display:flex; flex-direction: column">
+    h3 Nice to meet you 👋🏼
+    <div style="display:flex; justify-content:space-between">
+    <div style="padding-top: 5%; font-weight: 200;">
+    li Graduated from ASU in Computer Science
+    li Developer Advocate @IBM
+    li Previously Front End Developer
+    li Harry Potter fanatic ⚡️
+    </div>
+    <div><img style="border-radius: 50%"src="https://user-images.githubusercontent.com/18426780/36912901-71fc797e-1e05-11e8-8e83-9dd223120f2b.jpg" alt="Speaker picture" height="200"></div>
+    </div>
+    </div>
+
+    <aside class="notes">
+      p Talk about school, background
+    </aside>
+
