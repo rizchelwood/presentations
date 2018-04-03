@@ -16,15 +16,21 @@ block theme
 
 block slides
   +slide
-    h3 How to make your first open source contribution in under 15 minutes
-    <p style="font-weight: 200; margin-top: 30px; font-size: 24px;"> Rizchel Dayao </p>
-    <p style="display: inline; font-weight: 200; font-size: 24px;"> @rizcheldayao </p> <p style="display: inline; opacity: 0.5; font-weight: 200; font-size: 24px;">||</p> <p style="display: inline; font-weight: 200; font-size: 24px;">rdayao@us.ibm.com</p>
+    <div style="display: flex; justify-content: flex-start; flex-direction: column">
+    <div><h3 style="margin: 0px; opacity: 0.5; display: flex; font-size: 1em">How to make </h3></di>
+    <div><h3 style="margin: 0px; display: flex;  font-size: 1.3em"><span style="opacity: 0.5; padding-right: 10px; font-size: 1em"> your </span> first</h3>
+    <div><h3 style="margin: 0px; display: flex; opacity: 0.5; font-size: 1em">open source</h3></div>
+    <div><h3 style="margin: 0px; display: flex;">contribution <span style="opacity: 0.5; padding-left: 10px; font-size: 1em">in</span></h3></div>
+    <div><h3 style="margin: 0px; display: flex">under <span style="opacity: 0.5; padding-left: 10px; font-size: 1em">15 minutes</span></h3></div>
+    <p style="display: flex; font-size: 24px; font-weight: 200"> Rizchel Dayao
+    <p style="display: flex; font-size: 24px; font-weight: 200">@rizcheldayao || rdayao@us.ibm.com
+    </div>
 
   +slide
-    <div style="display:flex; flex-direction: column">
+    <div style="display:flex; flex-direction: column; align-items: flex-start">
     h3 Nice to meet you 👋🏼
     <div style="display:flex; justify-content:space-between">
-    <div style="padding-top: 5%; font-weight: 200;">
+    <div style="padding-top: 5%; font-weight: 200; text-align: left">
     li Graduated from ASU in Computer Science
     li Developer Advocate @IBM
     li Previously Front End Developer
@@ -39,16 +45,17 @@ block slides
     </aside>
 
   +slide
-    h4 Imagine a world where all technoly was copyrighted and required licenses to use...
+    h4 Imagine a world where all technoly was <span style="color: orange">copyrighted</span> and <span style="color: orange">required licenses</span> to use...
 
   +slide
     h3 How would it affect collaboration and innovation today?
 
   +slide
+    <div style="text-align: left">
     h3 It could cause...
     ul
-    li.fragment Proporietary software (big business) would rule the industry
-    li.fragment It could get really expensive
+    li.fragment Expensive software
+    li.fragment Big business would rule the industry
     li.fragment Lack of community and collaboration
     li.fragment Limitation of progression personally and professionally
 
@@ -60,40 +67,51 @@ block slides
     h3 But don't take my word for it...
 
   +slide
-    h3 IBM Cloud and Carbon Components
+    h3 Case study
+    p IBM Cloud and Carbon Components
 
   +slide
-    h3 IBM Cloud microservice
-    p One person who knew all of the code
-    p No peer reviews to ensure security and accountability
-    p Quality of code was bad
+    <div style="text-align: left">
+    h3 IBM Cloud microservices
+    ul
+    li.fragment One person who knew all of the code
+    li.fragment No peer reviews to ensure security and accountability
+    li.fragment Quality of code was bad
 
   +slide
-    p one right to rule them all
+    p one ring to rule them all
 
   +slide
+   <div style="text-align: left">
     h3 Carbon Components
-    p Contributions from anyone
-    p Peer reviews (pull requests)
-    p Testing
-    p Good quality of code
-    p Free for anyone to use
+    ul
+    li.fragment Contributions from anyone
+    li.fragment Peer reviews (pull requests)
+    li.fragment Testing
+    li.fragment Good quality of code
+    li.fragment Open for anyone to use
 
   +slide
     p gif opposite of lotr
 
   +slide
-    h3 IBM Cloud code has improved because of demonstration of carbon components...
+    h4 IBM Cloud code has improved because of the influence of Carbon Components...
 
   +slide
-    p Meme (lion king and dark place) here
-    h4 Thank goodness we don't live that world 🙏🏼
+    <div style="text-align: left">
+    h3 It now has...
+    li.fragment Peer review system
+    li.fragment Testing
+    li.fragment Pair programming
+    li.fragment Knowledge of the system among the whole team
 
   +slide
+    <div style="text-align: left">
     p What is open source?
     p denoting software for which the original source code is made freely available and may be redistributed and modified.
 
   +slide
+    <div style="text-align: left">
     h3 This means that anyone...
     ul
     li.fragment Can take the source code
@@ -101,6 +119,7 @@ block slides
     li.fragment Can distribute their own versions
 
   +slide
+    <div style="text-align: left">
     h3 Other benefits it provides
     ul
     li.fragment Cost benefits (flexibility and freedom but it requires maintenance and support)
@@ -109,6 +128,7 @@ block slides
     li.fragment Transparency & reliability
 
   +slide
+    <div style="text-align: left">
     h3 There's open source technology everywhere
     ul
     li.fragment Operating systems
@@ -120,12 +140,13 @@ block slides
    h3 List open source examples
 
   +slide
-   h3 How do you become part of this community and contribute to cool projects?
+   h4 How do you become part of this community and contribute to cool projects?
 
   +slide
-    h3 I will specifically be showing how you can contribute using Github.
+    h4 I will specifically be showing how you can contribute using Github.
 
   +slide
+    <div style="text-align: left">
     h3 What is Github?
     ul
     li.fragment source version control
@@ -133,10 +154,59 @@ block slides
     li.fragment place where you can pull down a repo and contribute back
 
   +slide
+    p picture of github
+
+  +slide
+    <div style="text-align: left">
     h3 Your first contribution
     ul
     li.fragment find something easy (docs, bug, etc)
-    li.fragment
+    li.fragment look for specific labels: first-timers-only, good first issue, low-hanging-fruit, beginner, easy
+    li.fragment find something you're passionate about
+    li.fragment things to consider: language, project, size
+
+  +slide
+    h3 Now you've found a bug, how do you contribute the fix back?
+
+  +slide
+    h3 01 Fork the repo
+
+  +slide
+    h3 02 Clone the repo locally
+
+  +slide
+    h3 03 Get the project running and check out branch
+
+  +slide
+    h3 04 Fix the issue
+
+  +slide
+    h3 05 Commit and push fix
+
+  +slide
+    h3 06 Create pull request comparing branch and master
+
+  +slide
+    h3 07 Tests will run and pass or fail
+
+  +slide
+    h3 08 One or more reviews are required
+
+  +slide
+    h3 09 Changes made if necessary
+
+  +slide
+    h3 10 Pull request gets merged to master
+
+  +slide
+    h3 Tada! You've made your first pull request!
+
+  +slide
+   <div style="text-align: left">
+   h3 Common pitfalls:
+   ul
+   li.fragment Not everything you find is open source (look for license)
+   li.fragment Establishing coding standards
 
 
 
