@@ -45,36 +45,64 @@ block slides
     </aside>
 
   +slide
-    h4 Imagine a world where all technoly was <span style="color: orange">copyrighted</span> and <span style="color: orange">required licenses</span> to use...
+    h4 Imagine a world where all technology was <span style="color: darkviolet">copyrighted</span> and <span style="color: darkviolet">required licenses</span> to use...
 
   +slide
-    h3 How would it affect collaboration and innovation today?
+    h4 How would it affect  <span style="color: navy">collaboration</span> and  <span style="color: navy">innovation</span> today?
 
   +slide
     <div style="text-align: left">
-    h3 It could cause...
+    p 78 percent of respondents said their companies run part or all of its operations on OSS and 66 percent said their company creates software for customers built on open source.
+    <p style="font-size: 20px"> - 2015 survey conducted by Black Duck Software and North Bridge</p>
+
+  +slide
+    <div style="text-align: left">
+    h3 Lack of open source could cause...
     ul
-    li.fragment Expensive software
-    li.fragment Big business would rule the industry
+    li.fragment Really <i>expensive</i> software
+    li.fragment Control of big business
+    li.fragment Reinvention of the wheel
     li.fragment Lack of community and collaboration
     li.fragment Limitation of progression personally and professionally
 
   +slide
-    p Gif here
-    h4 That would really suck!
+    <iframe src="https://giphy.com/embed/4cuyucPeVWbNS" width="480" height="344" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
   +slide
-    h3 But don't take my word for it...
+    h4 Let's look at an enterprise vs open source project...
 
   +slide
     h3 Case study
     p IBM Cloud and Carbon Components
+  
+  +slide
+    <div style="text-align: left">
+    h3 What is IBM Cloud? 
+    li.fragment Enterprise software
+    li.fragment No open source whatsoever
+    li.fragment Broken down into microservices
+  
+  +slide 
+    p picture of IBM Cloud here
+  
+  +slide
+    <div style="text-align: left">
+    h3 What is Carbon components? 
+    li.fragment Component library and design system
+    li.fragment Vanilla JS, React components and style guidelines
+    li.fragment All open source
+
+  +slide 
+    p picture of Carbon Components
+  
+  +slide
+    h4 How did they differ? 
 
   +slide
     <div style="text-align: left">
-    h3 IBM Cloud microservices
+    h3 IBM Cloud:
     ul
-    li.fragment One person who knew all of the code
+    li.fragment One person controlled all the code
     li.fragment No peer reviews to ensure security and accountability
     li.fragment Quality of code was bad
 
@@ -86,7 +114,7 @@ block slides
     h3 Carbon Components
     ul
     li.fragment Contributions from anyone
-    li.fragment Peer reviews (pull requests)
+    li.fragment Peer reviews on all contributions
     li.fragment Testing
     li.fragment Good quality of code
     li.fragment Open for anyone to use
@@ -95,13 +123,13 @@ block slides
     p gif opposite of lotr
 
   +slide
-    h4 IBM Cloud code has improved because of the influence of Carbon Components...
+    h4 IBM Cloud code has  <span style="color: navy">improved</span> because of the  <span style="color: navy">influence</span> of Carbon Components 💯
 
   +slide
     <div style="text-align: left">
     h3 It now has...
-    li.fragment Peer review system
-    li.fragment Testing
+    li.fragment A peer review system
+    li.fragment At least 85% testing coverage
     li.fragment Pair programming
     li.fragment Knowledge of the system among the whole team
 
@@ -117,41 +145,54 @@ block slides
     li.fragment Can take the source code
     li.fragment Can modify it
     li.fragment Can distribute their own versions
-
+  
   +slide
     <div style="text-align: left">
-    h3 Other benefits it provides
-    ul
-    li.fragment Cost benefits (flexibility and freedom but it requires maintenance and support)
-    li.fragment Community support (peer review ensure security and accountability)
-    li.fragment Quality of code
-    li.fragment Transparency & reliability
-
-  +slide
-    <div style="text-align: left">
-    h3 There's open source technology everywhere
+    h4 There's open source technology everywhere
+    <div style="display: flex; justify-content: space-between">
+    <div>
     ul
     li.fragment Operating systems
     li.fragment Language libraries
     li.fragment Artificial intelligence
-    li.fragment Etc.
+    li.fragment IoT
+    </div>
+    <div>
+    ul
+    li.fragment Linux
+    li.fragment Mozilla Firefox
+    li.fragment MongoDB
+    li.fragment Node.js
+    </div>
+    </div>  
 
   +slide
-   h3 List open source examples
+    <div style="text-align: left">
+    h3 Benefits it provides
+    ul
+    li.fragment Cost benefits 
+    li.fragment Community support 
+    li.fragment Quality of code
+    li.fragment Transparency & reliability
+
+    <aside class="notes">
+      p offers flexibility and freedom
+      p ensures security and accountability
+    </aside>
 
   +slide
-   h4 How do you become part of this community and contribute to cool projects?
+   h4 How do you become part of this <span style="color: navy">community</span> and  <span style="color: navy">contribute</span> to cool projects?
 
   +slide
-    h4 I will specifically be showing how you can contribute using Github.
+    h4 I will specifically be showing how you can contribute using Github. (Github logo)
 
   +slide
     <div style="text-align: left">
     h3 What is Github?
     ul
-    li.fragment source version control
-    li.fragment contains lots of repos
-    li.fragment place where you can pull down a repo and contribute back
+    li.fragment Code hosting platform for version control and collaboration
+    li.fragment Uses Git
+    li.fragment Users can pull down a repo and contribute back
 
   +slide
     p picture of github
@@ -160,53 +201,169 @@ block slides
     <div style="text-align: left">
     h3 Your first contribution
     ul
-    li.fragment find something easy (docs, bug, etc)
-    li.fragment look for specific labels: first-timers-only, good first issue, low-hanging-fruit, beginner, easy
-    li.fragment find something you're passionate about
-    li.fragment things to consider: language, project, size
+    li.fragment Find something easy (docs, small bugs)
+    li.fragment Look for specific labels: first-timers-only, good first issue, low-hanging-fruit, beginner, easy
+    li.fragment Find something you're passionate about
+    li.fragment Things to consider: language, project, size
+  
+  +slide
+    p picture of issue with labels
 
   +slide
-    h3 Now you've found a bug, how do you contribute the fix back?
+    h4 Now you've found a bug, how do you contribute the fix back?
 
   +slide
     h3 01 Fork the repo
+  
+  +slide
+    p picture of fork
 
   +slide
     h3 02 Clone the repo locally
+  
+  +slide
+    p picture of clone
 
   +slide
     h3 03 Get the project running and check out branch
+  
+  +slide
+    p picture of check out branch
 
   +slide
     h3 04 Fix the issue
 
   +slide
     h3 05 Commit and push fix
+  
+  +slide
+    p picture of commit
 
   +slide
     h3 06 Create pull request comparing branch and master
 
   +slide
+    p picture of PR
+
+  +slide
     h3 07 Tests will run and pass or fail
+  
+  +slide
+    p picture of test
 
   +slide
     h3 08 One or more reviews are required
+  
+  +slide
+    p picture of reviews
 
   +slide
     h3 09 Changes made if necessary
 
   +slide
     h3 10 Pull request gets merged to master
+  
+  +slide
+    p picture of merge
 
   +slide
-    h3 Tada! You've made your first pull request!
+    h3 Tada! Celebrate you've made your first contribution! 🎉
+
+  +slide
+    h3 It can be scary when first contributing
+
+  +slide
+    <div style="text-align: left">
+    h3 There are many fears we face...
+    ul
+    li.fragment I'm just a new developer
+    li.fragment Criticism for my submission
+    li.fragment What if my contribution is not accepted?
+
+  +slide
+    h3 Here are some ways to overcome those fears...
+
+  +slide
+    <div style="text-align: left">
+    h3 I'm just a new developer
+    ul
+    li.fragment You don't need to code to contribute back
+    li.fragment Everyone started somewhere
+    li.fragment Ask help from a more senior developer
+
+  +slide
+    <div style="text-align: left">
+    h3 Criticism for my submission
+    ul
+    li.fragment Ask for peer review
+    li.fragment Improve your skills by creating pull requests
+    li.fragment You will _usually_ get constructive feedback
+    li.fragment It will make you a better developer
+
+  +slide
+    <div style="text-align: left">
+    h3 What if my contribution is not accepted?
+    ul
+    li.fragment This could be because of several things
+    li.fragment Overwhelmed maintainers or resolved issues
+    li.fragment Look for repos with active maintainers that merge PRs quite often
+    li.fragment The best thing is to move on and contribute to something
 
   +slide
    <div style="text-align: left">
-   h3 Common pitfalls:
+   h3 General common pitfalls:
    ul
-   li.fragment Not everything you find is open source (look for license)
    li.fragment Establishing coding standards
+   li.fragment Peer reviews
+   li.fragment Maintenance
+   li.fragment Documentation
+
+  +slide
+   <div style="text-align: left">
+   h3 Contributor common pitfalls:
+   ul
+   li.fragment Open source licensing
+   li.fragment Contributing for the sake of contributing
+   li.fragment Nothing is perfect
+   li.fragment Document and comment your code
+
+  +slide
+    p 1. Search for specific labels
+    p 2. Find easy fixes
+    p 3. Push up your changes in a PR
+
+  +slide
+    <div style="text-align: center">
+      h3 Questions?
+      <div><img style="border-radius: 50%" src="https://user-images.githubusercontent.com/18426780/36912901-71fc797e-1e05-11e8-8e83-9dd223120f2b.jpg" alt="Speaker picture" height="200"></div>
+      h3 Thank you!
+      <div style="display: flex">
+        <div style="display: flex; justify-content: center; margin-right: 1rem; margin-left: 6rem">
+          <img style="border: none; margin: 0; box-shadow: none; background: transparent;%"  src='https://user-images.githubusercontent.com/18426780/36912894-711fcfb0-1e05-11e8-9a75-82940b50c0e6.png' />
+          <p>@rizcheldayao</p>
+        </div>
+        <div style="display: flex; justify-content: center;">
+          <img style="border: none; margin: 0; box-shadow: none; background: transparent; padding: 1rem" src='https://user-images.githubusercontent.com/18426780/36912895-7135222a-1e05-11e8-8901-eb80f7deb855.png' />
+          <p>rdayao@us.ibm.com</p>
+        </div>
+      </div>
+    </div>
+
+  +slide
+    <div style="text-align: left">
+    h3 Resources
+    <p style="font-size: 20px; margin: 0"> 1. Github</p>
+    <p style="font-size: 20px; color: navy">(https://github.com/)</p>
+    <p style="font-size: 20px; margin: 0"> 2. Beginner Repo</p>
+    <p style="font-size: 20px; color: navy">(https://github.com/MunGell/awesome-for-beginners)</p>
+    <p style="font-size: 20px;"> 3. Up for Grabs </p>
+    <p style="font-size: 20px; color: navy">(http://up-for-grabs.net/#/)</p>
+    <p style="font-size: 20px;"> 4. Issue Hub
+    <p style="font-size: 20px; color: navy">(http://issuehub.io/)
+    <p style="font-size: 20px;"> 5. Carbon Components
+    <p style="font-size: 20px; color: navy">(http://carbondesignsystem.com/)</p>
+    <p style="font-size: 20px;"> 6. Overcoming contribution fears
+    <p style="font-size: 20px; color: navy">(https://medium.freecodecamp.org/how-to-get-over-your-fear-of-contributing-to-open-source-6160e4cdf0d3)</p>
 
 
 
