@@ -7,11 +7,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   color: #fff;
   margin: 0px; }
 
-.slide-background:nth-child(28) {
-  background: url(../img/github.png) no-repeat center center fixed;
-}
-
-.slide-background:nth-child(26) {
+.slide-background:nth-child(3), .slide-background:nth-child(7) {
   background: #fff;
 }
 
