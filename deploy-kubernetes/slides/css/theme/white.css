@@ -7,8 +7,20 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   color: #fff;
   margin: 0px; }
 
-.slide-background:nth-child(3) {
+.slide-background:nth-child(3), .slide-background:nth-child(4), .slide-background:nth-child(5), .slide-background:nth-child(7), .slide-background:nth-child(9), .slide-background:nth-child(21) {
   background: #fff;
+}
+
+.slide-background:nth-child(15) {
+  background: #f7f7f7;
+}
+
+.slide-background:nth-child(24) {
+  background: #181818;
+}
+
+.slide-background:nth-child(26) , .slide-background:nth-child(28) {
+  background: #000;
 }
 
 /*********************************************

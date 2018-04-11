@@ -24,7 +24,7 @@
 <div><h3 style="margin: 0px; display: flex; font-size: 1em"><span style="opacity: 0.5; padding-right: 10px; font-size: 1em">Why</span> Kubernetes: </h3></di>
 <div><h3 style="margin: 0px; display: flex; opacity: 0.5; font-size: 1em">Finding the</h3>
 <div><h3 style="margin: 0px; display: flex; font-size: 1em">best <span style="opacity: 0.5; padding-left: 10px; font-size: 1em">solution</span></h3></div>
-<div><h3 style="margin: 0px; display: flex;"> <span style="opacity: 0.5; padding-right: 10px; font-size: 1em">for</span> you</h3></div>
+<div><h3 style="margin: 0px; display: flex;  font-size: 1em"> <span style="opacity: 0.5; padding-right: 10px;">for</span> you</h3></div>
 <p style="display: flex; font-size: 24px; font-weight: 200"> Rizchel Dayao
 <p style="display: flex; font-size: 24px; font-weight: 200">@rizcheldayao || rdayao@us.ibm.com
 </div>
@@ -48,38 +48,39 @@
         </section>
         <section><img style="border:none;" src="../img/not-my-problem.jpeg" alt="Not problem meme" height="500">
         </section>
-        <section>
-          <h3>I wanted to learn how the deployment process worked 🚀</h3>
+        <section><h4> I switched teams... <span class="fragment" data-fragment-index="1">and I wanted to  <span style="color: navy">learn</span> how the  <span style="color: navy">deployment</span> process worked 🚀</span></h4>
         </section>
-        <section>
-          <h3>So I started researching the different ways I could deploy an app</h3>
+        <section><iframe src="https://giphy.com/embed/VGG8UY1nEl66Y" width="480" height="392" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
         </section>
-        <section>
-          <h3>But I was overwhelmed with all of the deployment choices 😩</h3>
+        <section><h4> I started researching all the differents ways to deploy an app... <span class="fragment" data-fragment-index="1">But I was <span style="color: orange">overwhelmed</span> with all of the deployment choices 😩</span></h4>
         </section>
         <section><img style="border:none; height: 600px" src="../img/overwhelmed.png" alt="Emoji thinking" height="500">
         </section>
         <section>
-          <h3>Kubernetes was very popular and it's what we use for IBM Cloud</h3>
+          <h3>Ultimately, I decided to look into <span style="color: navy">Kubernetes</span></h3>
         </section>
-        <section>
-          <h3>So I decided to check it out</h3>
+        <section><div style="text-align: left">
+          <h3>Reasons:</h3>
+          <li class="fragment">Learn about containers and Docker</li>
+          <li class="fragment">Community support & documentation</li>
+          <li class="fragment">Automation (self healing, rollouts/rollbacks)</li>
+          <li class="fragment">Scalability</li>
         </section>
         <section><div style="text-align: left">
           <p>What is Kubernetes?</p>
-          <p>Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications.</p>
-          <p>- https://kubernetes.io/</p>
+          <p>Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications.</p><p style="font-size: 20px">  - https://kubernetes.io/
         </section>
         <section>
-          <h3>But first, let's take a step back and I'll explain containers...</h3>
+          <h3>First, let's look into  <span style="color: navy">containers</span>...</h3>
         </section>
         <section><div style="text-align: left">
           <h3>What are containers?</h3>
           <li class="fragment">Made up of container images</li>
-          <li class="fragment">Consists of executable package of an application (libraries, dependencies, etc)</li>
+          <li class="fragment">Consists of an executable package of an application (libraries, dependencies, etc)</li>
           <li class="fragment">Virtualize at the operating system level, with multiple containers running atop the OS kernel directly</li>
         </section>
         <section><img style="border:none;" src="../img/containers.png" alt="Container architecture" height="500">
+<p style="color: #000; font-weight: 200"> https://cloud.google.com/containers/
         </section>
         <section><div style="text-align: left">
           <h3>Benefits:</h3>
@@ -89,45 +90,62 @@
           <li class="fragment">Ideal for microsservice architectures</li>
         </section>
         <section>
-          <h3>How do we package our application to a container?</h3>
+          <h3>How do we  <span style="color: navy">package</span> our  <span style="color: navy">application</span> to a  <span style="color: navy">container</span>?</h3>
         </section>
         <section><div style="text-align: left">
-          <p>That's where Docker comes into play...</p>
-          <p>Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.</p>
+          <h3>That's where Docker comes into play...</h3><p class="fragment" data-fragment-index="1"> Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
+<p class="fragment" data-fragment-index="1" style="font-size: 20px"> - https://www.docker.com/
         </section>
         <section>
-          <h3>I'll be showing you how to containerize a React application...</h3>
-          <p>https://github.com/IBM/deploy-react-kubernetes</p>
+          <h4>I'll be showing you how to  <span style="color: navy">containerize</span> a  <span style="color: navy">React</span> application...</h4>
         </section>
-        <section>
-          <h3>Application:</h3>
+        <section><div style="text-align: left">
+          <h3>Repo:</h3>
+          <li class="fragment">https://github.com/IBM/deploy-react-kubernetes</li>
           <li class="fragment">Foundation is on Node.js</li>
           <li class="fragment">Uses the OMDb API</li>
           <li class="fragment">One application</li>
         </section>
-        <section>
-          <p>pictures of application</p>
+        <section><div style="text-align: left">
+<img style="border:none;" src="https://camo.githubusercontent.com/69187f55f40866c69d68be745a74abe9f707f3f0/68747470733a2f2f6d656469612e6769746875622e69626d2e636f6d2f757365722f313635302f66696c65732f62306339383864632d333161612d313165382d383637622d393535386435363130636437" alt="Container architecture" height="500"/>
         </section>
-        <section>
-          <p>picture of flow</p>
+        <section><div style="display: flex;">
+<h4 style="font-size: 10em; position: relative; opacity: 0.5">01</h4>
+<h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Create <span style="color: navy">Dockerfile</span></h2>
+</div>
         </section>
-        <section>
-          <p>1. Create Dockerfile</p>
+        <section><div style="text-align: left">
+          <h3>Dockerfile:</h3>
+          <li class="fragment">Used by Docker to build an image</li>
+          <li class="fragment">Document that contains the commands to build an image</li>
+          <li class="fragment">Examples: base image, exposed port, etc.</li>
         </section>
-        <section>
-          <p>picture of Dockerfile</p>
+        <section><section data-background-image="./img/Dockerfile.png" data-background-size="contain" data-background-position="left">
+</section>
         </section>
-        <section>
-          <p>2. Build Docker image</p>
+        <section><div style="display: flex;">
+<h4 style="font-size: 10em; position: relative; opacity: 0.5">02</h4>
+<h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);"> <span style="color: navy">Build</span> Docker image</h2>
+</div>
         </section>
-        <section>
-          <p>picture of building</p>
+        <section><section data-background-image="./img/build.png" data-background-size="contain" data-background-position="left">
+</section>
         </section>
-        <section>
-          <p>3. Run image in your container</p>
+        <section><div style="display: flex;">
+<h4 style="font-size: 10em; position: relative; opacity: 0.5">02</h4>
+<h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);"><span style="color: navy">Run</span> image</h2>
+</div>
         </section>
-        <section>
-          <p>picture of running image</p>
+        <section><section data-background-image="./img/run-docker.png" data-background-size="contain" data-background-position="left">
+</section>
+        </section>
+        <section><div style="display: flex;">
+<h4 style="font-size: 10em; position: relative; opacity: 0.5">03</h4>
+<h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);"><span style="color: navy">Access</span> it locally</h2>
+</div>
+        </section>
+        <section><section data-background-image="./img/local.png">
+</section>
         </section>
         <section>
           <h3>Now let's deploy our containerized application</h3>
@@ -135,7 +153,7 @@
         <section>
           <h3>We'll be using IBM Cloud for the deployment process</h3>
         </section>
-        <section>
+        <section><div style="text-align: left">
           <h3>Some prerequisites needed:</h3>
           <li class="fragment">IBM Cloud Account</li>
           <li class="fragment">Install IBM Cloud CLI</li>
