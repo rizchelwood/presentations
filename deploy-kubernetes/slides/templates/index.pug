@@ -47,10 +47,10 @@ block slides
     <img style="border:none; width: 700px; height: 700px; margin: 0" src="../img/lifecycle.png" alt="Software Lifecycle" height="500">
 
   +slide
-    p Gif I got this
+    <img style="border:none;" src="../img/gatsby.jpg" alt="Gatsby meme" height="500">
 
   +slide
-    p Gif not problem
+    <img style="border:none;" src="../img/not-my-problem.jpeg" alt="Not problem meme" height="500">
 
   +slide
    h3 I wanted to learn how the deployment process worked 🚀
@@ -59,7 +59,7 @@ block slides
     h3 So I started researching the different ways I could deploy an app
 
   +slide
-    h3 But I was overwhelmed with all of the deployment choices...
+    h3 But I was overwhelmed with all of the deployment choices 😩
 
   +slide
     <img style="border:none; height: 600px" src="../img/overwhelmed.png" alt="Emoji thinking" height="500">
@@ -82,18 +82,20 @@ block slides
   +slide
     <div style="text-align: left">
     h3 What are containers?
-    li.fragment containers allow you to package your application together with libraries and other dependencies, providing isolated environments for running your software services
-    li.fragment containers virtualize at the operating system level, with multiple containers running atop the OS kernel directly
+    li.fragment Made up of container images
+    li.fragment Consists of executable package of an application (libraries, dependencies, etc)
+    li.fragment Virtualize at the operating system level, with multiple containers running atop the OS kernel directly
 
   +slide
-    p picture of container architecture
+    <img style="border:none;" src="../img/containers.png" alt="Container architecture" height="500">
 
   +slide
     <div style="text-align: left">
     h3 Benefits:
-    li.fragment lightweight
-    li.fragment ability to run on any system
-    li.fragment ideal for microservices architecture
+    li.fragment Lightweight & performant
+    li.fragment Platform independent
+    li.fragment Isolation & resource sharing
+    li.fragment Ideal for microsservice architectures
 
   +slide
     h3 How do we package our application to a container?
@@ -104,13 +106,40 @@ block slides
     p Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
 
   +slide
+    h3 I'll be showing you how to containerize a React application...
+    p https://github.com/IBM/deploy-react-kubernetes
+
+  +slide
+    h3 Application:
+    li.fragment Foundation is on Node.js
+    li.fragment Uses the OMDb API
+    li.fragment One application
+
+  +slide
+    p pictures of application
+
+  +slide
+    p picture of flow
+
+  +slide
     p 1. Create Dockerfile
+
+  +slide
+    p picture of Dockerfile
 
   +slide
     p 2. Build Docker image
 
   +slide
-    p 3. Run imgae in your container
+    p picture of building
+
+  +slide
+    p 3. Run image in your container
+
+  +slide
+    p picture of running image
+
+
 
   +slide
     h3 Now let's deploy our containerized application
