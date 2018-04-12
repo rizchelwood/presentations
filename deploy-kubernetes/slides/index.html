@@ -57,30 +57,31 @@
         <section><img style="border:none; height: 600px" src="../img/overwhelmed.png" alt="Emoji thinking" height="500">
         </section>
         <section>
-          <h3>Ultimately, I decided to look into <span style="color: navy">Kubernetes</span></h3>
+          <h3>Ultimately, I decided to use <span style="color: navy">Kubernetes</span></h3>
         </section>
         <section><div style="text-align: left">
           <h3>Reasons:</h3>
           <li class="fragment">Learn about containers and Docker</li>
           <li class="fragment">Community support & documentation</li>
-          <li class="fragment">Automation (self healing, rollouts/rollbacks)</li>
+          <li class="fragment">Automation</li>
           <li class="fragment">Scalability</li>
         </section>
         <section><div style="text-align: left">
           <p>What is Kubernetes?</p>
-          <p>Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications.</p><p style="font-size: 20px">  - https://kubernetes.io/
+          <p>Kubernetes is an open-source system for <span style="color: navy">automating</span> deployment, <span style="color: navy">scaling</span>, and <span style="color: navy">management</span> of containerized applications.</p><p style="font-size: 20px">  - https://kubernetes.io/
         </section>
         <section>
-          <h3>First, let's look into  <span style="color: navy">containers</span>...</h3>
+          <h3>But first, let's look into  <span style="color: navy">containers</span></h3>
         </section>
         <section><div style="text-align: left">
           <h3>What are containers?</h3>
           <li class="fragment">Made up of container images</li>
           <li class="fragment">Consists of an executable package of an application (libraries, dependencies, etc)</li>
-          <li class="fragment">Virtualize at the operating system level, with multiple containers running atop the OS kernel directly</li>
+          <li class="fragment">Operating system level virtualization</li>
+          <li class="fragment">Multiple containers can run on top of OS kernel directly</li>
         </section>
         <section><img style="border:none;" src="../img/containers.png" alt="Container architecture" height="500">
-<p style="color: #000; font-weight: 200"> https://cloud.google.com/containers/
+<p style="color: #000; font-weight: 200; font-size: 20px"> https://cloud.google.com/containers/
         </section>
         <section><div style="text-align: left">
           <h3>Benefits:</h3>
@@ -93,11 +94,11 @@
           <h3>How do we  <span style="color: navy">package</span> our  <span style="color: navy">application</span> to a  <span style="color: navy">container</span>?</h3>
         </section>
         <section><div style="text-align: left">
-          <h3>That's where Docker comes into play...</h3><p class="fragment" data-fragment-index="1"> Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
+          <p>That's where Docker comes into play...</p><p class="fragment" data-fragment-index="1"> Docker is an open platform for developers and sysadmins to <span style="color: navy">build, ship, and run</span> distributed applications, whether on laptops, data center VMs, or the cloud.
 <p class="fragment" data-fragment-index="1" style="font-size: 20px"> - https://www.docker.com/
         </section>
         <section>
-          <h4>I'll be showing you how to  <span style="color: navy">containerize</span> a  <span style="color: navy">React</span> application...</h4>
+          <h3>Let's  <span style="color: navy">containerize</span> a  <span style="color: navy">React</span> application!</h3>
         </section>
         <section><div style="text-align: left">
           <h3>Repo:</h3>
@@ -128,67 +129,145 @@
 <h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);"> <span style="color: navy">Build</span> Docker image</h2>
 </div>
         </section>
-        <section><section data-background-image="./img/build.png" data-background-size="contain" data-background-position="left">
-</section>
+        <section><div style="text-align: left; color: #fff" >
+          <p>$ export docker_username=<span style="color: #FF69B4">[DOCKER_USERNAME]<span></p>
+          <p>$ docker build  -t $docker_username/app-image .</p><p class="fragment" data-fragment-index="1"> Sending build context to Docker daemon  856.6kB
+<p class="fragment" data-fragment-index="1">Step 1/8 : FROM node:9.4
+<p class="fragment" data-fragment-index="2">...
+<p class="fragment" data-fragment-index="3">Successfully tagged <span style="color: #FF69B4">[DOCKER_USERNAME]</span>/app-image:latest
         </section>
         <section><div style="display: flex;">
 <h4 style="font-size: 10em; position: relative; opacity: 0.5">02</h4>
 <h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);"><span style="color: navy">Run</span> image</h2>
 </div>
         </section>
-        <section><section data-background-image="./img/run-docker.png" data-background-size="contain" data-background-position="left">
-</section>
+        <section><div style="text-align: left; color: #fff" >
+          <p>$ docker run -p 3000:3000 -d $docker_username/app-image</p>
+          <p class="fragment">1540b75702a387a2e1fed754a89f</p>
         </section>
         <section><div style="display: flex;">
 <h4 style="font-size: 10em; position: relative; opacity: 0.5">03</h4>
 <h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);"><span style="color: navy">Access</span> it locally</h2>
 </div>
         </section>
-        <section><section data-background-image="./img/local.png">
-</section>
-        </section>
         <section>
-          <h3>Now let's deploy our containerized application</h3>
+          <h3>Now let's <span style="color: navy">deploy</span> our containerized application using <span style="color: navy">IBM Cloud</span></h3>
         </section>
-        <section>
-          <h3>We'll be using IBM Cloud for the deployment process</h3>
+        <section><div style="text-align: left">
+          <h3>Kubernetes definitions:</h3>
+          <li class="fragment"> Cluster: Consist of a cluster master and multiple worker machines</li>
+          <li class="fragment">Node: Worker machine that run applications managed by the cluster master</li>
+          <li class="fragment">Pod: Contains a group of one or more containers with shared resources</li>
+        </section>
+        <section><img style="border:none; height: 600px" src="../img/kubernetes-architecture.jpg" alt="Kubernetes architecture" height="500">
+<p style="color:#000; font-size: 20px"> http://nishadikirielle.blogspot.se/2016/02/kubernetes-at-first-glance.html
         </section>
         <section><div style="text-align: left">
           <h3>Some prerequisites needed:</h3>
           <li class="fragment">IBM Cloud Account</li>
           <li class="fragment">Install IBM Cloud CLI</li>
-          <li class="fragment">Install Container Registry plugin</li>
-          <li class="fragment">Create Kubernetes cluster</li>
+          <li class="fragment">Install the IBM Cloud Container Registry CLI</li>
+        </section>
+        <section><div style="display: flex;">
+<h4 style="font-size: 10em; position: relative; opacity: 0.5">01</h4>
+<h3 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Create <span style="color: navy">Kubernetes</span> cluster</h3>
+</div>
+        </section>
+        <section><section data-background-image="./img/kubernetes-search.png" data-background-size="contain">
+</section>
+        </section>
+        <section><section data-background-image="./img/kubernetes-create.png" data-background-size="contain">
+</section>
+        </section>
+        <section><section data-background-image="./img/kubernetes-dashboard.png" data-background-size="contain">
+</section>
+        </section>
+        <section><div style="display: flex;">
+<h4 style="font-size: 10em; position: relative; opacity: 0.5">02</h4>
+<h3 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Create <span style="color: navy">namespace</span></h3>
+</div>
+        </section>
+        <section><div style="text-align: left; color: #fff" >
+          <p>$ bx cr namespace-add <span style="color: #FF69B4">[your_namespace]</span></p>
+          <p class="fragment">Adding namespace '<span style="color: #00f9ff">rizcheldayao</span>'...</p>
+          <p class="fragment">Successfully added namespace '<span style="color: #00f9ff">rizcheldayao</span>'</p>
+          <p class="fragment"><span style="color: #39ff14">OK</span></p>
+        </section>
+        <section><div style="display: flex;">
+<h4 style="font-size: 10em; position: relative; opacity: 0.5">03</h4>
+<h3 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Build the image in <span style="color: navy">IBM Container Registry</span></h3>
+</div>
+        </section>
+        <section><div style="text-align: left; color: #fff" >
+          <p>$ bx cr build -t registry.<span style="color: #FF69B4">[ibm_cloud_region]</span>.bluemix.net/<span style="color: #FF69B4">[your_namespace]</span>/deploy-react-kubernetes .</p><p class="fragment" data-fragment-index="1"> Sending build context to Docker daemon  861.7kB
+<p class="fragment" data-fragment-index="1">Step 1/8 : FROM node:9.4
+<p class="fragment" data-fragment-index="2">...
+<p class="fragment" data-fragment-index="3"><span style="color: #39ff14">OK</span>
+        </section>
+        <section><div style="display: flex;">
+<h4 style="font-size: 10em; position: relative; opacity: 0.5">04</h4>
+<h3 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Run the <span style="color: navy">container</span> on a <span style="color: navy">cluster</span></h3>
+</div>
+        </section>
+        <section><div style="text-align: left; color: #fff" >
+          <p>$ kubectl run app-deployment --image=registry.<span style="color: #FF69B4">[ibm_cloud_region]</span>.bluemix.net/<span style="color: #FF69B4">[your_namespace]</span>/deploy-react-kubernetes</p>
+          <p class="fragment">deployment "app-deployment" created</p>
+        </section>
+        <section><div style="display: flex;">
+<h4 style="font-size: 10em; position: relative; opacity: 0.5">05</h4>
+<h3 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Create a <span style="color: navy">Service</span> that exposes the <span style="color: navy">deployment</span></h3>
+</div>
+        </section>
+        <section><div style="text-align: left; color: #fff" >
+          <p>$ kubectl expose deployment/app-deployment --type=NodePort --name=app-service --port=3000</p>
+          <p class="fragment">service "app-service" exposed</p>
+        </section>
+        <section><div style="display: flex;">
+<h4 style="font-size: 10em; position: relative; opacity: 0.5">05</h4>
+<h3 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Access application</h3>
+</div>
         </section>
         <section>
-          <p>Create Kubernetes cluster with images</p>
+          <h3>Obtain <span style="color: navy">public IP Address</span> of cluster</h3>
+        </section>
+        <section><div style="color: #fff" >
+          <p>$ bx cs workers <span style="color: #FF69B4">[CLUSTER_NAME]</span></p>
         </section>
         <section>
-          <p>1. Build image in IBM Cloud Container Registry Service</p>
+          <h3>Obtain the <span style="color: navy">NodePort</span> of the service</h3>
         </section>
-        <section>
-          <p>2. Run deployment</p>
+        <section><div style="color: #fff" >
+          <p>$ kubectl describe service app-service</p>
         </section>
-        <section>
-          <p>3. Expose deployment</p>
+        <section><section data-background-image="./img/local.png" data-background-size="contain">
+</section>
         </section>
-        <section>
-          <p>4. Access the application</p>
+        <section><div style="text-align: left">
+          <h3>Pros:</h3>
+          <li class="fragment">Automated Scheduling:</li>
+          <li class="fragment">Self Healing</li>
+          <li class="fragment">Automated rollouts & rollbacks</li>
+          <li class="fragment">Horizontal scaling</li>
+          <li class="fragment">Service discovery & load balancing</li>
         </section>
-        <section>
-          <p>Pros and Cons of Kubernetes</p>
+        <section><div style="text-align: left">
+          <h3>Cons:</h3>
+          <li class="fragment">Steep learning curve</li>
+          <li class="fragment">Unneccessary overhead for small, simple apps</li>
+          <li class="fragment">Set up</li>
         </section>
-        <section>
-          <p>when should you use kubernetes</p>
+        <section><div style="text-align: left">
+          <h3>Common pitfalls:</h3>
+          <li class="fragment">Configuration and set up</li>
+          <li class="fragment">idk</li>
+          <li class="fragment">idk</li>
         </section>
-        <section>
-          <p>common pitfalls</p>
-        </section>
-        <section>
+        <section><div style="text-align: left">
           <h3>Next steps:</h3>
+          <li class="fragment">Automate deployments with</li>
           <li class="fragment">Integrate into a CI tool like Travis</li>
           <li class="fragment">Multiple containers</li>
-          <li class="fragment">Scalability testing, etc</li>
+          <li class="fragment">Testing with advanced features</li>
         </section>
         <section><div style="text-align: center">
           <h3>Thank you!</h3><div><img style="border-radius: 50%" src="https://user-images.githubusercontent.com/18426780/36912901-71fc797e-1e05-11e8-8e83-9dd223120f2b.jpg" alt="Speaker picture" height="200"></div>
@@ -205,18 +284,18 @@
 </div>
         </section>
         <section><div style="text-align: left">
-          <h3>Resources</h3><p style="font-size: 20px; margin: 0"> 1. GitHub</p>
-<p style="font-size: 20px; color: navy">(https://github.com/)</p>
-<p style="font-size: 20px; margin: 0"> 2. Beginner Repo</p>
-<p style="font-size: 20px; color: navy">(https://github.com/MunGell/awesome-for-beginners)</p>
-<p style="font-size: 20px;"> 3. Up for Grabs </p>
-<p style="font-size: 20px; color: navy">(http://up-for-grabs.net/#/)</p>
-<p style="font-size: 20px;"> 4. Issue Hub
-<p style="font-size: 20px; color: navy">(http://issuehub.io/)
-<p style="font-size: 20px;"> 5. Carbon Components
-<p style="font-size: 20px; color: navy">(http://carbondesignsystem.com/)</p>
-<p style="font-size: 20px;"> 6. Overcoming contribution fears
-<p style="font-size: 20px; color: navy">(https://medium.freecodecamp.org/how-to-get-over-your-fear-of-contributing-to-open-source-6160e4cdf0d3)</p>
+          <h3>Resources</h3><p style="font-size: 20px; margin: 0"> 1. Github Repo</p>
+<p style="font-size: 20px; color: navy">(https://github.com/IBM/deploy-react-kubernetes)</p>
+<p style="font-size: 20px; margin: 0"> 2. Docker</p>
+<p style="font-size: 20px; color: navy">(http://docker.com/)</p>
+<p style="font-size: 20px;"> 3. Kubernetes </p>
+<p style="font-size: 20px; color: navy">(https://kubernetes.io/)</p>
+<p style="font-size: 20px;"> 4. Blog post
+<p style="font-size: 20px; color: navy">(https://medium.com/@rizchel.a.dayao/my-journey-to-deploying-my-first-react-application-with-kubernetes-95e6d25f434d
+<p style="font-size: 20px;"> 5. Demo
+<p style="font-size: 20px; color: navy">(https://youtu.be/1Lq9vW3LuH8)</p>
+<p style="font-size: 20px;"> 6. IBM Cloud
+<p style="font-size: 20px; color: navy">(https://console.bluemix.net)</p>
         </section>
       </div>
     </div>
