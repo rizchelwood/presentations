@@ -218,6 +218,11 @@ block slides
     </section>
 
   +slide
+    <div style="text-align: left; color: #fff" >
+    p $ bx cs cluster-config <span style="color: #FF69B4">[CLUSTER_NAME]</span>
+    p.fragment export KUBECONFIG= /Users/ibm/.bluemix/plugins/container-service/clusters/rizchel-cluster/kube-config-dal12-rizchel-cluster.yml
+
+  +slide
     <div style="display: flex;">
     <h4 style="font-size: 10em; position: relative; opacity: 0.5">02</h4>
     <h3 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Create <span style="color: navy">namespace</span></h3>
@@ -225,9 +230,9 @@ block slides
 
   +slide
     <div style="text-align: left; color: #fff" >
-    p $ bx cr namespace-add <span style="color: #FF69B4">[your_namespace]</span>
-    p.fragment Adding namespace '<span style="color: #00f9ff">rizcheldayao</span>'...
-    p.fragment Successfully added namespace '<span style="color: #00f9ff">rizcheldayao</span>'
+    p $ bx cr namespace-add <span style="color: #FF69B4">[NAMESPACE]</span>
+    p.fragment Adding namespace '<span style="color: #00f9ff">rdayao</span>'...
+    p.fragment Successfully added namespace '<span style="color: #00f9ff">rdayao</span>'
     p.fragment <span style="color: #39ff14">OK</span>
 
 
@@ -239,7 +244,7 @@ block slides
 
   +slide
     <div style="text-align: left; color: #fff" >
-    p $ bx cr build -t registry.<span style="color: #FF69B4">[ibm_cloud_region]</span>.bluemix.net/<span style="color: #FF69B4">[your_namespace]</span>/deploy-react-kubernetes .
+    p $ bx cr build -t registry.<span style="color: #FF69B4">[IBM_CLOUD_REGION]</span>.bluemix.net/<span style="color: #FF69B4">[NAMESPACE]</span>/deploy-react-kubernetes .
     <p class="fragment" data-fragment-index="1"> Sending build context to Docker daemon  861.7kB
     <p class="fragment" data-fragment-index="1">Step 1/8 : FROM node:9.4
     <p class="fragment" data-fragment-index="2">...
@@ -253,7 +258,7 @@ block slides
 
   +slide
     <div style="text-align: left; color: #fff" >
-    p $ kubectl run app-deployment --image=registry.<span style="color: #FF69B4">[ibm_cloud_region]</span>.bluemix.net/<span style="color: #FF69B4">[your_namespace]</span>/deploy-react-kubernetes
+    p $ kubectl run app-deployment --image=registry.<span style="color: #FF69B4">[IBM_CLOUD_REGION]</span>.bluemix.net/<span style="color: #FF69B4">[NAMESPACE]</span>/deploy-react-kubernetes
     p.fragment deployment "app-deployment" created
 
   +slide
@@ -270,7 +275,7 @@ block slides
   +slide
     <div style="display: flex;">
     <h4 style="font-size: 10em; position: relative; opacity: 0.5">05</h4>
-    <h3 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Access application</h3>
+    <h3 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);"><span style="color: navy">Access</span> application</h3>
     </div>
 
   +slide
@@ -311,8 +316,8 @@ block slides
    <div style="text-align: left">
    h3 Common pitfalls:
    li.fragment Configuration and set up
-   li.fragment idk
-   li.fragment idk
+   li.fragment Misusing containers
+   li.fragment Moving from beginner to advanced
 
   +slide
    <div style="text-align: left">
@@ -327,16 +332,8 @@ block slides
       h3 Thank you!
       <div><img style="border-radius: 50%" src="https://user-images.githubusercontent.com/18426780/36912901-71fc797e-1e05-11e8-8e83-9dd223120f2b.jpg" alt="Speaker picture" height="200"></div>
       h3 Rizchel Dayao
-      <div style="display: flex">
-        <div style="display: flex; justify-content: center; margin-right: 1rem; margin-left: 6rem">
-          <img style="border: none; margin: 0; box-shadow: none; background: transparent;%"  src='https://user-images.githubusercontent.com/18426780/36912894-711fcfb0-1e05-11e8-9a75-82940b50c0e6.png' />
-          <p>@rizcheldayao</p>
-        </div>
-        <div style="display: flex; justify-content: center;">
-          <img style="border: none; margin: 0; box-shadow: none; background: transparent; padding: 1rem" src='https://user-images.githubusercontent.com/18426780/36912895-7135222a-1e05-11e8-8901-eb80f7deb855.png' />
-          <p>rdayao@us.ibm.com</p>
-        </div>
-      </div>
+      p Follow me on Twitter: @rizcheldayao
+      p Slides available: https://goo.gl/cCdmyd
     </div>
 
 

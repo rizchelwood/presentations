@@ -20,8 +20,9 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   background: #181818;
 }
 
-.slide-background:nth-child(26), .slide-background:nth-child(28), .slide-background:nth-child(39), .slide-background:nth-child(41),
-.slide-background:nth-child(43), .slide-background:nth-child(45), .slide-background:nth-child(48), .slide-background:nth-child(50)  {
+.slide-background:nth-child(26), .slide-background:nth-child(28), .slide-background:nth-child(40), .slide-background:nth-child(42),
+.slide-background:nth-child(44), .slide-background:nth-child(46), .slide-background:nth-child(49), .slide-background:nth-child(51),
+.slide-background:nth-child(38)  {
   background: #000;
 }
 
