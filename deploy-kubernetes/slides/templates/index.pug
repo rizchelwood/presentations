@@ -17,10 +17,10 @@ block theme
 block slides
   +slide
     <div style="display: flex; justify-content: flex-start; flex-direction: column">
-    <div><h3 style="margin: 0px; display: flex; font-size: 1em"><span style="opacity: 0.5; padding-right: 10px; font-size: 1em">Why</span> Kubernetes: </h3></di>
-    <div><h3 style="margin: 0px; display: flex; opacity: 0.5; font-size: 1em">Finding the</h3>
-    <div><h3 style="margin: 0px; display: flex; font-size: 1em">best <span style="opacity: 0.5; padding-left: 10px; font-size: 1em">solution</span></h3></div>
-    <div><h3 style="margin: 0px; display: flex;  font-size: 1em"> <span style="opacity: 0.5; padding-right: 10px;">for</span> you</h3></div>
+    <div><h3 style="margin: 0px; display: flex; font-size: 1.3em"><span style="opacity: 0.5; padding-right: 10px; font-size: 1em">Why</span> Kubernetes: </h3></di>
+    <div><h3 style="margin: 0px; display: flex; opacity: 0.5; font-size: 1.3em">Finding the</h3>
+    <div><h3 style="margin: 0px; display: flex; font-size: 1.3em">best <span style="opacity: 0.5; padding-left: 10px; font-size: 1em">solution</span></h3></div>
+    <div><h3 style="margin: 0px; display: flex;  font-size: 1.3em"> <span style="opacity: 0.5; padding-right: 10px;">for</span> you</h3></div>
     <p style="display: flex; font-size: 24px; font-weight: 200"> Rizchel Dayao
     <p style="display: flex; font-size: 24px; font-weight: 200">@rizcheldayao || rdayao@us.ibm.com
     </div>
@@ -153,6 +153,7 @@ block slides
 
   +slide
     <div style="text-align: left; color: #fff" >
+    p ## Build in the directory the Dockerfile exists
     p $ export docker_username=<span style="color: #FF69B4">[DOCKER_USERNAME]<span>
     p $ docker build  -t $docker_username/app-image .
     <p class="fragment" data-fragment-index="1"> Sending build context to Docker daemon  856.6kB
@@ -160,6 +161,10 @@ block slides
     <p class="fragment" data-fragment-index="2">...
     <p class="fragment" data-fragment-index="3">Successfully tagged <span style="color: #FF69B4">[DOCKER_USERNAME]</span>/app-image:latest
 
+    <aside class="notes">
+      p . is path is .
+      p -f: specify location of Dockerfile
+    </aside>
 
   +slide
     <div style="display: flex;">
@@ -171,6 +176,12 @@ block slides
     <div style="text-align: left; color: #fff" >
     p $ docker run -p 3000:3000 -d $docker_username/app-image
     p.fragment 1540b75702a387a2e1fed754a89f
+
+    <aside class="notes">
+      p -p: Publish a container’s port(s) to the host
+      p -d: Run container in background and print container ID
+      p run: Run a command in a new container
+    </aside>
 
   +slide
     <div style="display: flex;">
@@ -221,7 +232,7 @@ block slides
   +slide
     <div style="text-align: left; color: #fff" >
     p $ bx cs cluster-config <span style="color: #FF69B4">[CLUSTER_NAME]</span>
-    p.fragment export KUBECONFIG= /Users/ibm/.bluemix/plugins/container-service/clusters/rizchel-cluster/kube-config-dal12-rizchel-cluster.yml
+    p.fragment export KUBECONFIG= /Users/ibm/.bluemix/plugins/container-service/clusters/rizchel-cluster/kube-config-dal1-rizchel-cluster.yml
 
   +slide
     <div style="display: flex;">
@@ -262,16 +273,27 @@ block slides
     p $ kubectl run app-deployment --image=registry.<span style="color: #FF69B4">[IBM_CLOUD_REGION]</span>.bluemix.net/<span style="color: #FF69B4">[NAMESPACE]</span>/deploy-react-kubernetes
     p.fragment deployment "app-deployment" created
 
+    <aside class="notes">
+      p The Deployment instructs Kubernetes how to create and update instances of your application.
+      p Cluster master schedules application instances onto individual Nodes in the cluster.
+      p run: Run a particular image on the cluster.
+    </aside>
+
   +slide
     <div style="display: flex;">
     <h4 style="font-size: 10em; position: relative; opacity: 0.5">05</h4>
-    <h3 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Create a <span style="color: navy">Service</span> that exposes the <span style="color: navy">deployment</span></h3>
+    <h3 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Create a <span style="color: navy">Service</span> to expose the <span style="color: navy">deployment</span></h3>
     </div>
 
   +slide
     <div style="text-align: left; color: #fff" >
     p $ kubectl expose deployment/app-deployment --type=NodePort --name=app-service --port=3000
     p.fragment service "app-service" exposed
+
+    <aside class="notes">
+      p expose application outside of cluster
+      p create service of deployment
+    </aside>
 
   +slide
     <div style="display: flex;">
@@ -280,18 +302,12 @@ block slides
     </div>
 
   +slide
-    h3 Obtain <span style="color: navy">public IP Address</span> of cluster
-
-  +slide
-    <div style="color: #fff" >
+    <div style="color: #fff; text-align: left;" >
+    p # Obtain public IP Address of cluster
     p $ bx cs workers <span style="color: #FF69B4">[CLUSTER_NAME]</span>
-
-  +slide
-    h3 Obtain the <span style="color: navy">NodePort</span> of the service
-
-  +slide
-    <div style="color: #fff" >
-    p $ kubectl describe service app-service
+    <p class="fragment" data-fragment-index="1"> # Obtain the NodePort of the service
+    <p class="fragment" data-fragment-index="1"> $ kubectl describe service app-service
+    <p class="fragment" data-fragment-index="2"> # Access it at <span style="color: #00f9ff">http://[PUBLIC_IP_ADDRESS]:[NODEPORT]</span>
 
   +slide
     <section data-background-image="./img/local.png" data-background-size="contain">
@@ -300,11 +316,16 @@ block slides
   +slide
     <div style="text-align: left">
     h3 Benefits:
-    li.fragment Automated Scheduling:
-    li.fragment Self Healing
-    li.fragment Automated rollouts & rollbacks
-    li.fragment Horizontal scaling
-    li.fragment Service discovery & load balancing
+    li.fragment Automation: scaling, self healing, rollouts/rollbacks
+    li.fragment Service discovery
+    li.fragment Load balancing
+
+    <aside class="notes">
+      p Scaling: automatically scales the number of pods in deployment
+      p Self Healing: monitor the health of pods and containers, and take immediate actions to resolve what issues it encounters.
+      p Rollouts/rollbacks: Rolling updates allow Deployments' update to take place with zero downtime by incrementally updating Pods instances with new ones. The new Pods will be scheduled on Nodes with available resources.
+      p Load balancer: provides an externally-accessible IP address that sends traffic to the correct port on your cluster nodes
+    </aside>
 
   +slide
     <div style="text-align: left">
@@ -323,8 +344,7 @@ block slides
   +slide
    <div style="text-align: left">
    h3 Next steps:
-   li.fragment Automate deployments with
-   li.fragment Integrate into a CI tool like Travis
+   li.fragment Continuous integration & deployments
    li.fragment Multiple containers
    li.fragment Testing with advanced features
 

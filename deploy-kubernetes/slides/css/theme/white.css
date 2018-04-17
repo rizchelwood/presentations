@@ -21,12 +21,12 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 }
 
 .slide-background:nth-child(26), .slide-background:nth-child(28), .slide-background:nth-child(40), .slide-background:nth-child(42),
-.slide-background:nth-child(44), .slide-background:nth-child(46), .slide-background:nth-child(49), .slide-background:nth-child(51),
-.slide-background:nth-child(38), .slide-background:nth-child(51)  {
+.slide-background:nth-child(44), .slide-background:nth-child(46), .slide-background:nth-child(48),
+.slide-background:nth-child(38)  {
   background: #000;
 }
 
-.slide-background:nth-child(52) {
+.slide-background:nth-child(49) {
   background: #89a2f6
 }
 
