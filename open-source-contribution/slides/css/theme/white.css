@@ -7,17 +7,13 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   color: #fff;
   margin: 0px; }
 
-.slide-background:nth-child(28) {
-  background: url(../img/github.png) no-repeat center center fixed;
-}
-
-.slide-background:nth-child(26), .slide-background:nth-child(10), .slide-background:nth-child(19), .slide-background:nth-child(21),
-.slide-background:nth-child(14), .slide-background:nth-child(16), .slide-background:nth-child(28), .slide-background:nth-child(31),
-.slide-background:nth-child(34), .slide-background:nth-child(36), .slide-background:nth-child(46), .slide-background:nth-child(47),
-.slide-background:nth-child(49), .slide-background:nth-child(51), .slide-background:nth-child(52), .slide-background:nth-child(55) {
+.slide-background:nth-child(4), .slide-background:nth-child(28), .slide-background:nth-child(12), .slide-background:nth-child(21), .slide-background:nth-child(23),
+.slide-background:nth-child(16), .slide-background:nth-child(18), .slide-background:nth-child(30), .slide-background:nth-child(33),
+.slide-background:nth-child(36), .slide-background:nth-child(38), .slide-background:nth-child(48), .slide-background:nth-child(49),
+.slide-background:nth-child(51), .slide-background:nth-child(53), .slide-background:nth-child(54), .slide-background:nth-child(57) {
   background: #fff;
 }
-.slide-background:nth-child(38), .slide-background:nth-child(39), .slide-background:nth-child(41), .slide-background:nth-child(44) {
+.slide-background:nth-child(40), .slide-background:nth-child(41), .slide-background:nth-child(43), .slide-background:nth-child(46) {
   background: #000;
 }
 
