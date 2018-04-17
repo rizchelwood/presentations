@@ -82,13 +82,20 @@
         </section>
         <section><img style="border:none;" src="./img/containers.png" alt="Container architecture" height="500">
 <p style="color: #000; font-weight: 200; font-size: 20px"> https://cloud.google.com/containers/
+<aside class="notes">
+          <p>etcd: backing store for all cluster data.</p>
+          <p>server: validates and configures data for the api objects which include pods, services, replicationcontrollers, and others</p>
+          <p>scheduler/controller: assigns nodes to pods, node controller</p>
+          <p>kubelet: takes in yaml and ensure container is described & healthy/running</p>
+          <p>proxy: provides load balancing</p></aside>
         </section>
         <section><div style="text-align: left">
           <h3>Benefits:</h3>
           <li class="fragment">Lightweight & performant</li>
           <li class="fragment">Platform independent</li>
           <li class="fragment">Isolation & resource sharing</li>
-          <li class="fragment">Ideal for microservice architectures</li>
+          <li class="fragment">Ideal for microservice architectures</li><aside class="notes">
+          <p>All Containers config are isolated but share resources at kernel level (cpu, memory, etc)</p></aside>
         </section>
         <section>
           <h3>How do we  <span style="color: navy">package</span> our  <span style="color: navy">application</span> to a  <span style="color: navy">container</span>?</h3>
@@ -254,10 +261,12 @@
 </section>
         </section>
         <section><div style="text-align: left">
-          <h3>Benefits:</h3>
-          <li class="fragment">Automation: scaling, self healing, rollouts/rollbacks</li>
-          <li class="fragment">Service discovery</li>
-          <li class="fragment">Load balancing</li><aside class="notes">
+          <h3>Advantages:</h3>
+          <li class="fragment">Automation: scaling, self healing, rollouts/rollbacks, scheduling</li>
+          <li class="fragment">Load balancing</li>
+          <li class="fragment">Modularity</li>
+          <li class="fragment">Open source</li><aside class="notes">
+          <p>Scheduling: provides scheduler to launch container on cluster nodes.</p>
           <p>Scaling: automatically scales the number of pods in deployment</p>
           <p>Self Healing: monitor the health of pods and containers, and take immediate actions to resolve what issues it encounters.</p>
           <p>Rollouts/rollbacks: Rolling updates allow Deployments' update to take place with zero downtime by incrementally updating Pods instances with new ones. The new Pods will be scheduled on Nodes with available resources.</p>

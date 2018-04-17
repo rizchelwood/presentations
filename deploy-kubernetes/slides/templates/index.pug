@@ -96,6 +96,14 @@ block slides
     <img style="border:none;" src="./img/containers.png" alt="Container architecture" height="500">
     <p style="color: #000; font-weight: 200; font-size: 20px"> https://cloud.google.com/containers/
 
+    <aside class="notes">
+      p etcd: backing store for all cluster data.
+      p server: validates and configures data for the api objects which include pods, services, replicationcontrollers, and others
+      p scheduler/controller: assigns nodes to pods, node controller
+      p kubelet: takes in yaml and ensure container is described & healthy/running
+      p proxy: provides load balancing
+    </aside>
+
   +slide
     <div style="text-align: left">
     h3 Benefits:
@@ -103,6 +111,9 @@ block slides
     li.fragment Platform independent
     li.fragment Isolation & resource sharing
     li.fragment Ideal for microservice architectures
+    <aside class="notes">
+      p All Containers config are isolated but share resources at kernel level (cpu, memory, etc)
+    </aside>
 
   +slide
     h3 How do we  <span style="color: navy">package</span> our  <span style="color: navy">application</span> to a  <span style="color: navy">container</span>?
@@ -315,12 +326,14 @@ block slides
 
   +slide
     <div style="text-align: left">
-    h3 Benefits:
-    li.fragment Automation: scaling, self healing, rollouts/rollbacks
-    li.fragment Service discovery
+    h3 Advantages:
+    li.fragment Automation: scaling, self healing, rollouts/rollbacks, scheduling
     li.fragment Load balancing
+    li.fragment Modularity
+    li.fragment Open source
 
     <aside class="notes">
+      p Scheduling: provides scheduler to launch container on cluster nodes.
       p Scaling: automatically scales the number of pods in deployment
       p Self Healing: monitor the health of pods and containers, and take immediate actions to resolve what issues it encounters.
       p Rollouts/rollbacks: Rolling updates allow Deployments' update to take place with zero downtime by incrementally updating Pods instances with new ones. The new Pods will be scheduled on Nodes with available resources.
