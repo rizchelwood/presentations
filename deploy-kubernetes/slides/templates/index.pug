@@ -33,7 +33,7 @@ block slides
     li Graduated from ASU in Computer Science
     li Developer Advocate @IBM
     li Previously Front End Developer
-    li Harry Potter fanatic ⚡️
+    li Denver newbie 🏔
     </div>
     <div><img style="border-radius: 50%"src="https://user-images.githubusercontent.com/18426780/36912901-71fc797e-1e05-11e8-8e83-9dd223120f2b.jpg" alt="Speaker picture" height="200"></div>
     </div>
@@ -91,23 +91,18 @@ block slides
     li.fragment Consists of an executable package of an application (libraries, dependencies, etc)
     li.fragment Operating system level virtualization
     li.fragment Multiple containers can run on top of OS kernel directly
+    <aside class="notes">
+     p kernel allows the existence of multiple isolated user-space instances.
+    </aside>
 
   +slide
     <img style="border:none;" src="./img/containers.png" alt="Container architecture" height="500">
     <p style="color: #000; font-weight: 200; font-size: 20px"> https://cloud.google.com/containers/
 
-    <aside class="notes">
-      p etcd: backing store for all cluster data.
-      p server: validates and configures data for the api objects which include pods, services, replicationcontrollers, and others
-      p scheduler/controller: assigns nodes to pods, node controller
-      p kubelet: takes in yaml and ensure container is described & healthy/running
-      p proxy: provides load balancing
-    </aside>
-
   +slide
     <div style="text-align: left">
     h3 Benefits:
-    li.fragment Lightweight & performant
+    li.fragment Lightweight
     li.fragment Platform independent
     li.fragment Isolation & resource sharing
     li.fragment Ideal for microservice architectures
@@ -164,7 +159,7 @@ block slides
 
   +slide
     <div style="text-align: left; color: #fff" >
-    p ## Build in the directory the Dockerfile exists
+    p # Build in the directory the Dockerfile exists
     p $ export docker_username=<span style="color: #FF69B4">[DOCKER_USERNAME]<span>
     p $ docker build  -t $docker_username/app-image .
     <p class="fragment" data-fragment-index="1"> Sending build context to Docker daemon  856.6kB
@@ -174,7 +169,6 @@ block slides
 
     <aside class="notes">
       p . is path is .
-      p -f: specify location of Dockerfile
     </aside>
 
   +slide
@@ -213,6 +207,13 @@ block slides
   +slide
     <img style="border:none; height: 600px" src="./img/kubernetes-architecture.jpg" alt="Kubernetes architecture" height="500">
     <p style="color:#000; font-size: 20px"> http://nishadikirielle.blogspot.se/2016/02/kubernetes-at-first-glance.html
+    <aside class="notes">
+      p etcd: backing store for all cluster data.
+      p server: validates and configures data for the api objects which include pods, services, replicationcontrollers, and others
+      p scheduler/controller: assigns nodes to pods, node controller
+      p kubelet: takes in yaml and ensure container is described & healthy/running
+      p proxy: provides load balancing
+    </aside>
 
   +slide
     <div style="text-align: left">
@@ -360,6 +361,7 @@ block slides
    li.fragment Continuous integration & deployments
    li.fragment Multiple containers
    li.fragment Testing with advanced features
+   li.fragment Istio
 
   +slide
     <div style="text-align: center">

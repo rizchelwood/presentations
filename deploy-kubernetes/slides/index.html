@@ -35,7 +35,7 @@
           <li>Graduated from ASU in Computer Science</li>
           <li>Developer Advocate @IBM</li>
           <li>Previously Front End Developer</li>
-          <li>Harry Potter fanatic ⚡️</li></div>
+          <li>Denver newbie 🏔</li></div>
 <div><img style="border-radius: 50%"src="https://user-images.githubusercontent.com/18426780/36912901-71fc797e-1e05-11e8-8e83-9dd223120f2b.jpg" alt="Speaker picture" height="200"></div>
 </div>
 </div>
@@ -78,20 +78,15 @@
           <li class="fragment">Made up of container images</li>
           <li class="fragment">Consists of an executable package of an application (libraries, dependencies, etc)</li>
           <li class="fragment">Operating system level virtualization</li>
-          <li class="fragment">Multiple containers can run on top of OS kernel directly</li>
+          <li class="fragment">Multiple containers can run on top of OS kernel directly</li><aside class="notes">
+          <p>kernel allows the existence of multiple isolated user-space instances.</p></aside>
         </section>
         <section><img style="border:none;" src="./img/containers.png" alt="Container architecture" height="500">
 <p style="color: #000; font-weight: 200; font-size: 20px"> https://cloud.google.com/containers/
-<aside class="notes">
-          <p>etcd: backing store for all cluster data.</p>
-          <p>server: validates and configures data for the api objects which include pods, services, replicationcontrollers, and others</p>
-          <p>scheduler/controller: assigns nodes to pods, node controller</p>
-          <p>kubelet: takes in yaml and ensure container is described & healthy/running</p>
-          <p>proxy: provides load balancing</p></aside>
         </section>
         <section><div style="text-align: left">
           <h3>Benefits:</h3>
-          <li class="fragment">Lightweight & performant</li>
+          <li class="fragment">Lightweight</li>
           <li class="fragment">Platform independent</li>
           <li class="fragment">Isolation & resource sharing</li>
           <li class="fragment">Ideal for microservice architectures</li><aside class="notes">
@@ -137,15 +132,14 @@
 </div>
         </section>
         <section><div style="text-align: left; color: #fff" >
-          <p>## Build in the directory the Dockerfile exists</p>
+          <p># Build in the directory the Dockerfile exists</p>
           <p>$ export docker_username=<span style="color: #FF69B4">[DOCKER_USERNAME]<span></p>
           <p>$ docker build  -t $docker_username/app-image .</p><p class="fragment" data-fragment-index="1"> Sending build context to Docker daemon  856.6kB
 <p class="fragment" data-fragment-index="1">Step 1/8 : FROM node:9.4
 <p class="fragment" data-fragment-index="2">...
 <p class="fragment" data-fragment-index="3">Successfully tagged <span style="color: #FF69B4">[DOCKER_USERNAME]</span>/app-image:latest
 <aside class="notes">
-          <p>. is path is .</p>
-          <p>-f: specify location of Dockerfile</p></aside>
+          <p>. is path is .</p></aside>
         </section>
         <section><div style="display: flex;">
 <h4 style="font-size: 10em; position: relative; opacity: 0.5">02</h4>
@@ -175,6 +169,12 @@
         </section>
         <section><img style="border:none; height: 600px" src="./img/kubernetes-architecture.jpg" alt="Kubernetes architecture" height="500">
 <p style="color:#000; font-size: 20px"> http://nishadikirielle.blogspot.se/2016/02/kubernetes-at-first-glance.html
+<aside class="notes">
+          <p>etcd: backing store for all cluster data.</p>
+          <p>server: validates and configures data for the api objects which include pods, services, replicationcontrollers, and others</p>
+          <p>scheduler/controller: assigns nodes to pods, node controller</p>
+          <p>kubelet: takes in yaml and ensure container is described & healthy/running</p>
+          <p>proxy: provides load balancing</p></aside>
         </section>
         <section><div style="text-align: left">
           <h3>Some prerequisites needed:</h3>
@@ -289,6 +289,7 @@
           <li class="fragment">Continuous integration & deployments</li>
           <li class="fragment">Multiple containers</li>
           <li class="fragment">Testing with advanced features</li>
+          <li class="fragment">Istio</li>
         </section>
         <section><div style="text-align: center">
           <h3>Thank you!</h3><div><img style="border-radius: 50%" src="https://user-images.githubusercontent.com/18426780/36912901-71fc797e-1e05-11e8-8e83-9dd223120f2b.jpg" alt="Speaker picture" height="200"></div>
