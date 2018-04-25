@@ -44,16 +44,16 @@ block slides
 
   +slide
    <section data-background-image="./img/question-mark.png">
-   h4(style="text-transform: uppercase; background:  #cb71d7") As a front end developer, I always dreaded the process of deploying an application
+   h4(style="text-transform: uppercase; background:  #cb71d7") As a developer, I was always lost in the process of deploying an application
    </section>
 
   +slide
-    <img style="border:none;" src="./img/gatsby.jpg" alt="Gatsby meme" height="500">
-    h4(style="color: black") I wanted to focus on perfecting the front end
+    <iframe src="https://giphy.com/embed/JIX9t2j0ZTN9S" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    h4(style="color: black") I wanted to focus on the front end
 
   +slide
-    <img style="border:none;" src="./img/not-my-problem.jpeg" alt="Not problem meme" height="500">
-    h4(style="color: black") Not spend hours on the deployment process
+    <img style="border:none;" src="./img/deployment-meme.jpg" alt="Deployment meme" height="500">
+    h4(style="color: black") Not spend hours on the deployment
 
   +slide
     <section data-background-image="./img/rocket.png">
@@ -84,6 +84,7 @@ block slides
     li.fragment Functions as the view layer
     li.fragment Component based
     li.fragment Declarative
+    li.fragment JSX
     </div>
     </section>
 
@@ -93,7 +94,9 @@ block slides
     </section>
 
   +slide
-    <img style="border:none;" src="./img/pyramid.png" alt="Pyramid architecture" height="500">
+    <section data-background-image="./img/pyramid.png">
+    </section>
+    //- <img style="border:none;" src="./img/pyramid.png" alt="Pyramid architecture" height="500">
 
   +slide
    <section data-background-image="./img/horizontal-background.png">
@@ -108,7 +111,7 @@ block slides
     h3.fragment(style="color: #fff;") Containers:
     li.fragment Made up of smaller elements called components
     li.fragment Manages all of the data
-    li.fragment Passes state as props to components
+    li.fragment Passes data as props to components
     </div>
     </div>
     </section>
@@ -119,12 +122,13 @@ block slides
    <div style="text-align:left; color: #cb71d7;">
     h3(style="color: #cb71d7;") Stove burner:
     li.fragment Reusable piece
-    li.fragment Receive data from stove
+    li.fragment Receive data and state from stove
     </div>
     <div style="text-align:left; color: #fff; padding-top: 150px">
     h3.fragment(style="color: #fff;") Components:
     li.fragment Reusable in multiple parts of an application
     li.fragment Receives data and state from container
+    li.fragment Accept data from containers through props
     </div>
     </div>
     </section>
