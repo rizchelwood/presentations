@@ -4,9 +4,10 @@
  * By Hakim El Hattab, http://hakim.se
  */
 
- /* html.dimbg .slide-background {
-  opacity: 0.4 !important;
-} */
+ html.dimbg .slide-background {
+  opacity: 0.2 !important;
+}
+
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: black;
   margin: 0px; }

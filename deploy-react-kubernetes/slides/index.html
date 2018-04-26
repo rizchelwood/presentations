@@ -28,7 +28,7 @@
 <div><h3 style="margin: 0px; display: flex; font-size: 1.3em"> <span style="opacity: 0.5; padding-right: 10px; font-size: 1em">While</span> Saving <span style="opacity: 0.5; padding-left: 10px; font-size: 1em">Time and Energy </span></h3></div>
 <p style="display: flex; font-size: 24px; font-weight: 200"> Rizchel Dayao </p>
 <p style="display: flex; font-size: 24px; font-weight: 200">@rizcheldayao || rdayao@us.ibm.com </p>
-<p style="display: flex; font-size: 24px; font-weight: 200">Slides: @rizcheldayao || GitHub:https://github.com/IBM/deploy-react-kubernetes </p>
+<p style="display: flex; font-size: 24px; font-weight: 200">Slides: https://goo.gl/uSuxXW || GitHub:https://github.com/IBM/deploy-react-kubernetes </p>
 </div>
 </section>
         </section>
@@ -77,18 +77,19 @@
 </div>
 </div>
         </section>
-        <section><section data-background-image="./img/react.png">
-<div style="text-align: left;background:rgba(255,255,255,0.75); color: #000">
-          <h4 style="color: #000;">React is a JavaScript library for building user interfaces:</h4>
+        <section><div style="position: relative; text-align: center;" >
+<img style="border:none; opacity: 0.2" src="./img/react.png" alt="React logo" height="500">
+<div style="text-align: left;color: #000; position: absolute; top: 25%">
+          <h4 style="color: #000;">React is a JavaScript library for building user interfaces</h4>
           <li class="fragment">Functions as the view layer</li>
           <li class="fragment">Component based</li>
           <li class="fragment">Virtual DOM</li>
           <li class="fragment">Declarative</li>
           <li class="fragment">JSX</li></div>
-</section>
+<div>
         </section>
         <section><section data-background-image="./img/blueprint.jpg">
-          <h3 style="color: black; background:rgba(255,255,255,0.5);">Imagine we're building a house like an application</h3></section>
+          <h3 style="color: black; background:rgba(255,255,255,0.75);">Imagine we're building a house like an application</h3></section>
         </section>
         <section><section data-background-image="./img/pyramid.png" data-background-size="contain">
 </section>
@@ -131,9 +132,9 @@
 <h4 style="background:#000; color: #fff">A separation of concerns allows an application to be easier to manage and provides cleaner code
 </section>
         </section>
-        <section><div style="position: relative; text-align: center">
-<img style="border:none;" src="./img/redux.png" alt="Redux flow" height="500">
-<div style="text-align: left;background:rgba(255,255,255,0.75); color: #000; position: absolute; top: 25%">
+        <section><div style="position: relative; text-align: center;" >
+<img style="border:none; opacity: 0.2" src="./img/redux.png" alt="Redux flow" height="500">
+<div style="text-align: left;color: #000; position: absolute; top: 25%">
           <h4 style="color: #000;">Redux is a JavaScript library for managing application state:</h4>
           <li class="fragment">Actions describe something has happened</li>
           <li class="fragment">Reducers update the state</li>
@@ -168,8 +169,8 @@
           <h4 style="background:rgba(255,255,255,0.75); color: #000;">Now let's deploy our application...<span class="fragment" data-fragment-index="1">without a YAML file (YAY! 🎉)</h4></section>
         </section>
         <section><div style="position: relative; text-align: center">
-<img style="border:none;" src="./img/kubernetes.png" alt="Kubernetes flow" height="500">
-<div style="text-align: left;background:rgba(255,255,255,0.75); color: #000; position: absolute; top: 25%">
+<img style="border:none;opacity:0.2" src="./img/kubernetes.png" alt="Kubernetes flow" height="500">
+<div style="text-align: left; color: #000; position: absolute; top: 25%">
           <h4 style="color: #000;">Kubernetes is an orchestration tool:</h4>
           <li class="fragment">Automates deployment</li>
           <li class="fragment">Manages the deployment & containerized applications</li></div>
@@ -195,8 +196,8 @@
 </div>
 </section>
         </section>
-        <section><section data-background-image="./img/board.jpg">
-<div style="text-align: left;background:rgba(255,255,255,0.5); color: #000; padding: 10px">
+        <section><section data-background-image="./img/rubik.jpg">
+<div style="text-align: left;color: #000; background:rgba(255,255,255,0.9); padding: 10px">
           <h3 style="color: #000;">What challenges does Kubernetes solve?</h3>
           <p class="fragment">1. What happens if my app crashes?</p>
           <p class="fragment">2. How can I roll out updates or rollbacks?</p>
@@ -221,11 +222,11 @@
           <p class="fragment" style="padding: 10px;">Microservices can be packaged into containers which are each deployed as pods for isolation and resource sharing</p>
         </section>
         <section><section data-background-image="./img/demo.jpg">
-          <h2 style="background:rgba(255,255,255,0.5); color: #000;">Demo(ish)</h2></section>
+          <h2 style="background:rgba(255,255,255,0.75); color: #000;">Demo(ish)</h2></section>
         </section>
         <section><div style="position: relative; text-align: center">
-<img style="border:none;" src="./img/ibm.svg" alt="IBM logo" height="500">
-<div style="text-align: left;background:rgba(255,255,255,0.9); color: #000; position: absolute; top: 25%">
+<img style="border:none;opacity: 0.2" src="./img/ibm.svg" alt="IBM logo" height="500">
+<div style="text-align: left; color: #000; position: absolute; top: 25%">
           <h4 style="color: #000;">Deployment prerequisites:</h4>
           <li class="fragment">IBM Cloud Account</li>
           <li class="fragment">Install IBM Cloud CLI</li>
@@ -316,8 +317,8 @@
 <p class="fragment" data-fragment-index="2"> # Access it at <span style="color: #00f9ff">http://[PUBLIC_IP_ADDRESS]:[NODEPORT]</span>
         </section>
         <section><section data-background-image="./img/stairs.jpg">
-<div style="text-align: left;background:#000; color: #fff">
-          <h4 style="color: #fff;">Next steps:</h4>
+<div style="text-align: left;background:rgba(255,255,255,0.75);  color: #000; padding: 10px">
+          <h4 style="color: #000;">Next steps:</h4>
           <li class="fragment">Continuous integration & deployments</li>
           <li class="fragment">Multiple containers</li>
           <li class="fragment">Istio</li></div>
@@ -327,15 +328,15 @@
           <h3>Thank you!</h3><div><img style="border-radius: 50%" src="https://user-images.githubusercontent.com/18426780/36912901-71fc797e-1e05-11e8-8e83-9dd223120f2b.jpg" alt="Speaker picture" height="200"></div>
           <h3>Rizchel Dayao</h3>
           <p>Follow me on Twitter: @rizcheldayao</p>
-          <p>Slides available: https://goo.gl/cCdmyd</p></div>
+          <p>Slides available: https://goo.gl/uSuxXW</p></div>
         </section>
         <section><div style="text-align: left">
-          <h3>Resources</h3><p style="font-size: 20px; margin: 0"> 1. Github Repo</p>
+          <h3>Resources</h3><p style="font-size: 20px; margin: 0"> 1. Slides</p>
+<p style="font-size: 20px; color: navy">(https://goo.gl/uSuxXW)</p>
+<p style="font-size: 20px;"> 2. GitHub Repo
 <p style="font-size: 20px; color: navy">(https://github.com/IBM/deploy-react-kubernetes)</p>
-<p style="font-size: 20px; margin: 0"> 2. Docker</p>
-<p style="font-size: 20px; color: navy">(http://docker.com/)</p>
-<p style="font-size: 20px;"> 3. Kubernetes </p>
-<p style="font-size: 20px; color: navy">(https://kubernetes.io/)</p>
+<p style="font-size: 20px;"> 3. React & Kubernetes </p>
+<p style="font-size: 20px; color: navy">(https://reactjs.org/, https://kubernetes.io/)</p>
 <p style="font-size: 20px;"> 4. Blog post
 <p style="font-size: 20px; color: navy">(https://medium.com/@rizchel.a.dayao/my-journey-to-deploying-my-first-react-application-with-kubernetes-95e6d25f434d
 <p style="font-size: 20px;"> 5. Demo
