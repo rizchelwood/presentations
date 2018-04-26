@@ -16,15 +16,15 @@ block theme
 
 block slides
   +slide
-    <section data-background-image="./img/washington.jpg" >
-    //data-state="dim-background"
-    <div style="display: flex; justify-content: flex-start; flex-direction: column">
+    <section data-background-image="./img/washington.jpg">
+    <div style="display: flex; justify-content: flex-start; flex-direction: column;">
     <div><h3 style="margin: 0px; display: flex; font-size: 1.3em; opacity: 0.5;">How to </h3></div>
     <div><h3 style="margin: 0px; display: flex; font-size: 1.3em">Deploy <span style="opacity: 0.5; padding-left: 10px; font-size: 1em">Your </span></h3></div>
     <div><h3 style="margin: 0px; display: flex; font-size: 1.3em">React <span style="opacity: 0.5; padding-left: 10px; font-size: 1em">Application </span></h3></div>
     <div><h3 style="margin: 0px; display: flex; font-size: 1.3em"> <span style="opacity: 0.5; padding-right: 10px; font-size: 1em">While</span> Saving <span style="opacity: 0.5; padding-left: 10px; font-size: 1em">Time and Energy </span></h3></div>
     <p style="display: flex; font-size: 24px; font-weight: 200"> Rizchel Dayao </p>
     <p style="display: flex; font-size: 24px; font-weight: 200">@rizcheldayao || rdayao@us.ibm.com </p>
+    <p style="display: flex; font-size: 24px; font-weight: 200">Slides: @rizcheldayao || GitHub:https://github.com/IBM/deploy-react-kubernetes </p>
     </div>
     </section>
 
@@ -35,6 +35,7 @@ block slides
     li Previously Front End Developer
     li Developer Advocate @IBM
     li First time in Washington
+    li James Bond
     </div>
     </section>
 
@@ -44,25 +45,30 @@ block slides
 
   +slide
    <section data-background-image="./img/question-mark.png">
-   h4(style="text-transform: uppercase; background:  #cb71d7") As a developer, I was always lost in the process of deploying an application
+   h4(style="text-transform: uppercase; background:  #cb71d7") As a developer, I was always lost in the process of deploying an app on Kubernetes
    </section>
 
   +slide
-    <iframe src="https://giphy.com/embed/JIX9t2j0ZTN9S" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-    h4(style="color: black") I wanted to focus on the front end
+    <img style="border:none;" src="./img/confused.jpg" alt="Confused meme" height="500">
+    h4(style="color: black") All of the documentation was different
+    <aside class="notes">
+    p Especially if you didn't want a yaml file
+    </aside>
 
   +slide
     <img style="border:none;" src="./img/deployment-meme.jpg" alt="Deployment meme" height="500">
-    h4(style="color: black") Not spend hours on deployment
-
+    h4(style="color: black") It took me almost a week to finally get a simple app deployed
   +slide
-    <section data-background-image="./img/rocket.png">
-    <h4 style="background:rgba(255,255,255,0.5); color: #000">I created a code pattern to quickly and easily deploy apps on Kubernetes</h4>
+    <section data-background-image="./img/code.jpg" >
+    <h4 style="background:#000; color: #fff">So I created a code pattern to quickly and easily deploy apps</h4>
     </section>
 
   +slide
-    <iframe src="https://giphy.com/embed/5GoVLqeAOo6PK" width="480" height="375" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    <iframe src="https://giphy.com/embed/nXxOjZrbnbRxS" width="356" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
     h4(style="color: black") To save hours of my time and energy 💯
+    <aside class="notes">
+    p And money, time = money!!
+    </aside>
 
   +slide
    h3(style="color: #cb71d7") Code pattern
@@ -88,7 +94,7 @@ block slides
 
   +slide
     <section data-background-image="./img/react.png">
-    <div style="text-align: left;background:rgba(255,255,255,0.5); color: #000">
+    <div style="text-align: left;background:rgba(255,255,255,0.75); color: #000">
     h4(style="color: #000") React is a JavaScript library for building user interfaces:
     li.fragment Functions as the view layer
     li.fragment Component based
@@ -154,21 +160,23 @@ block slides
 
   +slide
     <section data-background-image="./img/developer.jpg">
-    <h4 style="background:rgba(255,255,255,0.5); color: #000">A separation of concerns allows an application to be easier to manage and provides cleaner code
+    <h4 style="background:#000; color: #fff">A separation of concerns allows an application to be easier to manage and provides cleaner code
     </section>
 
   +slide
-    <section data-background-image="./img/redux.png" data-background-size="contain">
-    <div style="text-align: left;background:rgba(255,255,255,0.5); color: #000">
+    <div style="position: relative; text-align: center">
+    <img style="border:none;" src="./img/redux.png" alt="Redux flow" height="500">
+    <div style="text-align: left;background:rgba(255,255,255,0.75); color: #000; position: absolute; top: 25%">
     h4(style="color: #000") Redux is a JavaScript library for managing application state:
     li.fragment Actions describe something has happened
     li.fragment Reducers update the state
     li.fragment Store holds the application state
     </div>
-    </section>
+    <div>
 
   +slide
     <img style="border:none;" src="./img/redux-flow.png" alt="Redux flow" height="500">
+    p(style="font-size: 20px; color: #000") https://stackoverflow.com/questions/45416237/axios-calls-in-actions-redux/45425055
 
   +slide
     <section data-background-image="./img/background.png">
@@ -197,30 +205,34 @@ block slides
     </section>
 
   +slide
-    <section data-background-image="./img/configuration.png">
-     h4(style="background:rgba(255,255,255,0.5); color: #000") Now let's deploy our application...<span class="fragment" data-fragment-index="1">without a YAML file (YAY! 🎉)
+    <section data-background-image="./img/rocket.png">
+     h4(style="background:rgba(255,255,255,0.75); color: #000") Now let's deploy our application...<span class="fragment" data-fragment-index="1">without a YAML file (YAY! 🎉)
     </section>
 
   +slide
-    <section data-background-image="./img/kubernetes.png" data-background-size="contain">
-    <div style="text-align: left;background:rgba(255,255,255,0.5); color: #000">
+    <div style="position: relative; text-align: center">
+    <img style="border:none;" src="./img/kubernetes.png" alt="Kubernetes flow" height="500">
+    <div style="text-align: left;background:rgba(255,255,255,0.75); color: #000; position: absolute; top: 25%">
     h4(style="color: #000") Kubernetes is an orchestration tool:
     li.fragment Automates deployment
     li.fragment Manages the deployment & containerized applications
     </div>
-    </section>
+    </div>
 
   +slide
     <section data-background-image="./img/house.jpg">
-    h3(style="color: black; background:rgba(255,255,255,0.5)") Kubernetes is like the home builder in charge of scheduling and managing a house
+    h3(style="color: #fff; background:#000") Kubernetes is like the home builder in charge of scheduling and managing a house
     </section>
 
+    <aside class="notes">
+      p Kubernetes schedules pods go to which nodes, manage deployment
+    </aside>
   +slide
     <section data-background-image="./img/background.png">
     <div style="text-align: left; display: flex; ">
     <div style="color: #fff;">
     h3(style="text-align: left") Kubernetes definitions:
-    <li class="fragment" data-fragment-index="1"> Cluster: Consist of a cluster master and multilile worker machines
+    <li class="fragment" data-fragment-index="1"> Cluster: Consist of a cluster master and multiple worker machines
     <li class="fragment" data-fragment-index="3"> Node: Worker machine that run applications managed by the cluster master
     <li class="fragment" data-fragment-index="5"> Pod: Contains a group of one or more containers with shared resources
     </div>
@@ -234,16 +246,15 @@ block slides
     </section>
 
   +slide
-    h4 Home builders are responsible for scheduling employees to build/maintain the house, ensure the house is stable, etc like Kubernetes is responsible for managing deployments and apps
-
-  +slide
-    <div style="color: #cb71d7; text-align:left; padding: 10px">
-    h4(style="color: #cb71d7; border: 5px solid #cb71d7;") What challenges does Kubernetes solve?
-    p.fragment(style="margin:0") 1. What happens if my app crashes?
-    p.fragment(style="margin:0")  2. How can I roll out updates or rollbacks?
-    p.fragment(style="margin:0")  3. What happens when I can get an unexpected high influx of traffic?
-    p.fragment(style="margin:0")  4. What will work best for my microservice architecture?
+    <section data-background-image="./img/board.jpg">
+    <div style="text-align: left;background:rgba(255,255,255,0.5); color: #000; padding: 10px">
+    h3(style="color: #000") What challenges does Kubernetes solve?
+    p.fragment 1. What happens if my app crashes?
+    p.fragment 2. How can I roll out updates or rollbacks?
+    p.fragment 3. What happens when I can get an unexpected high influx of traffic?
+    p.fragment 4. What will work best for my microservice architecture?
     </div>
+    </section>
 
   +slide
     <div style="border: 5px solid #fff">
@@ -266,11 +277,14 @@ block slides
     p.fragment(style="padding: 10px") Microservices can be packaged into containers which are each deployed as pods for isolation and resource sharing
 
   +slide
-    h3 Demo(ish)
+    <section data-background-image="./img/demo.jpg">
+     h2(style="background:rgba(255,255,255,0.5); color: #000") Demo(ish)
+    </section>
 
   +slide
-    <section data-background-image="./img/ibm.svg">
-    <div style="text-align: left;background:rgba(255,255,255,0.5); color: #000">
+    <div style="position: relative; text-align: center">
+    <img style="border:none;" src="./img/ibm.svg" alt="IBM logo" height="500">
+    <div style="text-align: left;background:rgba(255,255,255,0.9); color: #000; position: absolute; top: 25%">
     h4(style="color: #000") Deployment prerequisites:
     li.fragment IBM Cloud Account
     li.fragment Install IBM Cloud CLI
@@ -387,11 +401,14 @@ block slides
     <p class="fragment" data-fragment-index="2"> # Access it at <span style="color: #00f9ff">http://[PUBLIC_IP_ADDRESS]:[NODEPORT]</span>
 
   +slide
-   <div style="text-align: left">
-   h3 Next steps:
-   li.fragment Continuous integration & deployments
-   li.fragment Multiple containers
-   li.fragment Istio
+    <section data-background-image="./img/stairs.jpg">
+    <div style="text-align: left;background:#000; color: #fff">
+    h4(style="color: #fff") Next steps:
+    li.fragment Continuous integration & deployments
+    li.fragment Multiple containers
+    li.fragment Istio
+    </div>
+    </section>
 
   +slide
     <div style="text-align: center">

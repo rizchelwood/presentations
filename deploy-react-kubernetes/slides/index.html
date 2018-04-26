@@ -20,14 +20,15 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <section><section data-background-image="./img/washington.jpg" >
-          <!--data-state="dim-background"--><div style="display: flex; justify-content: flex-start; flex-direction: column">
+        <section><section data-background-image="./img/washington.jpg">
+<div style="display: flex; justify-content: flex-start; flex-direction: column;">
 <div><h3 style="margin: 0px; display: flex; font-size: 1.3em; opacity: 0.5;">How to </h3></div>
 <div><h3 style="margin: 0px; display: flex; font-size: 1.3em">Deploy <span style="opacity: 0.5; padding-left: 10px; font-size: 1em">Your </span></h3></div>
 <div><h3 style="margin: 0px; display: flex; font-size: 1.3em">React <span style="opacity: 0.5; padding-left: 10px; font-size: 1em">Application </span></h3></div>
 <div><h3 style="margin: 0px; display: flex; font-size: 1.3em"> <span style="opacity: 0.5; padding-right: 10px; font-size: 1em">While</span> Saving <span style="opacity: 0.5; padding-left: 10px; font-size: 1em">Time and Energy </span></h3></div>
 <p style="display: flex; font-size: 24px; font-weight: 200"> Rizchel Dayao </p>
 <p style="display: flex; font-size: 24px; font-weight: 200">@rizcheldayao || rdayao@us.ibm.com </p>
+<p style="display: flex; font-size: 24px; font-weight: 200">Slides: @rizcheldayao || GitHub:https://github.com/IBM/deploy-react-kubernetes </p>
 </div>
 </section>
         </section>
@@ -36,26 +37,29 @@
           <h3>Nice to meet you 👋🏼</h3>
           <li>Previously Front End Developer</li>
           <li>Developer Advocate @IBM</li>
-          <li>First time in Washington</li></div>
+          <li>First time in Washington</li>
+          <li>James Bond</li></div>
 </section>
 <aside class="notes">
           <p>Talk about school, background</p></aside>
         </section>
         <section><section data-background-image="./img/question-mark.png">
-          <h4 style="text-transform: uppercase; background:  #cb71d7;">As a developer, I was always lost in the process of deploying an application</h4></section>
+          <h4 style="text-transform: uppercase; background:  #cb71d7;">As a developer, I was always lost in the process of deploying an app on Kubernetes</h4></section>
         </section>
-        <section><iframe src="https://giphy.com/embed/JIX9t2j0ZTN9S" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-          <h4 style="color: black;">I wanted to focus on the front end</h4>
+        <section><img style="border:none;" src="./img/confused.jpg" alt="Confused meme" height="500">
+          <h4 style="color: black;">All of the documentation was different</h4><aside class="notes">
+          <p>Especially if you didn't want a yaml file</p></aside>
         </section>
         <section><img style="border:none;" src="./img/deployment-meme.jpg" alt="Deployment meme" height="500">
-          <h4 style="color: black;">Not spend hours on deployment</h4>
+          <h4 style="color: black;">It took me almost a week to finally get a simple app deployed</h4>
         </section>
-        <section><section data-background-image="./img/rocket.png">
-<h4 style="background:rgba(255,255,255,0.5); color: #000">I created a code pattern to quickly and easily deploy apps on Kubernetes</h4>
+        <section><section data-background-image="./img/code.jpg" >
+<h4 style="background:#000; color: #fff">So I created a code pattern to quickly and easily deploy apps</h4>
 </section>
         </section>
-        <section><iframe src="https://giphy.com/embed/5GoVLqeAOo6PK" width="480" height="375" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-          <h4 style="color: black;">To save hours of my time and energy 💯</h4>
+        <section><iframe src="https://giphy.com/embed/nXxOjZrbnbRxS" width="356" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+          <h4 style="color: black;">To save hours of my time and energy 💯</h4><aside class="notes">
+          <p>And money, time = money!!</p></aside>
         </section>
         <section>
           <h3 style="color: #cb71d7;">Code pattern</h3><div style="display: flex; ">
@@ -74,7 +78,7 @@
 </div>
         </section>
         <section><section data-background-image="./img/react.png">
-<div style="text-align: left;background:rgba(255,255,255,0.5); color: #000">
+<div style="text-align: left;background:rgba(255,255,255,0.75); color: #000">
           <h4 style="color: #000;">React is a JavaScript library for building user interfaces:</h4>
           <li class="fragment">Functions as the view layer</li>
           <li class="fragment">Component based</li>
@@ -124,18 +128,20 @@
 </div>
         </section>
         <section><section data-background-image="./img/developer.jpg">
-<h4 style="background:rgba(255,255,255,0.5); color: #000">A separation of concerns allows an application to be easier to manage and provides cleaner code
+<h4 style="background:#000; color: #fff">A separation of concerns allows an application to be easier to manage and provides cleaner code
 </section>
         </section>
-        <section><section data-background-image="./img/redux.png" data-background-size="contain">
-<div style="text-align: left;background:rgba(255,255,255,0.5); color: #000">
+        <section><div style="position: relative; text-align: center">
+<img style="border:none;" src="./img/redux.png" alt="Redux flow" height="500">
+<div style="text-align: left;background:rgba(255,255,255,0.75); color: #000; position: absolute; top: 25%">
           <h4 style="color: #000;">Redux is a JavaScript library for managing application state:</h4>
           <li class="fragment">Actions describe something has happened</li>
           <li class="fragment">Reducers update the state</li>
           <li class="fragment">Store holds the application state</li></div>
-</section>
+<div>
         </section>
         <section><img style="border:none;" src="./img/redux-flow.png" alt="Redux flow" height="500">
+          <p style="font-size: 20px; color: #000;">https://stackoverflow.com/questions/45416237/axios-calls-in-actions-redux/45425055</p>
         </section>
         <section><section data-background-image="./img/background.png">
 <div style="text-align: left; display: flex; ">
@@ -158,23 +164,26 @@
         <section><section data-background-image="./img/app-redux.png" data-background-size="contain">
 </section>
         </section>
-        <section><section data-background-image="./img/configuration.png">
-          <h4 style="background:rgba(255,255,255,0.5); color: #000;">Now let's deploy our application...<span class="fragment" data-fragment-index="1">without a YAML file (YAY! 🎉)</h4></section>
+        <section><section data-background-image="./img/rocket.png">
+          <h4 style="background:rgba(255,255,255,0.75); color: #000;">Now let's deploy our application...<span class="fragment" data-fragment-index="1">without a YAML file (YAY! 🎉)</h4></section>
         </section>
-        <section><section data-background-image="./img/kubernetes.png" data-background-size="contain">
-<div style="text-align: left;background:rgba(255,255,255,0.5); color: #000">
+        <section><div style="position: relative; text-align: center">
+<img style="border:none;" src="./img/kubernetes.png" alt="Kubernetes flow" height="500">
+<div style="text-align: left;background:rgba(255,255,255,0.75); color: #000; position: absolute; top: 25%">
           <h4 style="color: #000;">Kubernetes is an orchestration tool:</h4>
           <li class="fragment">Automates deployment</li>
           <li class="fragment">Manages the deployment & containerized applications</li></div>
-</section>
+</div>
         </section>
         <section><section data-background-image="./img/house.jpg">
-          <h3 style="color: black; background:rgba(255,255,255,0.5);">Kubernetes is like the home builder in charge of scheduling and managing a house</h3></section>
+          <h3 style="color: #fff; background:#000;">Kubernetes is like the home builder in charge of scheduling and managing a house</h3></section>
+<aside class="notes">
+          <p>Kubernetes schedules pods go to which nodes, manage deployment</p></aside>
         </section>
         <section><section data-background-image="./img/background.png">
 <div style="text-align: left; display: flex; ">
 <div style="color: #fff;">
-          <h3 style="text-align: left;">Kubernetes definitions:</h3><li class="fragment" data-fragment-index="1"> Cluster: Consist of a cluster master and multilile worker machines
+          <h3 style="text-align: left;">Kubernetes definitions:</h3><li class="fragment" data-fragment-index="1"> Cluster: Consist of a cluster master and multiple worker machines
 <li class="fragment" data-fragment-index="3"> Node: Worker machine that run applications managed by the cluster master
 <li class="fragment" data-fragment-index="5"> Pod: Contains a group of one or more containers with shared resources
 </div>
@@ -186,15 +195,14 @@
 </div>
 </section>
         </section>
-        <section>
-          <h4>Home builders are responsible for scheduling employees to build/maintain the house, ensure the house is stable, etc like Kubernetes is responsible for managing deployments and apps</h4>
-        </section>
-        <section><div style="color: #cb71d7; text-align:left; padding: 10px">
-          <h4 style="color: #cb71d7; border: 5px solid #cb71d7;">What challenges does Kubernetes solve?</h4>
-          <p class="fragment" style="margin:0;">1. What happens if my app crashes?</p>
-          <p class="fragment" style="margin:0;"> 2. How can I roll out updates or rollbacks?</p>
-          <p class="fragment" style="margin:0;"> 3. What happens when I can get an unexpected high influx of traffic?</p>
-          <p class="fragment" style="margin:0;"> 4. What will work best for my microservice architecture?</p></div>
+        <section><section data-background-image="./img/board.jpg">
+<div style="text-align: left;background:rgba(255,255,255,0.5); color: #000; padding: 10px">
+          <h3 style="color: #000;">What challenges does Kubernetes solve?</h3>
+          <p class="fragment">1. What happens if my app crashes?</p>
+          <p class="fragment">2. How can I roll out updates or rollbacks?</p>
+          <p class="fragment">3. What happens when I can get an unexpected high influx of traffic?</p>
+          <p class="fragment">4. What will work best for my microservice architecture?</p></div>
+</section>
         </section>
         <section><div style="border: 5px solid #fff">
           <h3 style="padding: 10px;">Challenge #1: What happens if my app crashes?</h3>
@@ -212,11 +220,12 @@
           <h3 style="padding: 10px;">Challenge #4: What will work best for my microservice architecture?</h3>
           <p class="fragment" style="padding: 10px;">Microservices can be packaged into containers which are each deployed as pods for isolation and resource sharing</p>
         </section>
-        <section>
-          <h3>Demo(ish)</h3>
+        <section><section data-background-image="./img/demo.jpg">
+          <h2 style="background:rgba(255,255,255,0.5); color: #000;">Demo(ish)</h2></section>
         </section>
-        <section><section data-background-image="./img/ibm.svg">
-<div style="text-align: left;background:rgba(255,255,255,0.5); color: #000">
+        <section><div style="position: relative; text-align: center">
+<img style="border:none;" src="./img/ibm.svg" alt="IBM logo" height="500">
+<div style="text-align: left;background:rgba(255,255,255,0.9); color: #000; position: absolute; top: 25%">
           <h4 style="color: #000;">Deployment prerequisites:</h4>
           <li class="fragment">IBM Cloud Account</li>
           <li class="fragment">Install IBM Cloud CLI</li>
@@ -306,11 +315,13 @@
 <p class="fragment" data-fragment-index="1"> $ kubectl describe service app-service
 <p class="fragment" data-fragment-index="2"> # Access it at <span style="color: #00f9ff">http://[PUBLIC_IP_ADDRESS]:[NODEPORT]</span>
         </section>
-        <section><div style="text-align: left">
-          <h3>Next steps:</h3>
+        <section><section data-background-image="./img/stairs.jpg">
+<div style="text-align: left;background:#000; color: #fff">
+          <h4 style="color: #fff;">Next steps:</h4>
           <li class="fragment">Continuous integration & deployments</li>
           <li class="fragment">Multiple containers</li>
-          <li class="fragment">Istio</li>
+          <li class="fragment">Istio</li></div>
+</section>
         </section>
         <section><div style="text-align: center">
           <h3>Thank you!</h3><div><img style="border-radius: 50%" src="https://user-images.githubusercontent.com/18426780/36912901-71fc797e-1e05-11e8-8e83-9dd223120f2b.jpg" alt="Speaker picture" height="200"></div>

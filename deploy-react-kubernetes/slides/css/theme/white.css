@@ -3,51 +3,33 @@
  *
  * By Hakim El Hattab, http://hakim.se
  */
+
+ /* html.dimbg .slide-background {
+  opacity: 0.4 !important;
+} */
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: black;
   margin: 0px; }
 
-
-html.dim-background .slide-background {
-  opacity: 0.6 !important;
-}
-
 .slide-background:nth-child(4), .slide-background:nth-child(5), .slide-background:nth-child(7), .slide-background:nth-child(8), .slide-background:nth-child(15),
 .slide-background:nth-child(17), .slide-background:nth-child(11), .slide-background:nth-child(9), .slide-background:nth-child(13), .slide-background:nth-child(14),
-.slide-background:nth-child(16), .slide-background:nth-child(26), .slide-background:nth-child(32), .slide-background:nth-child(36), .slide-background:nth-child(37),
-.slide-background:nth-child(38) {
+.slide-background:nth-child(16), .slide-background:nth-child(25), .slide-background:nth-child(31), .slide-background:nth-child(35), .slide-background:nth-child(36),
+.slide-background:nth-child(37),  .slide-background:nth-child(22) {
   background-color: #fff;
-}
-.slide-background:nth-child(22) {
-  background: #3671e3
 }
 
  .slide-background:nth-child(19),  .slide-background:nth-child(20) {
   background: #8aa4f3;
 }
 
-.slide-background:nth-child(34) {
+.slide-background:nth-child(33) {
   background: #181818;
 }
 
-.slide-background:nth-child(39), .slide-background:nth-child(41), .slide-background:nth-child(43) , .slide-background:nth-child(45), .slide-background:nth-child(47),
-.slide-background:nth-child(49) {
+.slide-background:nth-child(38), .slide-background:nth-child(40), .slide-background:nth-child(42) , .slide-background:nth-child(44), .slide-background:nth-child(46),
+.slide-background:nth-child(48) {
   background: #000;
 }
-
-/*slide-background:nth-child(24) {
-  background: #181818;
-}
-
-.slide-background:nth-child(26), .slide-background:nth-child(28), .slide-background:nth-child(40), .slide-background:nth-child(42),
-.slide-background:nth-child(44), .slide-background:nth-child(46), .slide-background:nth-child(48),
-.slide-background:nth-child(38)  {
-  background: #000;
-}
-
-.slide-background:nth-child(49) {
-  background: #cb71d7
- }  */
 
 /*********************************************
  * GLOBAL STYLES
