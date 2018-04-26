@@ -10,3 +10,5 @@ There are many choices when looking for the right solution to manage and deploy 
 - Common pitfalls
 
 By the end of this talk, you will have the resources and tools to determine if this is the right solution for you and how you can get your application deployed!
+
+[Slides](https://rizcheldayao.github.io/presentations/deploy-kubernetes/slides/#/)

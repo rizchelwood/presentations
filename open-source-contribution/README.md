@@ -12,3 +12,5 @@ We’ve all heard of open source projects and that it’s important to contribut
 - Celebrate after each of your contributions!
 
 I'll cover my experience T IBM and talk about some anecdotes I've heard from my friends who contribute to other open source projects. This talk will give you the necessary tools and resources to be able to make your first contribution in under 15 minutes!
+
+[Slides](https://rizcheldayao.github.io/presentations/open-source-contribution/slides/#/)
