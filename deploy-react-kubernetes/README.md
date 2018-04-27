@@ -10,3 +10,5 @@ As a front end developer, we often dread the process of deploying and hosting ou
 - Celebrate!
 
 By the end of this talk, you’ll have a template and guide to deploy your React application while saving hours of your time and being stress free!
+
+[Slides](https://rizcheldayao.github.io/presentations/deploy-react-kubernetes/slides/#/)
