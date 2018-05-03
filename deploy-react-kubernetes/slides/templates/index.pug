@@ -16,18 +16,15 @@ block theme
 
 block slides
   +slide
-    <section data-background-image="./img/washington.jpg">
+    <section data-background-image="./img/basel.png">
     <div style="display: flex; justify-content: flex-start; flex-direction: column;">
-    <div><h3 style="margin: 0px; display: flex; font-size: 1.3em; opacity: 0.5;">How to </h3></div>
-    <div><h3 style="margin: 0px; display: flex; font-size: 1.3em">Deploy <span style="opacity: 0.5; padding-left: 10px; font-size: 1em">Your </span></h3></div>
-    <div><h3 style="margin: 0px; display: flex; font-size: 1.3em">React <span style="opacity: 0.5; padding-left: 10px; font-size: 1em">Application </span></h3></div>
-    <div><h3 style="margin: 0px; display: flex; font-size: 1.3em"> <span style="opacity: 0.5; padding-right: 10px; font-size: 1em">While</span> Saving <span style="opacity: 0.5; padding-left: 10px; font-size: 1em">Time and Energy </span></h3></div>
+    <div><h3 style="margin: 0px; display: flex; font-size: 1.3em"><span style="opacity: 0.5; padding-right: 10px; font-size: 1em">Why</span> Kubernetes: </h3></di>
+    <div><h3 style="margin: 0px; display: flex; opacity: 0.5; font-size: 1.3em">Finding the</h3>
+    <div><h3 style="margin: 0px; display: flex; font-size: 1.3em">best <span style="opacity: 0.5; padding-left: 10px; font-size: 1em">solution</span></h3></div>
+    <div><h3 style="margin: 0px; display: flex;  font-size: 1.3em"> <span style="opacity: 0.5; padding-right: 10px;">for</span> you</h3></div>
     p(style="display: flex; font-size: 24px; font-weight: 200") Rizchel Dayao
     p(style="display: flex; font-size: 24px; font-weight: 200") @rizcheldayao || rdayao@us.ibm.com
     p(style="display: flex; font-size: 24px; font-weight: 200") Slides: https://goo.gl/uSuxXW || GitHub:https://github.com/IBM/deploy-react-kubernetes
-    </div>
-    <div class="footer">
-      p Hello
     </div>
     </section>
 
@@ -210,12 +207,23 @@ block slides
 
   +slide
     <section data-background-image="./img/rocket.png">
-     h4(style="background:rgba(255,255,255,0.75); color: #000") Now let's deploy our application...<span class="fragment" data-fragment-index="1">without a YAML file (YAY! 🎉)
+     h4(style="background:rgba(255,255,255,0.75); color: #000") Now let's containerize & deploy our application...<span class="fragment" data-fragment-index="1">without a YAML file (YAY! 🎉)
     </section>
 
   +slide
     <div style="position: relative; text-align: center">
-    <img style="border:none;opacity:0.2" src="./img/kubernetes.png" alt="Kubernetes flow" height="500">
+    <img style="border:none;opacity:0.2" src="./img/docker.jpg" alt="Docker logo" height="500">
+    <div style="text-align: left; color: #000; position: absolute; top: 25%">
+    h4(style="color: #000") Docker is a tool used to containerize applications:
+    li.fragment Build images
+    li.fragment Run images on containers
+    li.fragment Containers consists of an executable package of an application
+    </div>
+    </div>
+
+  +slide
+    <div style="position: relative; text-align: center">
+    <img style="border:none;opacity:0.2" src="./img/kubernetes.png" alt="Kubernetes logo" height="500">
     <div style="text-align: left; color: #000; position: absolute; top: 25%">
     h4(style="color: #000") Kubernetes is an orchestration tool:
     li.fragment Automates deployment
@@ -231,6 +239,7 @@ block slides
     <aside class="notes">
       p Kubernetes schedules pods go to which nodes, manage deployment
     </aside>
+
   +slide
     <section data-background-image="./img/background.png">
     <div style="text-align: left; display: flex; ">
@@ -238,7 +247,7 @@ block slides
     h3(style="text-align: left") Kubernetes definitions:
     <li class="fragment" data-fragment-index="1"> Cluster: Consist of a cluster master and multiple worker machines
     <li class="fragment" data-fragment-index="3"> Node: Worker machine that run applications managed by the cluster master
-    <li class="fragment" data-fragment-index="5"> Pod: Contains a group of one or more containers with shared resources
+    <li class="fragment" data-fragment-index="5"> Pod: Usually contains one container
     </div>
     <div style="color: #cb71d7; padding-left: 150px">
     h3(style="text-align: left; color: #cb71d7") House equivalents:
@@ -281,6 +290,16 @@ block slides
     p.fragment(style="padding: 10px") Microservices can be packaged into containers which are each deployed as pods for isolation and resource sharing
 
   +slide
+    <section data-background-image="./img/hole.jpg">
+    <div style="text-align: left;background:rgba(255,255,255,0.75);  color: #000; padding: 10px">
+    h3(style="color: #000") Drawbacks & common pitfalls:
+    li.fragment Steep learning curve
+    li.fragment Set up
+    li.fragment Misusing containers
+    li.fragment Moving from beginner to advanced
+    </section>
+
+  +slide
     <section data-background-image="./img/demo.jpg">
      h2(style="background:rgba(255,255,255,0.75); color: #000") Demo(ish)
     </section>
@@ -292,7 +311,8 @@ block slides
     h4(style="color: #000") Deployment prerequisites:
     li.fragment IBM Cloud Account
     li.fragment Install IBM Cloud CLI
-    li.fragment Install the IBM Cloud Container Registry CLI
+    li.fragment Install the IBM Cloud Container Registry plugin
+    li.fragment Install the IBM Cloud Container Service plugin
     li.fragment Install Kubernetes command-line tool, kubectl
     </div>
     </section>
@@ -306,6 +326,43 @@ block slides
   +slide
     <section data-background-image="./img/Dockerfile.png" data-background-size="contain" data-background-position="left">
     </section>
+
+  +slide
+    <div style="display: flex;">
+    <h4 style="font-size: 10em; position: relative; opacity: 0.5">02</h4>
+    <h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);"> <span style="color: navy">Build</span> Docker image</h2>
+    </div>
+
+  +slide
+    <div style="text-align: left; color: #fff" >
+    p # Build in the directory the Dockerfile exists
+    p $ export docker_username=<span style="color: #FF69B4">[DOCKER_USERNAME]<span>
+    p $ docker build  -t $docker_username/app-image .
+    <p class="fragment" data-fragment-index="1"> Sending build context to Docker daemon  856.6kB
+    <p class="fragment" data-fragment-index="1">Step 1/8 : FROM node:9.4
+    <p class="fragment" data-fragment-index="2">...
+    <p class="fragment" data-fragment-index="3">Successfully tagged <span style="color: #FF69B4">[DOCKER_USERNAME]</span>/app-image:latest
+
+    <aside class="notes">
+      p . is path is .
+    </aside>
+
+  +slide
+    <div style="display: flex;">
+    <h4 style="font-size: 10em; position: relative; opacity: 0.5">02</h4>
+    <h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);"><span style="color: navy">Run</span> image</h2>
+    </div>
+
+  +slide
+    <div style="text-align: left; color: #fff" >
+    p $ docker run -p 3000:3000 -d $docker_username/app-image
+    p.fragment 1540b75702a387a2e1fed754a89f
+
+    <aside class="notes">
+      p -p: Publish a container’s port(s) to the host
+      p -d: Run container in background and print container ID
+      p run: Run a command in a new container
+    </aside>
 
   +slide
     <div style="display: flex;">

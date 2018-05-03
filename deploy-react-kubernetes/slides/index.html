@@ -20,17 +20,15 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <section><section data-background-image="./img/washington.jpg">
+        <section><section data-background-image="./img/basel.png">
 <div style="display: flex; justify-content: flex-start; flex-direction: column;">
-<div><h3 style="margin: 0px; display: flex; font-size: 1.3em; opacity: 0.5;">How to </h3></div>
-<div><h3 style="margin: 0px; display: flex; font-size: 1.3em">Deploy <span style="opacity: 0.5; padding-left: 10px; font-size: 1em">Your </span></h3></div>
-<div><h3 style="margin: 0px; display: flex; font-size: 1.3em">React <span style="opacity: 0.5; padding-left: 10px; font-size: 1em">Application </span></h3></div>
-<div><h3 style="margin: 0px; display: flex; font-size: 1.3em"> <span style="opacity: 0.5; padding-right: 10px; font-size: 1em">While</span> Saving <span style="opacity: 0.5; padding-left: 10px; font-size: 1em">Time and Energy </span></h3></div>
+<div><h3 style="margin: 0px; display: flex; font-size: 1.3em"><span style="opacity: 0.5; padding-right: 10px; font-size: 1em">Why</span> Kubernetes: </h3></di>
+<div><h3 style="margin: 0px; display: flex; opacity: 0.5; font-size: 1.3em">Finding the</h3>
+<div><h3 style="margin: 0px; display: flex; font-size: 1.3em">best <span style="opacity: 0.5; padding-left: 10px; font-size: 1em">solution</span></h3></div>
+<div><h3 style="margin: 0px; display: flex;  font-size: 1.3em"> <span style="opacity: 0.5; padding-right: 10px;">for</span> you</h3></div>
           <p style="display: flex; font-size: 24px; font-weight: 200;">Rizchel Dayao</p>
           <p style="display: flex; font-size: 24px; font-weight: 200;">@rizcheldayao || rdayao@us.ibm.com</p>
           <p style="display: flex; font-size: 24px; font-weight: 200;">Slides: https://goo.gl/uSuxXW || GitHub:https://github.com/IBM/deploy-react-kubernetes</p></div>
-<div class="footer">
-          <p>Hello</p></div>
 </section>
         </section>
         <section><section data-background-image="./img/rizchel.png">
@@ -171,10 +169,19 @@
 </section>
         </section>
         <section><section data-background-image="./img/rocket.png">
-          <h4 style="background:rgba(255,255,255,0.75); color: #000;">Now let's deploy our application...<span class="fragment" data-fragment-index="1">without a YAML file (YAY! 🎉)</h4></section>
+          <h4 style="background:rgba(255,255,255,0.75); color: #000;">Now let's containerize & deploy our application...<span class="fragment" data-fragment-index="1">without a YAML file (YAY! 🎉)</h4></section>
         </section>
         <section><div style="position: relative; text-align: center">
-<img style="border:none;opacity:0.2" src="./img/kubernetes.png" alt="Kubernetes flow" height="500">
+<img style="border:none;opacity:0.2" src="./img/docker.jpg" alt="Docker logo" height="500">
+<div style="text-align: left; color: #000; position: absolute; top: 25%">
+          <h4 style="color: #000;">Docker is a tool used to containerize applications:</h4>
+          <li class="fragment">Build images</li>
+          <li class="fragment">Run images on containers</li>
+          <li class="fragment">Containers consists of an executable package of an application</li></div>
+</div>
+        </section>
+        <section><div style="position: relative; text-align: center">
+<img style="border:none;opacity:0.2" src="./img/kubernetes.png" alt="Kubernetes logo" height="500">
 <div style="text-align: left; color: #000; position: absolute; top: 25%">
           <h4 style="color: #000;">Kubernetes is an orchestration tool:</h4>
           <li class="fragment">Automates deployment</li>
@@ -191,7 +198,7 @@
 <div style="color: #fff;">
           <h3 style="text-align: left;">Kubernetes definitions:</h3><li class="fragment" data-fragment-index="1"> Cluster: Consist of a cluster master and multiple worker machines
 <li class="fragment" data-fragment-index="3"> Node: Worker machine that run applications managed by the cluster master
-<li class="fragment" data-fragment-index="5"> Pod: Contains a group of one or more containers with shared resources
+<li class="fragment" data-fragment-index="5"> Pod: Usually contains one container
 </div>
 <div style="color: #cb71d7; padding-left: 150px">
           <h3 style="text-align: left; color: #cb71d7;">House equivalents:</h3><p class="fragment" data-fragment-index="2"> = Home builder company
@@ -226,6 +233,14 @@
           <h3 style="padding: 10px;">Challenge #4: What will work best for my microservice architecture?</h3>
           <p class="fragment" style="padding: 10px;">Microservices can be packaged into containers which are each deployed as pods for isolation and resource sharing</p>
         </section>
+        <section><section data-background-image="./img/hole.jpg">
+<div style="text-align: left;background:rgba(255,255,255,0.75);  color: #000; padding: 10px">
+          <h3 style="color: #000;">Drawbacks & common pitfalls:</h3>
+          <li class="fragment">Steep learning curve</li>
+          <li class="fragment">Set up</li>
+          <li class="fragment">Misusing containers</li>
+          <li class="fragment">Moving from beginner to advanced</li></section>
+        </section>
         <section><section data-background-image="./img/demo.jpg">
           <h2 style="background:rgba(255,255,255,0.75); color: #000;">Demo(ish)</h2></section>
         </section>
@@ -235,7 +250,8 @@
           <h4 style="color: #000;">Deployment prerequisites:</h4>
           <li class="fragment">IBM Cloud Account</li>
           <li class="fragment">Install IBM Cloud CLI</li>
-          <li class="fragment">Install the IBM Cloud Container Registry CLI</li>
+          <li class="fragment">Install the IBM Cloud Container Registry plugin</li>
+          <li class="fragment">Install the IBM Cloud Container Service plugin</li>
           <li class="fragment">Install Kubernetes command-line tool, kubectl</li></div>
 </section>
         </section>
@@ -245,6 +261,33 @@
         </section>
         <section><section data-background-image="./img/Dockerfile.png" data-background-size="contain" data-background-position="left">
 </section>
+        </section>
+        <section><div style="display: flex;">
+<h4 style="font-size: 10em; position: relative; opacity: 0.5">02</h4>
+<h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);"> <span style="color: navy">Build</span> Docker image</h2>
+</div>
+        </section>
+        <section><div style="text-align: left; color: #fff" >
+          <p># Build in the directory the Dockerfile exists</p>
+          <p>$ export docker_username=<span style="color: #FF69B4">[DOCKER_USERNAME]<span></p>
+          <p>$ docker build  -t $docker_username/app-image .</p><p class="fragment" data-fragment-index="1"> Sending build context to Docker daemon  856.6kB
+<p class="fragment" data-fragment-index="1">Step 1/8 : FROM node:9.4
+<p class="fragment" data-fragment-index="2">...
+<p class="fragment" data-fragment-index="3">Successfully tagged <span style="color: #FF69B4">[DOCKER_USERNAME]</span>/app-image:latest
+<aside class="notes">
+          <p>. is path is .</p></aside>
+        </section>
+        <section><div style="display: flex;">
+<h4 style="font-size: 10em; position: relative; opacity: 0.5">02</h4>
+<h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);"><span style="color: navy">Run</span> image</h2>
+</div>
+        </section>
+        <section><div style="text-align: left; color: #fff" >
+          <p>$ docker run -p 3000:3000 -d $docker_username/app-image</p>
+          <p class="fragment">1540b75702a387a2e1fed754a89f</p><aside class="notes">
+          <p>-p: Publish a container’s port(s) to the host</p>
+          <p>-d: Run container in background and print container ID</p>
+          <p>run: Run a command in a new container</p></aside>
         </section>
         <section><div style="display: flex;">
           <h4 style="font-size: 10em; position: relative; opacity: 0.5;">02</h4><h3 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Create <span style="color: navy">Kubernetes</span> cluster</h3>
