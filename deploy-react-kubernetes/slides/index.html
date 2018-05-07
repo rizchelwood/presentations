@@ -36,14 +36,13 @@
           <h3>Nice to meet you 👋🏼</h3>
           <li>Previously Front End Developer</li>
           <li>Developer Advocate @IBM</li>
-          <li>First time in Washington</li>
           <li>James Bond</li></div>
 </section>
 <aside class="notes">
           <p>Talk about school, background</p></aside>
         </section>
         <section><section data-background-image="./img/question-mark.png">
-          <h4 style="text-transform: uppercase; background:  #cb71d7;">As a developer, I was always lost in the process of deploying an app on Kubernetes</h4></section>
+          <h4 style="text-transform: uppercase; background:  #cb71d7;">As a developer, I was always lost in the process of deploying an app in production</h4></section>
         </section>
         <section><img style="border:none;" src="./img/confused.jpg" alt="Confused meme" height="500">
           <h4 style="color: black;">All of the documentation was different</h4><aside class="notes">
@@ -57,7 +56,7 @@
 </section>
         </section>
         <section><iframe src="https://giphy.com/embed/nXxOjZrbnbRxS" width="356" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-          <h4 style="color: black;">To save hours of my time and energy 💯</h4><aside class="notes">
+          <h4 style="color: black;">To help others save hours of time and energy 💯</h4><aside class="notes">
           <p>And money, time = money!!</p></aside>
         </section>
         <section>
@@ -216,7 +215,7 @@
           <h3 style="color: #000;">What challenges does Kubernetes solve?</h3>
           <p class="fragment">1. What happens if my app crashes?</p>
           <p class="fragment">2. How can I roll out updates or rollbacks?</p>
-          <p class="fragment">3. What happens when I can get an unexpected high influx of traffic?</p>
+          <p class="fragment">3. What happens when I get an unexpected high influx of traffic?</p>
           <p class="fragment">4. What will work best for my microservice architecture?</p></div>
 </section>
         </section>
@@ -229,7 +228,7 @@
           <p class="fragment" style="padding: 10px;"> A user can roll out or rollback an update with zero downtime by incrementally updating Pods instances with new ones</p>
         </section>
         <section><div style="border: 5px solid #fff">
-          <h3 style="padding: 10px;">Challenge #3: What happens when I can get an unexpected high influx of traffic?</h3>
+          <h3 style="padding: 10px;">Challenge #3: What happens when I get an unexpected high influx of traffic?</h3>
           <p class="fragment" style="padding: 10px;">Automatically scales the number of pods in deployment</p>
         </section>
         <section><div style="border: 5px solid #fff">
@@ -251,7 +250,7 @@
 <img style="border:none;opacity: 0.2" src="./img/ibm.svg" alt="IBM logo" height="500">
 <div style="text-align: left; color: #000; position: absolute; top: 25%">
           <h4 style="color: #000;">Deployment prerequisites:</h4>
-          <li class="fragment">IBM Cloud Account</li>
+          <li class="fragment">IBM Cloud account & Docker account</li>
           <li class="fragment">Install IBM Cloud CLI</li>
           <li class="fragment">Install the IBM Cloud Container Registry plugin</li>
           <li class="fragment">Install the IBM Cloud Container Service plugin</li>
@@ -265,12 +264,15 @@
         <section><section data-background-image="./img/Dockerfile.png" data-background-size="contain" data-background-position="left">
 </section>
         </section>
+        <section><section data-background-image="./img/python.png" data-background-size="contain" data-background-position="left">
+</section>
+        </section>
         <section><div style="display: flex;">
 <h4 style="font-size: 10em; position: relative; opacity: 0.5">02</h4>
 <h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);"> <span style="color: navy">Build</span> Docker image</h2>
 </div>
         </section>
-        <section><div style="text-align: left; color: #fff" >
+        <section><div style="text-align: left; color: #fff; font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;" >
           <p># Build in the directory the Dockerfile exists</p>
           <p>$ export docker_username=<span style="color: #FF69B4">[DOCKER_USERNAME]<span></p>
           <p>$ docker build  -t $docker_username/app-image .</p><p class="fragment" data-fragment-index="1"> Sending build context to Docker daemon  856.6kB
@@ -285,7 +287,7 @@
 <h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);"><span style="color: navy">Run</span> image</h2>
 </div>
         </section>
-        <section><div style="text-align: left; color: #fff" >
+        <section><div style="text-align: left; color: #fff; font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace; " >
           <p>$ docker run -p 3000:3000 -d $docker_username/app-image</p>
           <p class="fragment">1540b75702a387a2e1fed754a89f</p><aside class="notes">
           <p>-p: Publish a container’s port(s) to the host</p>
@@ -305,7 +307,7 @@
         <section><section data-background-image="./img/kubernetes-dashboard.png" data-background-size="contain">
 </section>
         </section>
-        <section><div style="text-align: left; color: #fff" >
+        <section><div style="text-align: left; color: #fff; font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace; " >
           <p>$ bx cs cluster-config <span style="color: #FF69B4">[CLUSTER_NAME]</span></p>
           <p class="fragment">export KUBECONFIG= /Users/ibm/.bluemix/plugins/container-service/clusters/rizchel-cluster/kube-config-dal1-rizchel-cluster.yml</p>
         </section>
@@ -313,7 +315,7 @@
           <h4 style="font-size: 10em; position: relative; opacity: 0.5;">03</h4><h3 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Create <span style="color: navy">namespace</span></h3>
 </div>
         </section>
-        <section><div style="text-align: left; color: #fff" >
+        <section><div style="text-align: left; color: #fff; font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace; " >
           <p>$ bx cr namespace-add <span style="color: #FF69B4">[NAMESPACE]</span></p>
           <p class="fragment">Adding namespace '<span style="color: #00f9ff">rdayao</span>'...</p>
           <p class="fragment">Successfully added namespace '<span style="color: #00f9ff">rdayao</span>'</p>
@@ -323,8 +325,8 @@
           <h4 style="font-size: 10em; position: relative; opacity: 0.5;">04</h4><h2 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);"> <span style="color: navy">Build</span> image</h2>
 </div>
         </section>
-        <section><div style="text-align: left; color: #fff" >
-          <p>$ bx cr build -t registry.<span style="color: #FF69B4">[IBM_CLOUD_REGION]</span>.bluemix.net/<span style="color: #FF69B4">[NAMESPACE]</span>/deploy-react-kubernetes .</p><p class="fragment" data-fragment-index="1"> Sending build context to Docker daemon  861.7kB
+        <section><div style="text-align: left; color: #fff; font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace; " >
+          <p>$ bx cr build -t registry.<span style="color: #FF69B4">[IBM_CLOUD_REGION]</span>.bluemix.net/<span style="color: #FF69B4">[NAMESPACE]</span>/app-image .</p><p class="fragment" data-fragment-index="1"> Sending build context to Docker daemon  861.7kB
 <p class="fragment" data-fragment-index="1">Step 1/8 : FROM node:9.4
 <p class="fragment" data-fragment-index="2">...
 <p class="fragment" data-fragment-index="3"><span style="color: #39ff14">OK</span>
@@ -333,8 +335,8 @@
           <h4 style="font-size: 10em; position: relative; opacity: 0.5;">05</h4><h3 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">Run the <span style="color: navy">image</span> as a <span style="color: navy">deployment</span></h3>
 </div>
         </section>
-        <section><div style="text-align: left; color: #fff" >
-          <p>$ kubectl run app-deployment --image=registry.<span style="color: #FF69B4">[IBM_CLOUD_REGION]</span>.bluemix.net/<span style="color: #FF69B4">[NAMESPACE]</span>/deploy-react-kubernetes</p>
+        <section><div style="text-align: left; color: #fff; font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace; " >
+          <p>$ kubectl run app-deployment --image=registry.<span style="color: #FF69B4">[IBM_CLOUD_REGION]</span>.bluemix.net/<span style="color: #FF69B4">[NAMESPACE]</span>/app-image</p>
           <p class="fragment">deployment "app-deployment" created</p><aside class="notes">
           <p>The Deployment instructs Kubernetes how to create and update instances of your application.</p>
           <p>Cluster master schedules application instances onto individual Nodes in the cluster.</p>
@@ -344,7 +346,7 @@
           <h4 style="font-size: 10em; position: relative; opacity: 0.5;">06</h4><h3 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);"><span style="color: navy">Expose</span> deployment as a <span style="color: navy">service</span></h3>
 </div>
         </section>
-        <section><div style="text-align: left; color: #fff" >
+        <section><div style="text-align: left; color: #fff; font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace; " >
           <p>$ kubectl expose deployment/app-deployment --type=NodePort --name=app-service --port=3000</p>
           <p class="fragment">service "app-service" exposed</p><aside class="notes">
           <p>expose application outside of cluster</p>
@@ -354,7 +356,7 @@
           <h4 style="font-size: 10em; position: relative; opacity: 0.5;">07</h4><h3 style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);"><span style="color: navy">Access</span> application</h3>
 </div>
         </section>
-        <section><div style="color: #fff; text-align: left;" >
+        <section><div style="color: #fff; text-align: left; font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace; " >
           <p># Obtain public IP Address of cluster</p>
           <p>$ bx cs workers <span style="color: #FF69B4">[CLUSTER_NAME]</span></p><p class="fragment" data-fragment-index="1"> # Obtain the NodePort of the service
 <p class="fragment" data-fragment-index="1"> $ kubectl describe service app-service
