@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Building Enterprise Level Applications with the Magic of React, Redux, and GraphQL</title>
+    <meta name="description" content="Build applications with React, Redux and GraphQL to deploy on Kubernetes">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+      
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section><section data-background-image="./img/athens.jpg">
+<div style="display: flex; justify-content: flex-start; flex-direction: column;">
+<div><h3 style="margin: 0px; display: flex; font-size: 1.3em"><span style="opacity: 0.5; padding-right: 10px; font-size: 1em">Building</span> Enterprise</h3></div>
+<div><h3 style="margin: 0px; display: flex; opacity: 0.5; font-size: 1.3em">Level Applications</h3>
+<div><h3 style="margin: 0px; display: flex; font-size: 1.3em"><span style="opacity: 0.5; padding-right: 10px; font-size: 1em">With The</span> Magic</h3></div>
+<div><h3 style="margin: 0px; display: flex;  font-size: 1.3em;"><span style="opacity: 0.5; padding-right: 10px;">of</span> React, Redux</h3></div>
+<div><h3 style="margin: 0px; display: flex;  font-size: 1.3em;"><span style="opacity: 0.5; padding-right: 10px;">and</span> GraphQL</h3></div>
+          <p style="display: flex; font-size: 24px; font-weight: 200;">Rizchel Dayao</p>
+          <p style="display: flex; font-size: 24px; font-weight: 200;">@rizcheldayao || rdayao@us.ibm.com</p>
+          <p style="display: flex; font-size: 24px; font-weight: 200;">Slides: https://goo.gl/uSuxXW</p></div>
+</section>
+        </section>
+        <section><section data-background-image="./img/rizchel.png">
+<div style="text-align: left">
+          <h3>Nice to meet you 👋🏼</h3>
+          <li>Previously Front End Developer</li>
+          <li>Developer Advocate @IBM</li>
+          <li>James Bond</li></div>
+</section>
+<aside class="notes">
+          <p>Talk about school, background</p></aside>
+        </section>
+        <section>
+          <h2>Building enterprise applications is hard</h2>
+        </section>
+        <section><iframe src="https://giphy.com/embed/n4WpP39mwWrmg" width="800" height="450" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+          <h4 style="color: #000;">It can make you feel like a queen (or king) when you're on a roll</h4>
+        </section>
+        <section><iframe src="https://giphy.com/embed/FXGoDrsgrNLj2" width="800" height="450" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+          <h4 style="color: #000;">Or it can make you feel like throwing your computer if things aren't going well</h4>
+        </section>
+        <section><section data-background-image="./img/notre-dame.jpg" >
+<h4 style="background:rgba(255,255,255,0.75); color: #000">One of the most challenging tasks is designing the architecture and set up</h4>
+</section>
+        </section>
+        <section><section data-background-image="./img/legos.jpg" >
+<div style="background:rgba(255,255,255,0.8); color: #000; text-align: left; padding: 10px">
+          <h3 style="color: #000;">There are so many things we have to consider:</h3>
+          <p class="fragment">1. What developer tools (language, library, etc) best meet our needs?</p>
+          <p class="fragment">2. How do we manage our internal and external data within our microservice?</p>
+          <p class="fragment">3. How do we maintain clean and consistent code?</p>
+          <p class="fragment">4. How do we create a consistent way to configure and deploy all our microservices?</p></div>
+</section>
+        </section>
+        <section><img style="border:none;" src="./img/anchorman.jpg" alt="Anchorman meme" height="500">
+        </section>
+        <section>
+          <h2>Our team was tasked to create a new front end microservice for our virtual server ordering experience in IBM Cloud</h2>
+        </section>
+        <section>
+          <h4>Like any project, we had certain requirements to consider:</h4>
+          <li class="fragment">Was this even possible to integrate Softlayer APIs into the IBM Cloud platform?</li>
+          <li class="fragment">New microservice that fit into the existing ecosystem</li>
+          <li class="fragment">Consume both IBM Cloud & Softlayer APIs</li>
+          <li class="fragment">Testing & component based architecture</li>
+        </section>
+        <section><div style="border: 5px solid #fff">
+          <h3 style="padding: 10px;">Challenge #1: What developer tools best meet our needs?</h3>
+          <p class="fragment" style="padding: 10px;">React, ES6, Express, Webpack</p>
+        </section>
+        <section>
+          <h3>Why did we choose React?</h3>
+          <li class="fragment">Reusable components</li>
+          <li class="fragment">Fast render with Virtual DOM</li>
+          <li class="fragment">Redux state management</li>
+          <li class="fragment">Data binding</li>
+          <li class="fragment">Carbon components library</li>
+        </section>
+        <section><div style="position: relative; text-align: center;" >
+<img style="border:none; opacity: 0.2" src="./img/react.png" alt="React logo" height="500">
+<div style="text-align: left;color: #000; position: absolute; top: 25%">
+          <h4 style="color: #000;">React is a JavaScript library for building user interfaces</h4>
+          <li class="fragment">Functions as the view layer</li>
+          <li class="fragment">Component based</li>
+          <li class="fragment">Virtual DOM</li>
+          <li class="fragment">Declarative</li>
+          <li class="fragment">JSX</li></div>
+<div>
+        </section>
+        <section><section data-background-image="./img/blueprint.jpg">
+          <h3 style="color: black; background:rgba(255,255,255,0.75);">Imagine we're building a house like an application</h3></section>
+        </section>
+        <section><section data-background-image="./img/pyramid.png" data-background-size="contain">
+</section>
+        </section>
+        <section><section data-background-image="./img/kitchen.png">
+</section>
+        </section>
+        <section>
+          <h3 style="color: #19a68f;">React containers</h3><div style="display: flex; ">
+<div style="color: black; border: 2px solid #19a68f">
+          <h4 style="color: #fff; background: #19a68f; border: 2px solid #19a68f; ;">Stove</h4><div style="color:#19a68f; padding: 5px">
+<p class="fragment" data-fragment-index="1"> Made up by smaller parts
+<p class="fragment" data-fragment-index="2"> Manages everything within its ecosystem
+<p class="fragment" data-fragment-index="3"> Passes the state to smaller parts
+</div>
+</div>
+<div style="color: black; border: 2px solid #19a68f; margin-left: 100px">
+          <h4 style="color: #fff; background: #19a68f; border: 2px solid #19a68f;">Containers</h4><div style="color:#19a68f; padding: 5px">
+<p class="fragment" data-fragment-index="1"> Made up of smaller elements called components
+<p class="fragment" data-fragment-index="2"> Manages all of the data
+<p class="fragment" data-fragment-index="3"> Passes data as props to components
+</div>
+</div>
+</div>
+        </section>
+        <section>
+          <h3 style="color: #19a68f;">React components</h3><div style="display: flex; ">
+<div style="color: black; border: 2px solid #19a68f">
+          <h4 style="color: #fff; background: #19a68f; border: 2px solid #19a68f; ;">Stove burner</h4><div style="color:#19a68f; padding: 5px">
+<p class="fragment" data-fragment-index="1"> Reusable piece
+<p class="fragment" data-fragment-index="2"> Receive data and state from stove
+</div>
+</div>
+<div style="color: black; border: 2px solid #19a68f; margin-left: 100px">
+          <h4 style="color: #fff; background: #19a68f; border: 2px solid #19a68f;">Components</h4><div style="color:#19a68f; padding: 5px">
+<p class="fragment" data-fragment-index="1"> Reusable in multiple parts of an application
+<p class="fragment" data-fragment-index="2"> Receives data and state from container
+<p class="fragment" data-fragment-index="3"> Accept data from containers through props
+</div>
+</div>
+</div>
+        </section>
+        <section><section data-background-image="./img/developer.jpg">
+<h4 style="background:#000; color: #fff">A separation of concerns allows an application to be easier to manage and provides cleaner code
+</section>
+        </section>
+        <section><div style="position: relative; text-align: center;" >
+<img style="border:none; opacity: 0.2" src="./img/redux.png" alt="Redux flow" height="500">
+<div style="text-align: left;color: #000; position: absolute; top: 25%">
+          <h4 style="color: #000;">Redux is a JavaScript library for managing application state:</h4>
+          <li class="fragment">Actions describe something has happened</li>
+          <li class="fragment">Reducers update the state</li>
+          <li class="fragment">Store holds the application state</li></div>
+<div>
+        </section>
+        <section><img style="border:none;" src="./img/redux-flow.png" alt="Redux flow" height="500">
+          <p style="font-size: 20px; color: #000;">https://stackoverflow.com/questions/45416237/axios-calls-in-actions-redux/45425055</p>
+        </section>
+        <section><section data-background-image="./img/background.png">
+<div style="text-align: left; display: flex; ">
+<div style="color: #fff;">
+          <h3 style="text-align: left;">Kitchen:</h3><p class="fragment" data-fragment-index="1"> 1. A user would turn on the stove burner
+<p class="fragment" data-fragment-index="2"> 2. TURN_ON_STOVE action
+<p class="fragment" data-fragment-index="3"> 3. State of the stove is ON
+</div>
+<div style="color: #19a68f; padding-left: 150px">
+          <h3 style="text-align: left; color: #19a68f;">Redux:</h3><p class="fragment" data-fragment-index="1">  => trigger action
+<p class="fragment" data-fragment-index="2"> => sent to the reducer
+<p class="fragment" data-fragment-index="3"> => state of the store is ON
+</div>
+</div>
+</section>
+        </section>
+        <section><div style="border: 5px solid #fff">
+          <h3 style="padding: 10px;">Challenge #1: How do we manage our internal and external data within our microservice?</h3>
+          <p class="fragment" style="padding: 10px;">Redux and GraphQL</p>
+        </section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        history: true,
+      
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+      
+    </script>
+  </body>
+</html>
