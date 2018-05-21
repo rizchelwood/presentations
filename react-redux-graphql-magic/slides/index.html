@@ -175,8 +175,47 @@
 </section>
         </section>
         <section><div style="border: 5px solid #fff">
-          <h3 style="padding: 10px;">Challenge #1: How do we manage our internal and external data within our microservice?</h3>
+          <h3 style="padding: 10px;">Challenge #2: How do we manage our internal and external data within our microservice?</h3>
           <p class="fragment" style="padding: 10px;">Redux and GraphQL</p>
+        </section>
+        <section><div style="position: relative; text-align: center;" >
+<img style="border:none; opacity: 0.2" src="./img/graphql.png" alt="GraphQL" height="500">
+<div style="text-align: left;color: #000; position: absolute; top: 25%">
+          <h4 style="color: #000;">GraphQL is a data query language for your APIs:</h4>
+          <li class="fragment">Send GraphQL query and get exactly what you need</li>
+          <li class="fragment">Gets many resources in a single request</li>
+          <li class="fragment">Apollo client cache query results</li>
+          <li class="fragment">Support local, offline development</li></div>
+<div>
+        </section>
+        <section><img style="border:none;" src="./img/graphql-architecture.png" alt="GraphQL architecture" height="500" />
+        </section>
+        <section><div style="text-align: center">
+<img style="border: none;"src="https://user-images.githubusercontent.com/18426780/36912893-7102c2bc-1e05-11e8-8aee-06bf6b839226.png" alt="Apollo queries and mutations" height="500">
+<p style="opacity: 1; color: #000;">https://www.apollographql.com/client/</p>
+</div>
+        </section>
+        <section><img style="border:none;" src="./img/gramps.png" alt="Gramps" height="300" />
+<aside class="notes">
+          <p>We created an internal package to allow independent data sources to be composed into a single GraphQL schema that was later open sourced...GrAMPS</p></aside>
+        </section>
+        <section><section data-background-image="./img/data.jpg">
+<div style="text-align: left;color: #000; background:rgba(255,255,255,0.7); padding: 10px">
+          <h3 style="color: #000;">Data source breakdown:</h3>
+          <li class="fragment">Models: functions for the different calls made with the parameters</li>
+          <li class="fragment">Resolvers: contain mutations and queries</li>
+          <li class="fragment">Schema: schema of the api calls (parameters, returned data, types)</li>
+          <li class="fragment">Mocks: mock local data using casual</li></div>
+</section>
+        </section>
+        <section><section data-background-image="./img/win.jpg">
+<div style="text-align: left;color: #000; background:rgba(255,255,255,0.9); padding: 10px">
+          <h3 style="color: #000;"> This allowed:</h3>
+          <li class="fragment">A central GraphQL microservice that anyone could consume</li>
+          <li class="fragment">An isolated data source for each microservice</li>
+          <li class="fragment">Easy adoption</li>
+          <li class="fragment">Better performance</li></div>
+</section>
         </section>
       </div>
     </div>

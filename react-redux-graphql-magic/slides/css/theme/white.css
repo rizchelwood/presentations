@@ -5,7 +5,8 @@
  */
 
  .slide-background:nth-child(4),  .slide-background:nth-child(5), .slide-background:nth-child(13), .slide-background:nth-child(15),
- .slide-background:nth-child(17),  .slide-background:nth-child(18), .slide-background:nth-child(20), .slide-background:nth-child(21) {
+ .slide-background:nth-child(17),  .slide-background:nth-child(18), .slide-background:nth-child(20), .slide-background:nth-child(21),
+ .slide-background:nth-child(24),  .slide-background:nth-child(27), .slide-background:nth-child(25) , .slide-background:nth-child(26) {
   background: #fff;
  }
 
