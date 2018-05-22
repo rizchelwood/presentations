@@ -217,6 +217,87 @@
           <li class="fragment">Better performance</li></div>
 </section>
         </section>
+        <section>
+          <h4>To make these API calls, we needed to perform a token exchange for Softlayer authentication, which introduced...a middleware layer</h4>
+        </section>
+        <section><div style="position: relative; text-align: center;" >
+<img style="border:none; opacity: 0.1" src="./img/express.png" alt="Express" height="500">
+<div style="text-align: left;color: #000; position: absolute; top: 25%">
+          <h4 style="color: #000;">Middleware consist of a series of function calls:</h4>
+          <li class="fragment">Access request object, response object, and next middleware function</li>
+          <li class="fragment">Able to make changes to request and response objects</li>
+          <li class="fragment">Chain multiple functions</li></div>
+<div>
+        </section>
+        <section><div style="text-align: left; color: #fff; font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace; " >
+          <p>function logger(req,res,next){</p>
+          <p style="padding-left: 100px;">  console.log(new Date(), req.method, req.url);</p>
+          <p style="padding-left: 100px;">   next();</p>
+          <p>}</p>
+        </section>
+        <section>
+          <h3>Flow:</h3>
+          <p class="fragment">1. Initiate authentication from the front end</p>
+          <p class="fragment">2. Specified routes in middleware</p>
+          <p class="fragment">3. Perform token exchange and send back auth object to front end</p>
+          <p class="fragment">4. Pass user id and token as props to containers</p>
+        </section>
+        <section><div style="color: black; border: 2px solid #19a68f">
+          <h4 style="color: #fff; background: #19a68f; padding: 1rem;">Initiate authentication from front end:</h4><div style="color:#19a68f; padding: 20px; text-align: left;">
+          <p class="fragment">Required user id and token in our React containers to make API calls</p>
+          <p class="fragment">Made an XMLHttpRequest in componentWillMount lifecycle method</p>
+          <p class="fragment">Specified the account id and URL to call in our middleware layer</p></div>
+</div>
+<aside class="notes">
+          <p>The request only had a url and method</p></aside>
+        </section>
+        <section><div style="color: black; border: 2px solid #19a68f">
+          <h4 style="color: #fff; background: #19a68f; border: padding: 1rem;">Specified routes in middleware:</h4><div style="color:#19a68f; padding: 20px; text-align: left;">
+          <p class="fragment">Used Express Router</p>
+          <p class="fragment">router.get('/api/SLAuth', getSLID, getSLToken);</p></div>
+</div>
+        </section>
+        <section><div style="color: black; border: 2px solid #19a68f">
+          <h4 style="color: #fff; background: #19a68f; padding: 1rem;">Perform token exchange and send back to front end:</h4><div style="color:#19a68f; padding: 20px; text-align: left;">
+          <p class="fragment">Searched accounts to get user id then sent the user id in the request object to the next function</p>
+          <p class="fragment">Use Request library to make POST call for token</p>
+          <p class="fragment">Send user id and token back as response</p>
+          <p class="fragment">Response object was passed as props down to containers</p></div>
+</div>
+        </section>
+        <section><div style="border: 5px solid #fff">
+          <h3 style="padding: 10px;">Challenge #1: How do we maintain clean and consistent code?</h3>
+          <p class="fragment" style="padding: 10px;">Testing and pull request reviews</p>
+        </section>
+        <section><div style="position: relative; text-align: center;" >
+<img style="border:none; opacity: 0.1" src="./img/jest.png" alt="Jest" height="500">
+<div style="text-align: left;color: #000; position: absolute; top: 25%">
+          <h4 style="color: #000;">Jest and Enzyme are unit testing utilities to test a React application:</h4>
+          <li class="fragment">Shallow rendering</li>
+          <li class="fragment">Full DOM rendering</li>
+          <li class="fragment">Coverage reports</li>
+          <li class="fragment">Snapshot testing</li>
+          <li class="fragment">Functionality testing</li></div>
+<div>
+        </section>
+        <section><div style="color: black; border: 2px solid #19a68f">
+          <h4 style="color: #fff; background: #19a68f; padding: 1rem;">Testing:</h4><div style="color:#19a68f; padding: 20px; text-align: left;">
+          <p class="fragment">With mock data</p>
+          <p class="fragment">By simulating events</p>
+          <p class="fragment">For state or prop change</p>
+          <p class="fragment">Test actions and reducers to equal the correct action and state</p>
+          <p class="fragment">Require at least 75% testing coverage</p></div>
+</div>
+        </section>
+        <section><div style="position: relative; text-align: center;" >
+<img style="border:none; opacity: 0.1" src="./img/github.png" alt="GitHub" height="500">
+<div style="text-align: left;color: #000; position: absolute; top: 25%">
+          <h4 style="color: #000;">Pull requests show what someone has changed to push up to a GitHub repository:</h4>
+          <li class="fragment">Require at least 2 reviews</li>
+          <li class="fragment">Pass all tests in the CI/CD pipeline</li>
+          <li class="fragment">Ensures all code is reviewed by someone else</li></div>
+<div>
+        </section>
       </div>
     </div>
     <script src="lib/js/head.min.js"></script>

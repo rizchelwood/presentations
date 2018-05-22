@@ -257,6 +257,107 @@ block slides
     </div>
     </section>
 
+  +slide
+    h4 To make these API calls, we needed to perform a token exchange for Softlayer authentication, which introduced...a middleware layer
+
+  +slide
+    <div style="position: relative; text-align: center;" >
+    <img style="border:none; opacity: 0.1" src="./img/express.png" alt="Express" height="500">
+    <div style="text-align: left;color: #000; position: absolute; top: 25%">
+    h4(style="color: #000") Middleware consist of a series of function calls:
+    li.fragment Access request object, response object, and next middleware function
+    li.fragment Able to make changes to request and response objects
+    li.fragment Chain multiple functions
+    </div>
+    <div>
+
+  +slide
+    <div style="text-align: left; color: #fff; font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace; " >
+    p function logger(req,res,next){
+    p(style="padding-left: 100px")   console.log(new Date(), req.method, req.url);
+    p(style="padding-left: 100px")    next();
+    p }
+
+  +slide
+    h3 Flow:
+    p.fragment 1. Initiate authentication from the front end
+    p.fragment 2. Specified routes in middleware
+    p.fragment 3. Perform token exchange and send back auth object to front end
+    p.fragment 4. Pass user id and token as props to containers
+
+  +slide
+    <div style="color: black; border: 2px solid #19a68f">
+    h4(style="color: #fff; background: #19a68f; padding: 1rem") Initiate authentication from front end:
+    <div style="color:#19a68f; padding: 20px; text-align: left;">
+    p.fragment Required user id and token in our React containers to make API calls
+    p.fragment Made an XMLHttpRequest in componentWillMount lifecycle method
+    p.fragment Specified the account id and URL to call in our middleware layer
+    </div>
+    </div>
+
+    <aside class="notes">
+      p The request only had a url and method
+    </aside>
 
 
+  +slide
+    <div style="color: black; border: 2px solid #19a68f">
+    h4(style="color: #fff; background: #19a68f; border: padding: 1rem") Specified routes in middleware:
+    <div style="color:#19a68f; padding: 20px; text-align: left;">
+    p.fragment Used Express Router
+    p.fragment router.get('/api/SLAuth', getSLID, getSLToken);
+    </div>
+    </div>
 
+  +slide
+    <div style="color: black; border: 2px solid #19a68f">
+    h4(style="color: #fff; background: #19a68f; padding: 1rem") Perform token exchange and send back to front end:
+    <div style="color:#19a68f; padding: 20px; text-align: left;">
+    p.fragment Searched accounts to get user id then sent the user id in the request object to the next function
+    p.fragment Use Request library to make POST call for token
+    p.fragment Send user id and token back as response
+    p.fragment Response object was passed as props down to containers
+    </div>
+    </div>
+
+  +slide
+    <div style="border: 5px solid #fff">
+    h3(style="padding: 10px") Challenge #1: How do we maintain clean and consistent code?
+    p.fragment(style="padding: 10px") Testing and pull request reviews
+
+  +slide
+    <div style="position: relative; text-align: center;" >
+    <img style="border:none; opacity: 0.1" src="./img/jest.png" alt="Jest" height="500">
+    <div style="text-align: left;color: #000; position: absolute; top: 25%">
+    h4(style="color: #000") Jest and Enzyme are unit testing utilities to test a React application:
+    li.fragment Shallow rendering
+    li.fragment Full DOM rendering
+    li.fragment Coverage reports
+    li.fragment Snapshot testing
+    li.fragment Functionality testing
+    </div>
+    <div>
+
+
+  +slide
+    <div style="color: black; border: 2px solid #19a68f">
+    h4(style="color: #fff; background: #19a68f; padding: 1rem") Testing:
+    <div style="color:#19a68f; padding: 20px; text-align: left;">
+    p.fragment With mock data
+    p.fragment By simulating events
+    p.fragment For state or prop change
+    p.fragment Test actions and reducers to equal the correct action and state
+    p.fragment Require at least 75% testing coverage
+    </div>
+    </div>
+
+  +slide
+    <div style="position: relative; text-align: center;" >
+    <img style="border:none; opacity: 0.1" src="./img/github.png" alt="GitHub" height="500">
+    <div style="text-align: left;color: #000; position: absolute; top: 25%">
+    h4(style="color: #000") Pull requests show what someone has changed to push up to a GitHub repository:
+    li.fragment Require at least 2 reviews
+    li.fragment Pass all tests in the CI/CD pipeline
+    li.fragment Ensures all code is reviewed by someone else
+    </div>
+    <div>
