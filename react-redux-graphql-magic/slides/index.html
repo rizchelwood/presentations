@@ -266,7 +266,7 @@
 </div>
         </section>
         <section><div style="border: 5px solid #fff">
-          <h3 style="padding: 10px;">Challenge #1: How do we maintain clean and consistent code?</h3>
+          <h3 style="padding: 10px;">Challenge #3: How do we maintain clean and consistent code?</h3>
           <p class="fragment" style="padding: 10px;">Testing and pull request reviews</p>
         </section>
         <section><div style="position: relative; text-align: center;" >
@@ -297,6 +297,87 @@
           <li class="fragment">Pass all tests in the CI/CD pipeline</li>
           <li class="fragment">Ensures all code is reviewed by someone else</li></div>
 <div>
+        </section>
+        <section><div style="border: 5px solid #fff">
+          <h3 style="padding: 10px;">Challenge #4: How do we create a consistent way to configure and deploy all our microservices?</h3>
+          <p class="fragment" style="padding: 10px;">Kubernetes</p>
+        </section>
+        <section><div style="position: relative; text-align: center">
+<img style="border:none;opacity:0.2" src="./img/kubernetes.png" alt="Kubernetes logo" height="500">
+<div style="text-align: left; color: #000; position: absolute; top: 25%">
+          <h4 style="color: #000;">Kubernetes is an orchestration tool:</h4>
+          <li class="fragment">Automates deployment</li>
+          <li class="fragment">Manages the deployment & containerized applications</li></div>
+</div>
+        </section>
+        <section><section data-background-image="./img/house.jpg">
+          <h3 style="color: #fff; background:#000;">Kubernetes is like the home builder in charge of scheduling and managing a house</h3></section>
+<aside class="notes">
+          <p>Kubernetes schedules pods go to which nodes, manage deployment</p></aside>
+        </section>
+        <section><section data-background-image="./img/background.png">
+<div style="text-align: left; display: flex; ">
+<div style="color: #fff;">
+          <h3 style="text-align: left;">Kubernetes definitions:</h3><li class="fragment" data-fragment-index="1"> Cluster: Consist of a cluster master and multiple worker machines
+<li class="fragment" data-fragment-index="3"> Node: Worker machine that run applications managed by the cluster master
+<li class="fragment" data-fragment-index="5"> Pod: Usually contains one container
+</div>
+<div style="color: #19a68f; padding-left: 150px">
+          <h3 style="text-align: left; color: #19a68f;">House equivalents:</h3><p class="fragment" data-fragment-index="2"> = Home builder company
+<p class="fragment" data-fragment-index="4" style="margin-top: 50px"> = Home builder employees
+<p class="fragment" data-fragment-index="6" style="margin-top: 100px"> = Room
+</div>
+</div>
+</section>
+        </section>
+        <section><section data-background-image="./img/rubik.jpg">
+<div style="text-align: left;color: #000; background:rgba(255,255,255,0.9); padding: 10px">
+          <h3 style="color: #000;">What challenges does Kubernetes solve?</h3>
+          <p class="fragment">1. What happens if my app crashes?</p>
+          <p class="fragment">2. How can I roll out updates or rollbacks?</p>
+          <p class="fragment">3. What happens when I get an unexpected high influx of traffic?</p>
+          <p class="fragment">4. What will work best for my microservice architecture?</p></div>
+</section>
+        </section>
+        <section><div style="border: 5px solid #fff">
+          <h3 style="padding: 10px;">Challenge #1: What happens if my app crashes?</h3>
+          <p class="fragment" style="padding: 10px;">Provides monitoring for pod health and restarts them in case of failure</p>
+        </section>
+        <section><div style="border: 5px solid #fff">
+          <h3 style="padding: 10px;">Challenge #2: How can I roll out updates or rollbacks?</h3>
+          <p class="fragment" style="padding: 10px;"> A user can roll out or rollback an update with zero downtime by incrementally updating Pods instances with new ones</p>
+        </section>
+        <section><div style="border: 5px solid #fff">
+          <h3 style="padding: 10px;">Challenge #3: What happens when I get an unexpected high influx of traffic?</h3>
+          <p class="fragment" style="padding: 10px;">Automatically scales the number of pods in deployment</p>
+        </section>
+        <section><div style="border: 5px solid #fff">
+          <h3 style="padding: 10px;">Challenge #4: What will work best for my microservice architecture?</h3>
+          <p class="fragment" style="padding: 10px;">Microservices can be packaged into containers which are each deployed as pods for isolation and resource sharing</p>
+        </section>
+        <section>
+          <h3>Business impact/status</h3>
+        </section>
+        <section><div style="text-align: center">
+          <h3>Thank you!</h3><div><img style="border-radius: 50%" src="https://user-images.githubusercontent.com/18426780/36912901-71fc797e-1e05-11e8-8e83-9dd223120f2b.jpg" alt="Speaker picture" height="200"></div>
+          <h3>Rizchel Dayao</h3>
+          <p>Follow me on Twitter: @rizcheldayao</p>
+          <p>Slides available: https://goo.gl/uSuxXW</p></div>
+        </section>
+        <section><div style="text-align: left">
+          <h3>Resources</h3>
+          <p style="font-size: 20px; margin: 0;">1. Slides</p>
+          <p style="font-size: 20px; color: navy;">(https://goo.gl/uSuxXW)</p>
+          <p style="font-size: 20px;">2. GitHub Repo</p>
+          <p style="font-size: 20px; color: navy;">(https://github.com/IBM/deploy-react-kubernetes)</p>
+          <p style="font-size: 20px;">3. React & Kubernetes</p>
+          <p style="font-size: 20px; color: navy;">(https://reactjs.org/, https://kubernetes.io/)</p>
+          <p style="font-size: 20px;">4. Blog post</p>
+          <p style="font-size: 20px; color: navy;">(https://medium.com/@rizchel.a.dayao/my-journey-to-deploying-my-first-react-application-with-kubernetes-95e6d25f434d</p>
+          <p style="font-size: 20px;">5. Demo</p>
+          <p style="font-size: 20px; color: navy;">(https://youtu.be/1Lq9vW3LuH8)</p>
+          <p style="font-size: 20px;">6. IBM Cloud</p>
+          <p style="font-size: 20px; color: navy;">(https://console.bluemix.net)</p>
         </section>
       </div>
     </div>
