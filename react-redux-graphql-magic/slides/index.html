@@ -29,7 +29,7 @@
 <div><h3 style="margin: 0px; display: flex;  font-size: 1.3em;"><span style="opacity: 0.5; padding-right: 10px;">and</span> GraphQL</h3></div>
           <p style="display: flex; font-size: 24px; font-weight: 200;">Rizchel Dayao</p>
           <p style="display: flex; font-size: 24px; font-weight: 200;">@rizcheldayao || rdayao@us.ibm.com</p>
-          <p style="display: flex; font-size: 24px; font-weight: 200;">Slides: https://goo.gl/uSuxXW</p></div>
+          <p style="display: flex; font-size: 24px; font-weight: 200;">Slides: https://goo.gl/nY5RPG</p></div>
 </section>
         </section>
         <section><section data-background-image="./img/rizchel.png">
@@ -43,7 +43,7 @@
           <p>Talk about school, background</p></aside>
         </section>
         <section>
-          <h2>Building enterprise applications is hard</h2>
+          <h2 style="color:#000; font-size: 75px;">Building enterprise applications is <span style="color:#19a68f">hard</span></h2>
         </section>
         <section><iframe src="https://giphy.com/embed/n4WpP39mwWrmg" width="800" height="450" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
           <h4 style="color: #000;">It can make you feel like a queen (or king) when you're on a roll</h4>
@@ -67,26 +67,33 @@
         <section><img style="border:none;" src="./img/anchorman.jpg" alt="Anchorman meme" height="500">
         </section>
         <section>
-          <h2>Our team was tasked to create a new front end microservice for our virtual server ordering experience in IBM Cloud</h2>
+          <h3 style="color:#000; font-size: 75px;">Our team tasked to <span style="color:#19a68f">create</span> a new front end <span style="color:#19a68f">microservice</span></h3>
         </section>
-        <section>
-          <h4>Like any project, we had certain requirements to consider:</h4>
+        <section><section data-background-image="./img/virtualserver.png" >
+</section>
+        </section>
+        <section><section data-background-image="./img/check.png" >
+<div style="background:rgba(255,255,255,0.75); color: #000; text-align: left; padding: 10px">
+          <h4 style="color: #000;">Like any project, we had certain requirements to fulfill:</h4>
           <li class="fragment">Was this even possible to integrate Softlayer APIs into the IBM Cloud platform?</li>
           <li class="fragment">New microservice that fit into the existing ecosystem</li>
           <li class="fragment">Consume both IBM Cloud & Softlayer APIs</li>
-          <li class="fragment">Testing & component based architecture</li>
+          <li class="fragment">Testing & component based architecture</li></div>
+</section>
         </section>
         <section><div style="border: 5px solid #fff">
           <h3 style="padding: 10px;">Challenge #1: What developer tools best meet our needs?</h3>
           <p class="fragment" style="padding: 10px;">React, ES6, Express, Webpack</p>
         </section>
-        <section>
-          <h3>Why did we choose React?</h3>
+        <section><section data-background-image="./img/door.jpg" >
+<div style="background:rgba(255,255,255,0.8); color: #000; text-align: left; padding: 10px">
+          <h3 style="color: #000;"> Why did we choose React?</h3>
           <li class="fragment">Reusable components</li>
           <li class="fragment">Fast render with Virtual DOM</li>
           <li class="fragment">Redux state management</li>
           <li class="fragment">Data binding</li>
-          <li class="fragment">Carbon components library</li>
+          <li class="fragment">Carbon components library</li></div>
+</section>
         </section>
         <section><div style="position: relative; text-align: center;" >
 <img style="border:none; opacity: 0.2" src="./img/react.png" alt="React logo" height="500">
@@ -218,7 +225,7 @@
 </section>
         </section>
         <section>
-          <h4>To make these API calls, we needed to perform a token exchange for Softlayer authentication, which introduced...a middleware layer</h4>
+          <h3 style="color:#000; font-size: 75px;">To authenticate, we needed to create a <span style="color:#19a68f">middleware</span> layer</h3>
         </section>
         <section><div style="position: relative; text-align: center;" >
 <img style="border:none; opacity: 0.1" src="./img/express.png" alt="Express" height="500">
@@ -235,12 +242,14 @@
           <p style="padding-left: 100px;">   next();</p>
           <p>}</p>
         </section>
-        <section>
-          <h3>Flow:</h3>
+        <section><section data-background-image="./img/path.jpg">
+<div style="text-align: left;color: #000; background:rgba(255,255,255,0.75); padding: 10px">
+          <h3 style="color: #000;">Middleware flow:</h3>
           <p class="fragment">1. Initiate authentication from the front end</p>
           <p class="fragment">2. Specified routes in middleware</p>
           <p class="fragment">3. Perform token exchange and send back auth object to front end</p>
-          <p class="fragment">4. Pass user id and token as props to containers</p>
+          <p class="fragment">4. Pass user id and token as props to containers</p></div>
+</section>
         </section>
         <section><div style="color: black; border: 2px solid #19a68f">
           <h4 style="color: #fff; background: #19a68f; padding: 1rem;">Initiate authentication from front end:</h4><div style="color:#19a68f; padding: 20px; text-align: left;">
@@ -332,52 +341,61 @@
         </section>
         <section><section data-background-image="./img/rubik.jpg">
 <div style="text-align: left;color: #000; background:rgba(255,255,255,0.9); padding: 10px">
-          <h3 style="color: #000;">What challenges does Kubernetes solve?</h3>
+          <h3 style="color: #000;">Kubernetes at an enterprise scale:</h3>
           <p class="fragment">1. What happens if my app crashes?</p>
           <p class="fragment">2. How can I roll out updates or rollbacks?</p>
           <p class="fragment">3. What happens when I get an unexpected high influx of traffic?</p>
           <p class="fragment">4. What will work best for my microservice architecture?</p></div>
 </section>
         </section>
-        <section><div style="border: 5px solid #fff">
-          <h3 style="padding: 10px;">Challenge #1: What happens if my app crashes?</h3>
-          <p class="fragment" style="padding: 10px;">Provides monitoring for pod health and restarts them in case of failure</p>
+        <section><div style="border: 5px solid #19a68f; color: ##19a68f">
+          <h3 style="padding: 10px; color: #19a68f;">What happens if my app crashes?</h3>
+          <p class="fragment" style="padding: 10px; color: #19a68f;">Provides monitoring for pod health and restarts them in case of failure</p>
         </section>
-        <section><div style="border: 5px solid #fff">
-          <h3 style="padding: 10px;">Challenge #2: How can I roll out updates or rollbacks?</h3>
-          <p class="fragment" style="padding: 10px;"> A user can roll out or rollback an update with zero downtime by incrementally updating Pods instances with new ones</p>
+        <section><div style="border: 5px solid #19a68f; color: ##19a68f">
+          <h3 style="padding: 10px; color: #19a68f;">How can I roll out updates or rollbacks?</h3>
+          <p class="fragment" style="padding: 10px; color: #19a68f;"> A user can roll out or rollback an update with zero downtime by incrementally updating Pods instances with new ones</p>
         </section>
-        <section><div style="border: 5px solid #fff">
-          <h3 style="padding: 10px;">Challenge #3: What happens when I get an unexpected high influx of traffic?</h3>
-          <p class="fragment" style="padding: 10px;">Automatically scales the number of pods in deployment</p>
+        <section><div style="border: 5px solid #19a68f; color: ##19a68f">
+          <h3 style="padding: 10px; color: #19a68f;">What happens when I get an unexpected high influx of traffic?</h3>
+          <p class="fragment" style="padding: 10px; color: #19a68f;">Automatically scales the number of pods in deployment</p>
         </section>
-        <section><div style="border: 5px solid #fff">
-          <h3 style="padding: 10px;">Challenge #4: What will work best for my microservice architecture?</h3>
-          <p class="fragment" style="padding: 10px;">Microservices can be packaged into containers which are each deployed as pods for isolation and resource sharing</p>
+        <section><div style="border: 5px solid #19a68f; color: ##19a68f">
+          <h3 style="padding: 10px; color: #19a68f;">What will work best for my microservice architecture?</h3>
+          <p class="fragment" style="padding: 10px; color: #19a68f;">Microservices can be packaged into containers which are each deployed as pods for isolation and resource sharing</p>
         </section>
         <section>
           <h3>Business impact/status</h3>
+        </section>
+        <section>
+          <h3>Recap:</h3>
+          <li class="fragment">Use React for building components and containers</li>
+          <li class="fragment">Use GraphQL for making API calls and caching results</li>
+          <li class="fragment">Use Redux to manage state and store API call responses</li>
+          <li class="fragment">Use a middleware if applicable</li>
+          <li class="fragment">Make sure to test and review everything!</li>
+          <li class="fragment">Deploy on Kubernetes</li>
         </section>
         <section><div style="text-align: center">
           <h3>Thank you!</h3><div><img style="border-radius: 50%" src="https://user-images.githubusercontent.com/18426780/36912901-71fc797e-1e05-11e8-8e83-9dd223120f2b.jpg" alt="Speaker picture" height="200"></div>
           <h3>Rizchel Dayao</h3>
           <p>Follow me on Twitter: @rizcheldayao</p>
-          <p>Slides available: https://goo.gl/uSuxXW</p></div>
+          <p>Slides available: https://goo.gl/nY5RPG</p></div>
         </section>
         <section><div style="text-align: left">
           <h3>Resources</h3>
           <p style="font-size: 20px; margin: 0;">1. Slides</p>
-          <p style="font-size: 20px; color: navy;">(https://goo.gl/uSuxXW)</p>
+          <p style="font-size: 20px; color: navy;">(https://goo.gl/nY5RPG)</p>
           <p style="font-size: 20px;">2. GitHub Repo</p>
           <p style="font-size: 20px; color: navy;">(https://github.com/IBM/deploy-react-kubernetes)</p>
           <p style="font-size: 20px;">3. React & Kubernetes</p>
           <p style="font-size: 20px; color: navy;">(https://reactjs.org/, https://kubernetes.io/)</p>
-          <p style="font-size: 20px;">4. Blog post</p>
-          <p style="font-size: 20px; color: navy;">(https://medium.com/@rizchel.a.dayao/my-journey-to-deploying-my-first-react-application-with-kubernetes-95e6d25f434d</p>
-          <p style="font-size: 20px;">5. Demo</p>
-          <p style="font-size: 20px; color: navy;">(https://youtu.be/1Lq9vW3LuH8)</p>
-          <p style="font-size: 20px;">6. IBM Cloud</p>
-          <p style="font-size: 20px; color: navy;">(https://console.bluemix.net)</p>
+          <p style="font-size: 20px;">4. GraphQL</p>
+          <p style="font-size: 20px; color: navy;">(https://graphql.org/)</p>
+          <p style="font-size: 20px;">5. Express Middleware</p>
+          <p style="font-size: 20px; color: navy;">(https://expressjs.com/en/guide/using-middleware.html)</p>
+          <p style="font-size: 20px;">6. Jest & Enzyme</p>
+          <p style="font-size: 20px; color: navy;">(http://airbnb.io/enzyme/docs/guides/jest.html)</p>
         </section>
       </div>
     </div>

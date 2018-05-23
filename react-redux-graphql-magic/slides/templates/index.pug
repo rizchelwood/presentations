@@ -44,7 +44,7 @@ block slides
     </aside>
 
   +slide
-   h2 Building enterprise applications is hard
+   h2(style="color:#000; font-size: 75px") Building enterprise applications is <span style="color:#19a68f">hard</span>
 
   +slide
    <iframe src="https://giphy.com/embed/n4WpP39mwWrmg" width="800" height="450" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
@@ -74,14 +74,22 @@ block slides
     <img style="border:none;" src="./img/anchorman.jpg" alt="Anchorman meme" height="500">
 
   +slide
-    h2 Our team was tasked to create a new front end microservice for our virtual server ordering experience in IBM Cloud
+    h3(style="color:#000; font-size: 75px") Our team tasked to <span style="color:#19a68f">create</span> a new front end <span style="color:#19a68f">microservice</span>
 
   +slide
-    h4 Like any project, we had certain requirements to consider:
+    <section data-background-image="./img/virtualserver.png" >
+    </section>
+
+  +slide
+    <section data-background-image="./img/check.png" >
+    <div style="background:rgba(255,255,255,0.75); color: #000; text-align: left; padding: 10px">
+    h4(style="color: #000") Like any project, we had certain requirements to fulfill:
     li.fragment Was this even possible to integrate Softlayer APIs into the IBM Cloud platform?
     li.fragment New microservice that fit into the existing ecosystem
     li.fragment Consume both IBM Cloud & Softlayer APIs
     li.fragment Testing & component based architecture
+    </div>
+    </section>
 
   +slide
     <div style="border: 5px solid #fff">
@@ -89,12 +97,16 @@ block slides
     p.fragment(style="padding: 10px") React, ES6, Express, Webpack
 
   +slide
-    h3 Why did we choose React?
+    <section data-background-image="./img/door.jpg" >
+    <div style="background:rgba(255,255,255,0.8); color: #000; text-align: left; padding: 10px">
+    h3(style="color: #000")  Why did we choose React?
     li.fragment Reusable components
     li.fragment Fast render with Virtual DOM
     li.fragment Redux state management
     li.fragment Data binding
     li.fragment Carbon components library
+    </div>
+    </section>
 
   +slide
     <div style="position: relative; text-align: center;" >
@@ -258,7 +270,7 @@ block slides
     </section>
 
   +slide
-    h4 To make these API calls, we needed to perform a token exchange for Softlayer authentication, which introduced...a middleware layer
+    h3(style="color:#000; font-size: 75px") To authenticate, we needed to create a <span style="color:#19a68f">middleware</span> layer
 
   +slide
     <div style="position: relative; text-align: center;" >
@@ -279,11 +291,15 @@ block slides
     p }
 
   +slide
-    h3 Flow:
+    <section data-background-image="./img/path.jpg">
+    <div style="text-align: left;color: #000; background:rgba(255,255,255,0.75); padding: 10px">
+    h3(style="color: #000") Middleware flow:
     p.fragment 1. Initiate authentication from the front end
     p.fragment 2. Specified routes in middleware
     p.fragment 3. Perform token exchange and send back auth object to front end
     p.fragment 4. Pass user id and token as props to containers
+    </div>
+    </section>
 
   +slide
     <div style="color: black; border: 2px solid #19a68f">
@@ -408,7 +424,7 @@ block slides
   +slide
     <section data-background-image="./img/rubik.jpg">
     <div style="text-align: left;color: #000; background:rgba(255,255,255,0.9); padding: 10px">
-    h3(style="color: #000") What challenges does Kubernetes solve?
+    h3(style="color: #000") Kubernetes at an enterprise scale:
     p.fragment 1. What happens if my app crashes?
     p.fragment 2. How can I roll out updates or rollbacks?
     p.fragment 3. What happens when I get an unexpected high influx of traffic?
@@ -417,27 +433,36 @@ block slides
     </section>
 
   +slide
-    <div style="border: 5px solid #fff">
-    h3(style="padding: 10px") Challenge #1: What happens if my app crashes?
-    p.fragment(style="padding: 10px") Provides monitoring for pod health and restarts them in case of failure
+    <div style="border: 5px solid #19a68f; color: ##19a68f">
+    h3(style="padding: 10px; color: #19a68f") What happens if my app crashes?
+    p.fragment(style="padding: 10px; color: #19a68f") Provides monitoring for pod health and restarts them in case of failure
 
   +slide
-    <div style="border: 5px solid #fff">
-    h3(style="padding: 10px") Challenge #2: How can I roll out updates or rollbacks?
-    p.fragment(style="padding: 10px")  A user can roll out or rollback an update with zero downtime by incrementally updating Pods instances with new ones
+    <div style="border: 5px solid #19a68f; color: ##19a68f">
+    h3(style="padding: 10px; color: #19a68f") How can I roll out updates or rollbacks?
+    p.fragment(style="padding: 10px; color: #19a68f")  A user can roll out or rollback an update with zero downtime by incrementally updating Pods instances with new ones
 
   +slide
-    <div style="border: 5px solid #fff">
-    h3(style="padding: 10px") Challenge #3: What happens when I get an unexpected high influx of traffic?
-    p.fragment(style="padding: 10px") Automatically scales the number of pods in deployment
+    <div style="border: 5px solid #19a68f; color: ##19a68f">
+    h3(style="padding: 10px; color: #19a68f") What happens when I get an unexpected high influx of traffic?
+    p.fragment(style="padding: 10px; color: #19a68f") Automatically scales the number of pods in deployment
 
   +slide
-    <div style="border: 5px solid #fff">
-    h3(style="padding: 10px") Challenge #4: What will work best for my microservice architecture?
-    p.fragment(style="padding: 10px") Microservices can be packaged into containers which are each deployed as pods for isolation and resource sharing
+    <div style="border: 5px solid #19a68f; color: ##19a68f">
+    h3(style="padding: 10px; color: #19a68f") What will work best for my microservice architecture?
+    p.fragment(style="padding: 10px; color: #19a68f") Microservices can be packaged into containers which are each deployed as pods for isolation and resource sharing
 
   +slide
     h3 Business impact/status
+
+  +slide
+    h3 Recap:
+    li.fragment Use React for building components and containers
+    li.fragment Use GraphQL for making API calls and caching results
+    li.fragment Use Redux to manage state and store API call responses
+    li.fragment Use a middleware if applicable
+    li.fragment Make sure to test and review everything!
+    li.fragment Deploy on Kubernetes
 
   +slide
     <div style="text-align: center">
@@ -458,9 +483,9 @@ block slides
     p(style="font-size: 20px; color: navy") (https://github.com/IBM/deploy-react-kubernetes)
     p(style="font-size: 20px;") 3. React & Kubernetes
     p(style="font-size: 20px; color: navy") (https://reactjs.org/, https://kubernetes.io/)
-    p(style="font-size: 20px;") 4. Blog post
-    p(style="font-size: 20px; color: navy") (https://medium.com/@rizchel.a.dayao/my-journey-to-deploying-my-first-react-application-with-kubernetes-95e6d25f434d
-    p(style="font-size: 20px;") 5. Demo
-    p(style="font-size: 20px; color: navy") (https://youtu.be/1Lq9vW3LuH8)
-    p(style="font-size: 20px;") 6. IBM Cloud
-    p(style="font-size: 20px; color: navy") (https://console.bluemix.net)
+    p(style="font-size: 20px;") 4. GraphQL
+    p(style="font-size: 20px; color: navy") (https://graphql.org/)
+    p(style="font-size: 20px;") 5. Express Middleware
+    p(style="font-size: 20px; color: navy") (https://expressjs.com/en/guide/using-middleware.html)
+    p(style="font-size: 20px;") 6. Jest & Enzyme
+    p(style="font-size: 20px; color: navy") (http://airbnb.io/enzyme/docs/guides/jest.html)
