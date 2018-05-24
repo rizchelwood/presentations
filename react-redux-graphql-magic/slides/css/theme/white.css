@@ -6,43 +6,18 @@
 
  .slide-background:nth-child(4),  .slide-background:nth-child(5), .slide-background:nth-child(14), .slide-background:nth-child(16),
  .slide-background:nth-child(18),  .slide-background:nth-child(19), .slide-background:nth-child(21), .slide-background:nth-child(22),
- .slide-background:nth-child(25),  .slide-background:nth-child(28), .slide-background:nth-child(26) , .slide-background:nth-child(27),
- .slide-background:nth-child(32),  .slide-background:nth-child(35), .slide-background:nth-child(36) , .slide-background:nth-child(37),
- .slide-background:nth-child(41), .slide-background:nth-child(40), .slide-background:nth-child(39), .slide-background:nth-child(43),
- .slide-background:nth-child(3),  .slide-background:nth-child(8), .slide-background:nth-child(9), .slide-background:nth-child(31), .slide-background:nth-child(47),
- .slide-background:nth-child(48), .slide-background:nth-child(49), .slide-background:nth-child(50)       {
+ .slide-background:nth-child(25),  .slide-background:nth-child(26),  .slide-background:nth-child(29), .slide-background:nth-child(27) , .slide-background:nth-child(28),
+ .slide-background:nth-child(33),  .slide-background:nth-child(36), .slide-background:nth-child(37) , .slide-background:nth-child(38),
+ .slide-background:nth-child(43), .slide-background:nth-child(42), .slide-background:nth-child(41), .slide-background:nth-child(45),
+ .slide-background:nth-child(3),  .slide-background:nth-child(8), .slide-background:nth-child(9), .slide-background:nth-child(32), .slide-background:nth-child(49),
+ .slide-background:nth-child(50), .slide-background:nth-child(51), .slide-background:nth-child(52), .slide-background:nth-child(53), .slide-background:nth-child(54),
+ .slide-background:nth-child(40)  {
   background: #fff;
  }
 
-.slide-background:nth-child(33) {
+.slide-background:nth-child(34) {
    background: #000;
  }
-
- /* html.dimbg .slide-background {
-  opacity: 0.2 !important;
-}
-
-section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
-  color: black;
-  margin: 0px; }
-
-
- .slide-background:nth-child(20),  .slide-background:nth-child(21) {
-  background: #8aa4f3;
-}
-
-.slide-background:nth-child(36) {
-  background: #181818;
-}
-
-.slide-background:nth-child(37) {
-  background: #1e1e1e;
-}
-
-.slide-background:nth-child(46), .slide-background:nth-child(48), .slide-background:nth-child(52), .slide-background:nth-child(54),
-.slide-background:nth-child(39), .slide-background:nth-child(41), .slide-background:nth-child(50), .slide-background:nth-child(56)  {
-  background: #000;
-} */
 
 /*********************************************
  * GLOBAL STYLES
