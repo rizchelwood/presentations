@@ -116,7 +116,6 @@ block slides
     li.fragment Functions as the view layer
     li.fragment Component based
     li.fragment Virtual DOM
-    li.fragment Declarative
     li.fragment JSX
     </div>
     <div>
@@ -362,6 +361,12 @@ block slides
     li.fragment Functionality testing
     </div>
     <div>
+
+    <aside class="notes">
+      p Shallow rendering: Shallow rendering is useful to constrain yourself to testing a component as a unit, and to ensure that your tests aren't indirectly asserting on behavior of child components.
+      p Full DOM rendering (mount): Full DOM rendering is ideal for use cases where you have components that may interact with DOM APIs, or may require the full lifecycle in order to fully test the component. Full DOM rendering requires that a full DOM API be available at the global scope. This means that it must be run in an environment that at least “looks like” a browser environment.
+      p Snapshot: A typical snapshot test case for a mobile app renders a UI component, takes a screenshot, then compares it to a reference image stored alongside the test.
+    </aside>
 
 
   +slide
