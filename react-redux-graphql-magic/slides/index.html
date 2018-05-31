@@ -102,7 +102,6 @@
           <li class="fragment">Functions as the view layer</li>
           <li class="fragment">Component based</li>
           <li class="fragment">Virtual DOM</li>
-          <li class="fragment">Declarative</li>
           <li class="fragment">JSX</li></div>
 <div>
         </section>
@@ -296,6 +295,10 @@
           <li class="fragment">Snapshot testing</li>
           <li class="fragment">Functionality testing</li></div>
 <div>
+<aside class="notes">
+          <p>Shallow rendering: Shallow rendering is useful to constrain yourself to testing a component as a unit, and to ensure that your tests aren't indirectly asserting on behavior of child components.</p>
+          <p>Full DOM rendering (mount): Full DOM rendering is ideal for use cases where you have components that may interact with DOM APIs, or may require the full lifecycle in order to fully test the component. Full DOM rendering requires that a full DOM API be available at the global scope. This means that it must be run in an environment that at least “looks like” a browser environment.</p>
+          <p>Snapshot: A typical snapshot test case for a mobile app renders a UI component, takes a screenshot, then compares it to a reference image stored alongside the test.</p></aside>
         </section>
         <section><div style="color: black; border: 2px solid #19a68f">
           <h4 style="color: #fff; background: #19a68f; padding: 1rem;">Testing:</h4><div style="color:#19a68f; padding: 20px; text-align: left;">
@@ -388,6 +391,10 @@
           <li>Make sure to test and review everything!</li>
           <li>Deploy on Kubernetes</li></div>
 </section>
+        </section>
+        <section>
+          <h3 style="text-align: left; color: #000;"> Check out Phil Estes keynote tomorrow!</h3>
+          <p style="text-align: left; color: #000;"> A brief history of why Docker containers took the world by storm, and as the technology matures, how it is moving into serverless, IoT, PaaS, and other 'non-container-native' worlds because of the power of the packaging format</p>
         </section>
         <section><div style="text-align: center">
           <h3>Thank you!</h3><div><img style="border-radius: 50%" src="https://user-images.githubusercontent.com/18426780/36912901-71fc797e-1e05-11e8-8e83-9dd223120f2b.jpg" alt="Speaker picture" height="200"></div>
